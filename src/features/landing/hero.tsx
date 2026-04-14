@@ -10,7 +10,7 @@ export const Hero = () => {
       <GradientBackground />
 
       <div className="relative py-24 sm:py-32 lg:pb-20">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
 
             {/* Badge */}
@@ -27,7 +27,7 @@ export const Hero = () => {
             <h1 className="text-4xl font-bold tracking-tight text-balance
                            text-foreground sm:text-5xl lg:text-6xl
                            lg:leading-tight">
-              Vous cherchez à intégrer de l'I.A. dans vos process métier. {" "}
+              Vous cherchez à intégrer de l'I.A. <br/> {" "}
               <span className="text-orange-500">
                 Mais vous ne savez pas par où commencer ?
               </span>

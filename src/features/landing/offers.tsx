@@ -21,101 +21,79 @@ type Offer = {
 
 const OFFERS: Offer[] = [
   {
-    id: "site",
+    id: "solo",
     badge: "POPULAIRE",
-    title: "Création de site web",
-    price: "À partir de 997€",
-    priceUnit: "",
+    title: "Solo",
+    price: "97€",
+    priceUnit: "par mois",
     description:
-      "Site web professionnel qui attire, convainc et convertit — pas juste beau, mais conçu pour ramener des clients.",
+      "Formation complète + accompagnement pour intégrer Claude dans votre quotidien. Idéal pour les indépendants et solopreneurs.",
     features: [
-      "Design sur-mesure responsive",
-      "Optimisation SEO native",
-      "Performances maximales",
-      "+ de 5 pages selon votre activité",
+      "Formation Claude de A à Z",
+      "Accompagnement intégration personnalisé",
+      "Prompts & templates métier inclus",
+      "Accès communauté privée",
     ],
-    cta: "En savoir plus",
-    href: "/site-web",
+    cta: "Démarrer",
+    href: "/offre-solo",
     popular: true,
   },
   {
-    id: "clé-en-main",
-    title: "Clé en main",
+    id: "team",
     badge: "NOUVEAU",
-    price: "49€",
-    priceUnit: "Premier paiement dans 15 jrs",
+    title: "Team",
+    price: "147€",
+    priceUnit: "par mois",
     description:
-      "Votre présence Google gérée de A à Z, avec site web, SEO local et CRM pour le suivi suivi.",
+      "Écosystème I.A. complet, souverain et conforme RGPD. Hébergement, automatisation et LLM open source pour votre équipe.",
     features: [
-      "Site web professionnel inclus",
-      "Stratégie SEO local déployée",
-      "Création de contenu mensuel",
-      "Hébergement & maintenance inclus",
+      "Hébergement Coolify inclus",
+      "Automatisation n8n + RAG",
+      "LLM open source (Claude & autres)",
+      "KV4 + stockage vectoriel",
+      "Site web intégré",
+      "Conformité RGPD complète",
     ],
-    cta: "Démarrer maintenant",
-    href: "/cle-en-main",
+    cta: "Découvrir",
+    href: "/offre-team",
     popular: false,
   },
   {
-    id: "seo",
-    title: "Référencement web (SEO)",
-    price: "À partir de 497€",
-    priceUnit: "",
+    id: "enterprise",
+    badge: "PUISSANT",
+    title: "Enterprise",
+    price: "297€",
+    priceUnit: "par mois",
     description:
-      "Stratégie SEO complète pour améliorer votre positionnement sur Google.",
+      "Tout le plan Team, mais avec une infrastructure plus puissante et des modèles de dernière génération.",
     features: [
-      "Audit SEO technique complet",
-      "Recherche de mots-clés stratégiques",
-      "Optimisation on-page",
-      "Startégie de contenu",
+      "Tout le plan Team inclus",
+      "KV8 haute performance",
+      "LLM Gemma 4 & modèles premium",
+      "RAG avancé multi-sources",
+      "Support prioritaire dédié",
+      "Onboarding équipe complet",
     ],
     cta: "En savoir plus",
-    href: "/seo",
+    href: "/offre-enterprise",
+    popular: false,
   },
   {
-    id: "fiche-google",
-    title: "Optimisation Fiche Google",
-    price: "À partir de 247€",
-    priceUnit: "",
+    id: "premium",
+    title: "Premium",
+    price: "Sur devis",
+    priceUnit: "configuration full custom",
     description:
-      "Optimisation complète de votre Fiche Google Business Profile pour plus de visibilité locale.",
+      "Configuration complète sur mesure. Pour les structures qui veulent aller plus loin, plus vite, sans compromis.",
     features: [
-      "Optimisation complète du profil",
-      "Stratégie de catégories & attributs",
-      "Gestion des avis & réponses",
+      "Audit & architecture I.A. sur mesure",
+      "Déploiement full stack personnalisé",
+      "Intégrations métier spécifiques",
+      "Formation équipes avancée",
+      "SLA & accompagnement long terme",
     ],
-    cta: "En savoir plus",
-    href: "/gmb",
-  },
-  {
-    id: "audit",
-    title: "Audit de visibilité",
-    price: "97€",
-    priceUnit: "remboursés à la signature*",
-    description:
-      "Analyse complète de votre présence Google avec plan d'action priorisé.",
-    features: [
-      "Analyse mots-clés & positions",
-      "Audit Fiche Google Business",
-      "Analyse concurrence locale",
-    ],
-    cta: "En savoir plus",
-    href: "/audit",
-  },
-  {
-    id: "partenariat",
-    title: "Partenariat leads",
-    price: "0€",
-    priceUnit: "à avancer — paiement au résultat",
-    description:
-      "On génère vos clients qualifiés via Google, vous ne payez que les leads reçus. Zone exclusive, zéro risque.",
-    features: [
-      "SEO local & fiche Google déployés",
-      "Landing page dédiée à votre activité",
-      "Tracking des appels & formulaires",
-    ],
-    cta: "En savoir plus",
-    href: "/partenariat",
+    cta: "Nous contacter",
+    href: "/contact",
     popular: false,
   },
 ];
@@ -160,14 +138,14 @@ export const Offers = () => {
             variant="h2"
             className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Choisissez comment on travaille ensemble
+            Choisissez votre niveau d'intégration I.A.
           </Typography>
 
           <Typography
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-balance"
           >
-            Site web, SEO local, fiche Google — chaque levier activé pour vous rendre incontournable.
+            De la formation solo à l'écosystème enterprise — souverain, conforme RGPD et taillé pour votre métier.
           </Typography>
         </div>
 
@@ -233,7 +211,8 @@ const OfferCard = ({
   href,
   popular,
 }: Offer) => {
-  const isSite = id === "site";
+  const isSolo = id === "solo";
+  const isPremium = id === "premium";
 
   return (
     <div
@@ -243,14 +222,14 @@ const OfferCard = ({
         "p-6 transition-all overflow-visible",
         "hover:-translate-y-1 hover:shadow-md hover:shadow-black/5",
         "dark:hover:shadow-black/20",
-        isSite
-          ? "border border-orange-500/20 bg-orange-500/5"
-          : popular
-            ? "border border-orange-500/50 bg-card"
+        isSolo
+          ? "border border-orange-500/50 bg-orange-500/5"
+          : isPremium
+            ? "border border-border bg-gradient-to-b from-card to-muted/30"
             : "border border-border bg-card"
       )}
     >
-      {/* Badge populaire */}
+      {/* Badge */}
       {badge && (
         <div className="absolute -top-3 right-4 pt-4">
           <span
@@ -271,10 +250,7 @@ const OfferCard = ({
       <div className="mt-2">
         <div className="flex items-baseline gap-1">
           <span className="text-2xl font-bold text-foreground">
-            {price.replace("€", "")}
-          </span>
-          <span className="text-sm font-normal text-orange-500">
-            {title.toLowerCase().includes("clé en main") ? "€/mois" : "€"}
+            {price}
           </span>
         </div>
         {priceUnit && (
@@ -298,10 +274,7 @@ const OfferCard = ({
             data-testid="offer-feature"
             className="flex items-start gap-2 text-xs text-muted-foreground"
           >
-            <Check
-              size={13}
-              className="mt-0.5 shrink-0 text-orange-500"
-            />
+            <Check size={13} className="mt-0.5 shrink-0 text-orange-500" />
             {f}
           </li>
         ))}
@@ -314,9 +287,11 @@ const OfferCard = ({
           className={cn(
             "block w-full rounded-md py-2.5 text-center",
             "text-sm font-semibold transition-all",
-            popular
+            isSolo
               ? "bg-orange-500 text-white hover:bg-orange-400 hover:shadow-lg hover:shadow-orange-500/30"
-              : "border border-border text-foreground hover:border-orange-500/50 hover:text-orange-500"
+              : isPremium
+                ? "bg-foreground text-background hover:opacity-80"
+                : "border border-border text-foreground hover:border-orange-500/50 hover:text-orange-500"
           )}
         >
           {cta} →

@@ -85,7 +85,7 @@ export function LandingHeader() {
         >
           <Image
             src={SiteConfig.appIcon}
-            alt="lemurian app logo"
+            alt="mon agent ia app logo"
             width={24}
             height={24}
           />
@@ -100,7 +100,7 @@ export function LandingHeader() {
             className="origin-left text-lg font-bold tracking-tight
                        text-foreground"
           >
-            Lemurian Agency
+            Mon agent ai
           </motion.p>
         </div>
 

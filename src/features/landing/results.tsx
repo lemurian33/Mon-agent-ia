@@ -1,9 +1,9 @@
 import { Typography } from "@/components/nowts/typography";
 import Link from "next/link";
 import {
-  Phone, MapPin, MousePointerClick,
-  TrendingUp, Star, Navigation,
-  Calendar, Activity, Zap,
+  Clock, Zap, BrainCircuit,
+  TrendingUp, Users, BarChart2,
+  Calendar, Activity, ShieldCheck,
 } from "lucide-react";
 
 type Metrique = {
@@ -15,41 +15,41 @@ type Metrique = {
 
 type ResultCard = {
   client: string;
-  ville: string;
+  secteur: string;
   metriques: Metrique[];
   tags: string[];
 };
 
 const RESULTS: ResultCard[] = [
   {
-    client: "Unlcoaching | Coaching sportif ",
-    ville: "Gradignan",
+    client: "Unlcoaching | Coaching sportif",
+    secteur: "Automatisation administrative",
     metriques: [
-      { icon: Phone,            label: "Appels",      delta: "+202%", highlight: true },
-      { icon: Navigation,       label: "Itinéraires", delta: "+116%", highlight: true },
-      { icon: MousePointerClick, label: "Clics site",  delta: "+285%", highlight: true },
+      { icon: Clock,        label: "Temps admin économisé", delta: "-68%",   highlight: true },
+      { icon: Users,        label: "Clients suivis",        delta: "+3x",    highlight: true },
+      { icon: Zap,          label: "Tâches automatisées",   delta: "12 /sem", highlight: true },
     ],
-    tags: ["Création site","SEO local", "Google Business", "I.A"],
+    tags: ["Agent I.A.", "Automatisation", "RGPD", "Formation"],
   },
   {
     client: "Segment.C | Artisan menuisier",
-    ville: "Bordeaux",
+    secteur: "Devis & relation client",
     metriques: [
-      { icon: TrendingUp, label: "Demandes", delta: "+340%", highlight: true },
-      { icon: Phone,      label: "Appels",   delta: "+189%", highlight: true },
-      { icon: Star,       label: "Position", delta: "Top 10", highlight: false },
+      { icon: TrendingUp,   label: "Devis générés",         delta: "+340%",  highlight: true },
+      { icon: Clock,        label: "Temps de réponse",      delta: "-80%",   highlight: true },
+      { icon: BrainCircuit, label: "Relances automatiques", delta: "24/7",   highlight: false },
     ],
-    tags: ["Création site", "SEO local", "Google Business","I.A"],
+    tags: ["Agent I.A.", "Chatbot", "RGPD", "Formation"],
   },
   {
-    client: "Cabinet Medical | Dr Campagne F. ",
-    ville: "Vendays-Montalivet",
+    client: "Cabinet Médical | Dr Campagne F.",
+    secteur: "Gestion des rendez-vous",
     metriques: [
-      { icon: Calendar, label: "RDV en ligne",  delta: "+487%", highlight: true },
-      { icon: Activity, label: "Visites site",  delta: "+334%", highlight: true },
-      { icon: Phone,    label: "Appels",        delta: "+195%", highlight: true },
+      { icon: Calendar,     label: "RDV automatisés",       delta: "+487%",  highlight: true },
+      { icon: ShieldCheck,  label: "Conformité RGPD",       delta: "100%",   highlight: false },
+      { icon: Activity,     label: "Charge secrétariat",    delta: "-155%",   highlight: true },
     ],
-    tags: ["Création site","Google Business","I.A"],
+    tags: ["Agent I.A.", "RGPD", "Automatisation", "Formation"],
   },
 ];
 
@@ -74,14 +74,14 @@ export const Results = () => {
             className="mt-4 text-3xl font-semibold tracking-tight
                        text-balance sm:text-4xl"
           >
-            On traque vos résultats 
+            Ce que l'I.A. change concrètement
           </Typography>
 
           <Typography
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            Ce que nos clients ont gagné en passant à la vitesse supérieure sur Google.
+            Des résultats mesurables, chez des vrais clients — sans jargon, sans magie.
           </Typography>
         </div>
 
@@ -109,7 +109,7 @@ export const Results = () => {
   );
 };
 
-const ResultCardItem = ({ client, ville, metriques, tags }: ResultCard) => {
+const ResultCardItem = ({ client, secteur, metriques, tags }: ResultCard) => {
   return (
     <div
       data-testid="result-card"
@@ -121,7 +121,7 @@ const ResultCardItem = ({ client, ville, metriques, tags }: ResultCard) => {
       {/* Header */}
       <div className="mb-4">
         <h3 className="text-sm font-semibold text-foreground">{client}</h3>
-        <p className="text-xs text-muted-foreground">{ville}</p>
+        <p className="text-xs text-muted-foreground">{secteur}</p>
       </div>
 
       {/* Métriques */}
