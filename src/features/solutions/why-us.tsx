@@ -7,6 +7,12 @@ import {
   Gauge,
 } from "lucide-react";
 
+type Reason = {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+};
+
 const REASONS: Reason[] = [
   {
     icon: Bot,
