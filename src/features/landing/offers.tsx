@@ -114,6 +114,25 @@ const OFFERS: Offer[] = [
     href: "/contact",
     popular: false,
   },
+  {
+    id: "i.a vocal",
+    badge: "NOUVEAU",
+    title: "Agent vocal I.A.",
+    price: "À partir de 159€",
+    priceUnit: "par mois",
+    description:
+      "Un agent vocal I.A. 500 min puis 0.25€/min répond à vos appels entrants 24h/24, qualifie vos prospects et prend des rendez-vous — sans secrétaire, sans raté.",
+    features: [
+      "Réponse automatique aux appels entrants",
+      "Qualification & prise de RDV automatisée",
+      "Intégration à votre agenda , CRM",
+      "Disponible 24h/24, 7j/7",
+      "Conforme RGPD",
+    ],
+    cta: "Découvrir l'agent vocal",
+    href: "/offre-agent-vocal",
+    popular: false,
+  },
 ];
 
 export const Offers = () => {

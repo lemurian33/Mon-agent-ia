@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 const HIGHLIGHTS = [
   "Sans engagement",
   "Résultats mesurables",
-  "Accompagnement local",
+  "Accompagnement personnalisé",
 ] as const;
 
 export const HeroSolution = () => {
@@ -38,7 +38,7 @@ export const HeroSolution = () => {
                       uppercase dark:border-orange-800/60
                       dark:bg-orange-950/60 dark:text-orange-300"
         >
-          Nos solutions SEO local
+          Intégration I.A. pour les entreprises
         </div>
 
         {/* Titre */}
@@ -46,8 +46,8 @@ export const HeroSolution = () => {
           className="text-4xl font-bold tracking-tight text-balance
                      text-foreground sm:text-5xl lg:text-6xl lg:leading-tight"
         >
-          Visibilité Google qui{" "}
-          <span className="text-orange-500">génère de vrais clients</span>
+          L'I.A. qui travaille{" "}
+          <span className="text-orange-500">directement dans votre métier</span>
         </h1>
 
         {/* Sous-titre */}
@@ -55,8 +55,8 @@ export const HeroSolution = () => {
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed
                      text-muted-foreground sm:text-lg"
         >
-          Visibilité locale, leads qualifiés, suivi mesurable. Tout ce qu'il faut
-          pour que votre business tourne — sans dépendre de la pub.
+          Automatisation, agents I.A. et formation sur mesure. Tout ce qu'il faut
+          pour gagner du temps, réduire les tâches répétitives — et garder une longueur d'avance.
         </p>
 
         {/* Highlights */}
@@ -73,9 +73,7 @@ export const HeroSolution = () => {
         </div>
 
         {/* CTAs */}
-        <div
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
-        >
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="#audit-form"
             className="inline-flex items-center gap-2 rounded-md
@@ -84,7 +82,7 @@ export const HeroSolution = () => {
                        hover:shadow-lg hover:shadow-orange-500/30
                        active:scale-95"
           >
-            Démarrer mon audit gratuit
+            Réserver mon audit I.A. gratuit
             <ArrowRight size={16} />
           </Link>
           <Link
