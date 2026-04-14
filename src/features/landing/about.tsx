@@ -12,7 +12,7 @@ const VALUES = [
 
 const COMMITMENTS = [
   "Je vous accompagne et vous forme à l'intégration de l'I.A",
-  "J'intègre l'I.A. directement dans vos process métier",
+  "J'intègre l'I.A. directement dans vos process métier.",
   "Je déploie un écosystème souverain, hébergé et sécurisé",
 ];
 
@@ -92,8 +92,8 @@ export const About = () => {
                 <strong className="font-semibold text-foreground">
                   Mon agent Ai
                 </strong>
-                , j'ai passé des années à développer des applications web avec 
-                <Link href="" target="_blank" className=""><strong className="font-semibold text-orange-500">Lemurian Agency</strong></Link>et à
+                , j'ai passé des années à développer des applications web avec {" "} 
+                <Link href="project-ar-01.vercel.app" target="_blank" className=""><strong className="font-semibold text-orange-500">Lemurian Agency</strong></Link>{" "} et à
                 explorer l'écosystème I.A. de l'intérieur. Aujourd'hui, je mets
                 cette double expertise au service d'un seul objectif:{" "} <br/>
                 <strong className="font-semibold text-foreground">

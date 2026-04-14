@@ -18,11 +18,22 @@ const NAV_COLUMNS = [
   {
     title: "Services",
     links: [
-      { label: "Création site web",         href: "/site-web" },
-      { label: "Site web clé en main",      href: "/cle-en-main" },
-      { label: "Solutions SEO",             href: "/seo" },
-      { label: "Optimisation GMB",          href: "/gmb" },
-      { label: "Audit de visibilité",       href: "/audit" },
+      { label: "Audit I.A.",              href: "/audit" },
+      { label: "Accompagnement I.A.",     href: "/offre-solo" },
+      { label: "Solution Team",           href: "/offre-team" },
+      { label: "Pour les Entreprises",    href: "/offre-enterprise" },
+      { label: "Premium",                 href: "/offre-premium" },
+      { label: "Agent Vocal I.A",         href: "/offre-agent-vocal" },
+      { label: "Création site web",       href: "project-ar-01.vercel.app", target="_blank" },
+    ],
+  },
+  {
+    title: "RGPD",
+    links: [
+      { label: "Claude",       target:"_blank", href: "" },
+      { label: "Hostinger",    target:"_blank", href: "" },
+      { label: "Call rounded", target:"_blank", href: "" },
+      { label: "LLm local",    target:"_blank", href: "" },
     ],
   },
   {
@@ -31,6 +42,7 @@ const NAV_COLUMNS = [
       { label: "Espace client",           href: "/signin" },
       { label: "Plan du site",            href: "/plan-du-site" },
       { label: "Performance",target:"_blank", href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#" },
+      { label: "Co²",target:"_blank", href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#" },
     ],
   },
 ] as const;
@@ -59,14 +71,12 @@ export function Footer() {
                 height={24}
               />
               <span className="text-lg font-bold text-foreground">
-                Lemurian Agency
+                Mon agent AI
               </span>
             </Link>
 
-            <p className="max-w-xs text-sm leading-relaxed
-                          text-muted-foreground">
-              Création site web et SEO locale. On transforme votre 
-              visibilité Google en machine à générer des leads qualifiés.
+            <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
+             J'intègre et déploie un écosystème d'agents I.A. directement dans vos process métier — pour des résultats concrets et mesurables.
             </p>
 
             {/* Contact */}
@@ -92,7 +102,7 @@ export function Footer() {
           </div>
 
           {/* ── Colonnes droite — nav 4 colonnes ── */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
             {NAV_COLUMNS.map(({ title, links }) => (
               <div key={title} className="flex flex-col gap-4">
                 <h4 className="border-l-2 border-orange-500 pl-3
@@ -139,7 +149,7 @@ export function Footer() {
                   Nouvelle-Aquitaine
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Bordeaux, Mérignac, Pessac, Arcachon et toute la région
+                  Bordeaux, Mérignac, Pessac, Talence et toute la région
                 </p>
               </div>
             </div>

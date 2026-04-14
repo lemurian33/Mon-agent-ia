@@ -119,7 +119,7 @@ export const Testimonials = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            Des retours concrets de professionnels en Occitanie.
+            Des retours concrets de professionnels en Nouvelle Aquitaine.
           </Typography>
         </div>
 

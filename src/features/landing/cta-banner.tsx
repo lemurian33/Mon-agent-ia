@@ -41,7 +41,7 @@ export const CtaBanner = () => {
                          hover:shadow-lg hover:shadow-orange-500/30
                          active:scale-95"
             >
-              Réserver un appel stratégique →
+              Réserver votre appel →
             </Link>
           </div>
 
