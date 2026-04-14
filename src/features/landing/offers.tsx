@@ -21,6 +21,24 @@ type Offer = {
 
 const OFFERS: Offer[] = [
   {
+    id: "audit",
+    badge: "GRATUIT",
+    title: "Audit I.A.",
+    price: "0€",
+    priceUnit: "sans engagement",
+    description:
+      "En 30 minutes, on identifie exactement quels process de votre business peuvent être automatisés avec l'I.A. — et combien ça vous ferait gagner.",
+    features: [
+      "Analyse de vos process métier",
+      "Identification des opportunités I.A.",
+      "Estimation des gains concrets",
+      "Feuille de route personnalisée",
+    ],
+    cta: "Réserver mon audit",
+    href: "/#audit-form",
+    popular: false,
+  },
+  {
     id: "solo",
     badge: "POPULAIRE",
     title: "Solo",

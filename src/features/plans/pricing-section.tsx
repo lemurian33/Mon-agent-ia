@@ -16,15 +16,8 @@ const COMMUNICATION_PACKS = [
     cta: "Réserver mon audit →",
     href: "/#audit-form",
   },
-  // {
-  //   title: "Formation équipe",
-  //   price: "Sur devis",
-  //   subtitle: "Sessions pratiques sur cas concrets issus de votre métier. Pas de théorie inutile.",
-  //   cta: "En savoir plus →",
-  //   href: "/contact",
-  // },
   {
-    title: "Intégration sur mesure",
+    title: "Premium",
     price: "Sur devis",
     subtitle: "Déploiement full stack personnalisé avec intégrations métier spécifiques et SLA dédié.",
     cta: "Nous contacter →",
@@ -37,14 +30,14 @@ export function Pricing() {
 
   return (
     <section className="from-background to-muted/20 w-full bg-gradient-to-b py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Choisissez votre niveau d'intégration I.A.
             </h2>
-            <p className="text-muted-foreground max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               De la formation solo à l'écosystème enterprise — souverain, conforme RGPD et taillé pour votre métier.
             </p>
           </div>
