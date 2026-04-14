@@ -5,32 +5,33 @@
  * Design : badge pill orange, titre centré, sous-titre, 2 CTAs arrondis.
  * Pas d'image / illustration.
  */
-
 import Link from "next/link";
 
 export const RealisationsHero = () => {
   return (
     <section className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
+
         {/* Badge pill */}
-        <span className="inline-flex items-center rounded-full 
+        <span className="inline-flex items-center rounded-full
                       border border-orange-200 bg-orange-50 px-4 py-1.5
                       text-xs font-semibold tracking-widest text-orange-700
                       uppercase dark:border-orange-800/60 dark:bg-orange-950/60
-                      dark:text-orange-30">
-          Mes réalisations
+                      dark:text-orange-300">
+          Cas clients I.A. — résultats réels
         </span>
 
         {/* Titre */}
         <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
-          Des sites qui rankent, des clients qui{" "}
-          <span className="text-orange-500">appellent.</span>
+          Des automatisations I.A. qui{" "}
+          <span className="text-orange-500">tournent pour de vrai.</span>
         </h1>
 
-        {/* Sous titre */}
+        {/* Sous-titre */}
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-          Chaque réalisation ici représente un vrai business local qui reçoit
-          aujourd'hui des appels et des demandes grâce à son site. Pas de cas théoriques, que des résultats concrets.
+          Pas de démos. Pas de promesses. Ces entreprises ont intégré l'I.A.
+          dans leurs process — et mesurent aujourd'hui un gain de temps
+          et de revenus concrets.
         </p>
 
         {/* CTAs */}
@@ -48,6 +49,7 @@ export const RealisationsHero = () => {
             Voir nos solutions
           </Link>
         </div>
+
       </div>
     </section>
   );

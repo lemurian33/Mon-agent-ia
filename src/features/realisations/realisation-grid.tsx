@@ -34,196 +34,258 @@ type Realisation = {
 const REALISATIONS: Realisation[] = [
   {
     id: "Segment-c",
-    tags: ["Site", "GBP","I.A"],
+    tags: ["Agent I.A", "Site", "GBP"],
     city: "Bordeaux",
     title: "Segment.c | Menuiserie",
     category: "Artisanat",
-    objective: "Générer des demandes de devis",
+    objective: "Automatiser les devis et la relation client",
     metrics: [
-      { label: "Demandes",         before: "0/mois", after: "12/mois", growth: "+1200%" },
-      { label: "Appels",           before: "8/mois", after: "41/mois", growth: "+512%" },
-      { label: "Position moyenne", before: "50e",    after: "12e",     growth: "Top 10", isRank: true },
+      { label: "Devis générés",    before: "0/mois",  after: "12/mois", growth: "+1200%" },
+      { label: "Appels",           before: "8/mois",  after: "41/mois", growth: "+512%" },
+      { label: "Temps de réponse", before: "48h",     after: "< 5 min", growth: "-96%", isRank: true },
     ],
-    tools: ["SEO local", "SEO multi-pages", "Artisanat"],
+    tools: ["Agent I.A", "Automatisation", "Artisanat"],
     href: "https://segment-c.com",
-    context: "Menuisier Bordeaux sans présence en ligne, dépendant du bouche-à-oreille pour trouver des clients.",
+    context:
+      "Menuisier bordelais sans présence digitale, dépendant du bouche-à-oreille. Les devis étaient traités manuellement, avec des délais de réponse de 2 jours.",
     actions: [
+      "Déploiement d'un agent I.A de pré-qualification des demandes",
+      "Génération automatique de devis par type de prestation",
       "Création d'un site vitrine optimisé SEO",
       "Optimisation de la fiche Google Business",
-      "Ciblage des mots-clés menuiserie Bordeaux",
-      "Campagne d'avis Google",
       "Stratégie de contenu d'article I.A",
-      "Hébergement self hosting",
+      "Hébergement self hosting souverain",
     ],
-    stack: ["Next.js", "Agent I.A", "Google Business Profile", "SEO local", "Google Search Console"],
+    stack: ["Next.js", "Agent I.A Claude", "Google Business Profile", "SEO local", "Google Search Console"],
   },
   {
     id: "cabinet-medical-dr-campagne",
-    tags: ["Site", "GBP","Agent I.A"],
+    tags: ["Agent I.A Vocal", "Site", "GBP"],
     city: "Vendays-Montalivet",
     title: "Cabinet médical du Dr F. Campagne",
     category: "Santé",
-    objective: "Remplir le planning de consultations",
+    objective: "Automatiser la prise de rendez-vous",
     metrics: [
-      { label: "RDV en ligne",     before: "10/mois", after: "32/mois",  growth: "+320%" },
-      { label: "Appels",           before: "24/mois", after: "157/mois", growth: "+654%" },
-      { label: "Position moyenne", before: "79e",     after: "9e",       growth: "Top 10", isRank: true },
+      { label: "RDV automatisés",  before: "10/mois", after: "32/mois",  growth: "+320%" },
+      { label: "Appels traités",   before: "24/mois", after: "157/mois", growth: "+654%" },
+      { label: "Charge secrétariat", before: "100%", after: "< 30%",    growth: "-70%", isRank: true },
     ],
-    tools: ["SEO local", "Google Business", "Santé"],
+    tools: ["Agent Vocal I.A", "Automatisation", "RGPD"],
     href: "https://dr-c.cabinet-vendays.com",
-    context: "Cabinet de médical du Dr Campagne F. souhaite crée un site vitrine pour prise de rendez-vous en ligne. Un Agent I.A Vocal sera en mesure de prendres des rendez-vous dans le calendrier en ligne.",
+    context:
+      "Cabinet médical souhaitant décharger le secrétariat de la gestion des RDV. Un agent I.A vocal prend les rendez-vous directement dans le calendrier, en conformité RGPD.",
     actions: [
+      "Déploiement d'un agent I.A vocal pour prise de RDV",
+      "Intégration avec cal.com pour la gestion du calendrier",
       "Création site avec prise de RDV en ligne",
-      "Configuration du calendrier en ligne",
-      "Stratégie pour agent I.A vocal pour prise de RDV",
+      "Conformité RGPD complète des données patients",
       "Optimisation GBP avec spécialités généraliste",
-      "Hébergement self hosting",
+      "Hébergement self hosting souverain",
     ],
-    stack: ["Next.js", "cal.com", "callrounded","Google Business Profile", "SEO local"],
+    stack: ["Next.js", "cal.com", "callrounded", "Google Business Profile", "SEO local"],
   },
   {
     id: "Expresse-depannage",
-    tags: ["Site","SEO", "GBP"],
+    tags: ["Agent I.A", "Site", "SEO"],
     city: "Bordeaux",
     title: "Express Dépannage",
     category: "Artisanat",
-    objective: "Générer des demandes de devis.",
+    objective: "Automatiser la capture et qualification des leads",
     metrics: [
-      { label: "Appels",           before: "4/mois",  after: "36/mois", growth: "+900%" },
-      { label: "Demandes devis",   before: "10/mois", after: "29/mois", growth: "+290%" },
-      { label: "Position moyenne", before: "44e",     after: "6e",      growth: "Top 10", isRank: true },
+      { label: "Appels captés",    before: "4/mois",  after: "36/mois", growth: "+900%" },
+      { label: "Devis qualifiés",  before: "10/mois", after: "29/mois", growth: "+290%" },
+      { label: "Taux de conversion", before: "12%",   after: "38%",     growth: "+216%", isRank: true },
     ],
-    tools: ["SEO local", "Google Business", "Artisanat"],
+    tools: ["Agent I.A", "Automatisation", "Artisanat"],
     href: "https://express-depannage.com",
-    context: "Plombier à Bordeaux face à une concurrence locale très forte, avec une visibilité quasi nulle sur Google.",
+    context:
+      "Plombier à Bordeaux face à une concurrence locale forte. Les leads entrants étaient non qualifiés et le suivi manuel. Un agent I.A trie et qualifie désormais chaque demande.",
     actions: [
+      "Agent I.A de qualification des demandes d'urgence",
       "Création d'un site optimisé pour la capture de leads",
       "Stratégie SEO local hyper-ciblée Bordeaux",
       "Optimisation GBP avec zones d'intervention",
       "Création de pages villes environnantes",
     ],
-    stack: ["Next.js", "SEO local", "Google Business Profile", "Pages villes", "Google Search Console"],
+    stack: ["Next.js", "Agent I.A Claude", "Google Business Profile", "Pages villes", "Google Search Console"],
   },
   {
     id: "unlcoaching",
-    tags: ["Site","GBP", "SEO"],
+    tags: ["Agent I.A", "Site", "GBP"],
     city: "Gradignan",
     title: "Unlcoaching",
     category: "Coaching sportif",
-    objective: "Prise de contact pour coaching",
+    objective: "Automatiser le suivi et la prise de contact",
     metrics: [
-      { label: "RDV",        before: "25/mois", after: "45/mois", growth: "+172%" },
-      { label: "Appels",     before: "10/mois", after: "60/mois", growth: "+150%" },
-      { label: "Clics site", before: "0/mois",  after: "40/mois", growth: "+242%" },
+      { label: "RDV automatisés", before: "25/mois", after: "45/mois", growth: "+80%" },
+      { label: "Appels",          before: "10/mois", after: "60/mois", growth: "+500%" },
+      { label: "Temps admin",     before: "8h/sem",  after: "1h/sem",  growth: "-87%", isRank: true },
     ],
-    tools: ["SEO local", "Google Business", "Coaching"],
+    tools: ["Agent I.A", "Automatisation", "Coaching"],
     href: "https://unlcoaching.com",
-    context: "Augmenter les prises de contact pour coaching sportif à Gradignan, face à une concurrence locale bien référencée sur Google.",
+    context:
+      "Coach sportif à Gradignan passant trop de temps sur l'administratif. Un agent I.A gère désormais la prise de contact, le suivi des clients et les rappels automatiques.",
     actions: [
+      "Agent I.A de suivi client et relances automatiques",
       "Création d'un site optimisé pour la capture de leads",
       "Optimisation GBP avec services détaillés",
-      "Stratégie SEO local marques unlcoaching",
-      "Création de contenu article sportif & alimentaire",
-      "Campagne d'avis clients",
+      "Stratégie SEO local marque unlcoaching",
+      "Campagne d'avis clients automatisée",
     ],
-    stack: ["Next.js", "GBP", "SEO local", "Contenu", "Google Search Console"],
+    stack: ["Next.js", "Agent I.A Claude", "GBP", "SEO local", "Google Search Console"],
   },
   {
     id: "original",
-    tags: ["SEO", "GBP"],
+    tags: ["Agent I.A", "SEO", "GBP"],
     city: "Lot-et-Garonne",
     title: "Original",
     category: "E-commerce",
-    objective: "Augmenter les ventes sur le site",
+    objective: "Automatiser la relation client et les estimations",
     metrics: [
-      { label: "Estimations",      before: "3/mois",   after: "22/mois",   growth: "+633%" },
+      { label: "Estimations auto", before: "3/mois",   after: "22/mois",   growth: "+633%" },
       { label: "Trafic organique", before: "450/mois", after: "1850/mois", growth: "+311%" },
-      { label: "Appels",           before: "29/mois",  after: "58/mois",   growth: "+220%" },
+      { label: "Appels qualifiés", before: "29/mois",  after: "58/mois",   growth: "+100%" },
     ],
-    tools: ["SEO", "Google Business", "E-commerce"],
+    tools: ["Agent I.A", "Automatisation", "E-commerce"],
     href: "https://original.fr",
-    context: "Commerce en ligne dans le Lot-et-Garonne. Le site existant était peu optimisé et la fiche Google Business mal configurée. Une faible visibilité sur Google et une concurrence locale forte.",
+    context:
+      "Commerce en ligne dans le Lot-et-Garonne avec un site peu optimisé. Un agent I.A prend en charge les demandes d'estimation et qualifie les prospects avant transmission.",
     actions: [
-      "Création d'un site optimisé pour la capture de leads",
+      "Agent I.A de traitement des demandes d'estimation",
       "Stratégie de contenu sur les produits",
       "Optimisation technique SEO avancée",
       "Maillage interne et pages de ville ciblées",
     ],
-    stack: ["SEO technique", "Contenu local", "Google Search Console"],
+    stack: ["Agent I.A Claude", "SEO technique", "Contenu local", "Google Search Console"],
   },
   {
     id: "cabinet-medical-dr-ramaroson",
-    tags: ["Site", "GBP","Agent I.A"],
+    tags: ["Agent I.A Vocal", "Site", "GBP"],
     city: "Vendays-Montalivet",
     title: "Cabinet médical du Dr L. Ramaroson",
     category: "Santé",
-    objective: "Remplir le planning de consultations",
+    objective: "Automatiser la prise de rendez-vous",
     metrics: [
-      { label: "RDV en ligne",     before: "14/mois", after: "58/mois", growth: "+314%" },
-      { label: "Appels",           before: "22/mois", after: "71/mois", growth: "+223%" },
-      { label: "Position moyenne", before: "19e",     after: "6e",      growth: "Top 10", isRank: true },
+      { label: "RDV automatisés",    before: "14/mois", after: "58/mois", growth: "+314%" },
+      { label: "Appels traités",     before: "22/mois", after: "71/mois", growth: "+223%" },
+      { label: "Charge secrétariat", before: "100%",    after: "< 30%",   growth: "-70%", isRank: true },
     ],
-    tools: ["SEO local", "Google Business", "Santé"],
+    tools: ["Agent Vocal I.A", "Automatisation", "RGPD"],
     href: "https://dr-r.cabinet-vendays.com",
-    context: "Cabinet du Dr Ramaroson L. souhaitant créer un site vitrine pour prise de rendez-vous en ligne. Un Agent I.A Vocal prend les rendez-vous dans le calendrier en ligne.",
+    context:
+      "Cabinet du Dr Ramaroson L. souhaitant automatiser la prise de RDV. L'agent I.A vocal répond aux appels, vérifie les disponibilités et inscrit le RDV dans le calendrier.",
     actions: [
+      "Déploiement d'un agent vocal I.A pour prise de RDV",
+      "Intégration cal.com pour la gestion du calendrier",
       "Création site avec prise de RDV en ligne",
-      "Configuration du calendrier en ligne",
-      "Stratégie pour agent vocal I.A pour prise de RDV",
+      "Conformité RGPD complète des données patients",
       "Optimisation GBP avec spécialités généraliste",
-      "Hébergement",
+      "Hébergement souverain",
     ],
     stack: ["Next.js", "callrounded", "cal.com", "Google Business Profile", "SEO local"],
   },
   {
     id: "mon-agent-ai",
-    tags: ["Site", "Agent I.A", "SEO"],
+    tags: ["Agent I.A", "Site", "SEO"],
     city: "Bordeaux",
     title: "Mon Agent I.A",
     category: "Intelligence Artificielle",
-    objective: "Générer des demandes de démo",
+    objective: "Automatiser la génération de demandes de démo",
     metrics: [
       { label: "Demandes démo",    before: "0/mois",  after: "18/mois",  growth: "+1800%" },
       { label: "Trafic organique", before: "0/mois",  after: "320/mois", growth: "+320%" },
-      { label: "Position moyenne", before: "—",       after: "8e",       growth: "Top 10", isRank: true },
+      { label: "Leads qualifiés",  before: "0/mois",  after: "12/mois",  growth: "+1200%", isRank: true },
     ],
-    tools: ["Agent I.A", "SEO local", "Tech"],
+    tools: ["Agent I.A", "Automatisation", "Tech"],
     href: "https://www.mon-agent-ai.com",
-    context: "Agence spécialisée en agents I.A sans présence en ligne, cherchant à démontrer son expertise et capter des leads qualifiés via Google.",
+    context:
+      "Agence I.A sans présence en ligne. Un agent I.A qualifie les visiteurs, répond aux questions sur les offres et route les prospects vers le bon formulaire de contact.",
     actions: [
+      "Agent I.A de qualification et routage des prospects",
       "Création d'un site vitrine axé crédibilité tech",
       "Pages cas d'usage par secteur d'activité",
       "SEO ciblé requêtes agent I.A & automatisation",
       "Formulaire de demande de démo optimisé",
-      "Hébergement self hosting",
+      "Hébergement self hosting souverain",
     ],
-    stack: ["Next.js", "Agent I.A", "SEO local", "Google Search Console"],
+    stack: ["Next.js", "Agent I.A Claude", "SEO local", "Google Search Console"],
   },
   {
     id: "lemurian-agency",
-    tags: ["Site", "SEO", "Design"],
+    tags: ["Agent I.A", "Site", "SEO"],
     city: "Bordeaux",
     title: "Lemurian Agency",
     category: "Agence créative",
-    objective: "Renforcer la présence et capter des prospects",
+    objective: "Automatiser la qualification des prospects entrants",
     metrics: [
-      { label: "Prises de contact", before: "2/mois",  after: "19/mois",  growth: "+950%" },
-      { label: "Trafic organique",  before: "80/mois", after: "540/mois", growth: "+575%" },
-      { label: "Position moyenne",  before: "62e",     after: "11e",      growth: "Top 10", isRank: true },
+      { label: "Prospects qualifiés", before: "2/mois",  after: "19/mois",  growth: "+950%" },
+      { label: "Trafic organique",    before: "80/mois", after: "540/mois", growth: "+575%" },
+      { label: "Temps de traitement", before: "2h/lead", after: "< 5 min",  growth: "-96%", isRank: true },
     ],
-    tools: ["SEO", "Design", "Agence"],
+    tools: ["Agent I.A", "Automatisation", "Agence"],
     href: "https://www.lemurian-agency.com",
-    context: "Agence créative bordelaise avec une identité visuelle forte, cherchant à convertir sa notoriété en leads qualifiés via une présence Google optimisée.",
+    context:
+      "Agence créative bordelaise recevant des demandes non qualifiées et chronophages à traiter. Un agent I.A trie, qualifie et priorise chaque prospect avant réponse humaine.",
     actions: [
+      "Agent I.A de qualification et scoring des prospects",
       "Refonte du site avec direction artistique sur-mesure",
       "Animations d'entrée et transitions fluides",
       "Architecture SEO pensée pour l'acquisition",
       "Optimisation GBP agence créative Bordeaux",
-      "Stratégie de contenu sectorielle",
     ],
-    stack: ["Next.js", "SEO local", "Google Business Profile", "Google Search Console"],
+    stack: ["Next.js", "Agent I.A Claude", "SEO local", "Google Business Profile", "Google Search Console"],
   },
 ];
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+
+export const RealisationsHero = () => {
+  return (
+    <section className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
+        {/* Badge pill */}
+        <span
+          className="inline-flex items-center rounded-full
+                     border border-orange-200 bg-orange-50 px-4 py-1.5
+                     text-xs font-semibold tracking-widest text-orange-700
+                     uppercase dark:border-orange-800/60 dark:bg-orange-950/60
+                     dark:text-orange-300"
+        >
+          Cas clients I.A. — résultats mesurés
+        </span>
+
+        {/* Titre */}
+        <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
+          Des agents I.A. déployés,{" "}
+          <span className="text-orange-500">des process automatisés.</span>
+        </h1>
+
+        {/* Sous-titre */}
+        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+          Pas de démos. Pas de promesses. Ces entreprises ont intégré l'I.A.
+          dans leurs process métier — et mesurent aujourd'hui un gain de temps
+          et de chiffre d'affaires concrets.
+        </p>
+
+        {/* CTAs */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href="#audit-form"
+            className="rounded-md bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-400 hover:shadow-lg hover:shadow-orange-500/30 active:scale-95"
+          >
+            Commander mon audit →
+          </Link>
+          <Link
+            href="/solutions"
+            className="border-border bg-muted/30 text-foreground hover:bg-muted rounded-md border px-6 py-3 text-sm font-semibold transition-all active:scale-95"
+          >
+            Voir nos solutions
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
 
@@ -357,11 +419,13 @@ const CardMetrics = ({ metrics }: { metrics: Metric[] }) => (
           <span className="shrink-0 text-xs text-muted-foreground/40">→</span>
           <span className="shrink-0 text-xs font-semibold text-foreground">{m.after}</span>
         </div>
-        <span className={`shrink-0 text-xs font-bold ${
-          m.isRank
-            ? "rounded bg-orange-500/20 px-1.5 py-0.5 text-orange-400"
-            : "text-orange-500"
-        }`}>
+        <span
+          className={`shrink-0 text-xs font-bold ${
+            m.isRank
+              ? "rounded bg-orange-500/20 px-1.5 py-0.5 text-orange-400"
+              : "text-orange-500"
+          }`}
+        >
           {m.growth}
         </span>
       </div>
@@ -442,15 +506,10 @@ export const RealisationsGrid = () => {
           data-testid="realisations-grid"
         >
           {visibleRealisations.map((r) => (
-            <Card
-              key={r.id}
-              realisation={r}
-              onOpen={() => setSelected(r)}
-            />
+            <Card key={r.id} realisation={r} onOpen={() => setSelected(r)} />
           ))}
         </div>
 
-        {/* Toggle btn */}
         <div className="mt-10 flex justify-center">
           <button
             onClick={nextStep}
@@ -462,10 +521,7 @@ export const RealisationsGrid = () => {
       </div>
 
       {selected && (
-        <RealisationModal
-          r={selected}
-          onClose={() => setSelected(null)}
-        />
+        <RealisationModal r={selected} onClose={() => setSelected(null)} />
       )}
     </section>
   );
