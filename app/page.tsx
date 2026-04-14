@@ -42,7 +42,7 @@ export default function HomePage() {
 
       <PricingTable />
 
-      <Pricing />
+      {/* <Pricing /> */}
 
       <SectionDivider />
 
