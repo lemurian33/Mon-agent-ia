@@ -18,13 +18,12 @@ const NAV_COLUMNS = [
   {
     title: "Services",
     links: [
-      { label: "Audit I.A.",              href: "/audit" },
-      { label: "Accompagnement I.A.",     href: "/offre-solo" },
-      { label: "Solution Team",           href: "/offre-team" },
-      { label: "Pour les Entreprises",    href: "/offre-enterprise" },
-      { label: "Premium",                 href: "/offre-premium" },
-      { label: "Agent Vocal I.A",         href: "/offre-agent-vocal" },
-      { label: "Création site web",       href: "project-ar-01.vercel.app", target:"_blank" },
+      { label: "Audit I.A.",         href: "/audit" },
+      { label: "Accompagnement",     href: "/offre-solo" },
+      { label: "Solution Team",      href: "/offre-team" },
+      { label: "Entreprises",        href: "/offre-enterprise" },
+      { label: "Premium",            href: "/offre-premium" },
+      { label: "Agent Vocal I.A",    href: "/offre-agent-vocal" },
     ],
   },
   {
@@ -32,7 +31,7 @@ const NAV_COLUMNS = [
     links: [
       { label: "Claude",       target:"_blank", href: "" },
       { label: "Hostinger",    target:"_blank", href: "" },
-      { label: "Call rounded", target:"_blank", href: "" },
+      { label: "Call Rounded", target:"_blank", href: "" },
       { label: "LLm local",    target:"_blank", href: "" },
     ],
   },
@@ -43,6 +42,7 @@ const NAV_COLUMNS = [
       { label: "Plan du site",  href: "/plan-du-site" },
       { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
       { label: "Co²",           href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
+      { label: "Création site",      href: "project-ar-01.vercel.app", target:"_blank" },
     ],
   },
 ] as const;
