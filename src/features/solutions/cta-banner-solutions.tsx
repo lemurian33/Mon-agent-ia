@@ -35,8 +35,8 @@ export const CtaBannerSolutions = () => {
             className="text-3xl font-bold tracking-tight text-balance
                        text-foreground sm:text-4xl"
           >
-            Prêt à dominer{" "}
-            <span className="text-orange-500">Google dans votre ville ?</span>
+            Prêt à faire travailler{" "}
+            <span className="text-orange-500">l'I.A. pour votre business ?</span>
           </h2>
 
           {/* Sous-titre */}
@@ -44,9 +44,9 @@ export const CtaBannerSolutions = () => {
             className="mx-auto mt-4 max-w-xl text-base text-muted-foreground
                        sm:text-lg"
           >
-            Réservez un appel stratégique gratuit. On analyse votre situation,
-            on identifie vos leviers de croissance et on vous présente un plan
-            d'action concret — sans engagement.
+            Réservez un audit gratuit de 30 min. On analyse vos process, on identifie
+            ce qui peut être automatisé et on vous remet une feuille de route concrète
+            — sans engagement.
           </p>
 
           {/* CTAs */}
@@ -76,8 +76,7 @@ export const CtaBannerSolutions = () => {
 
           {/* Micro-preuves */}
           <p className="mt-6 text-xs text-muted-foreground">
-            +20 audits réalisés · Réponse en moins de 24h · Bordeaux,
-            Nouvelle-Aquitaine
+            +20 audits I.A. réalisés · Réponse en moins de 24h · Conforme RGPD · Bordeaux,Nouvelle-Aquitaine
           </p>
         </div>
       </div>
