@@ -1,79 +1,83 @@
 import React from 'react';
 import {
-  Database, 
+  Brain,
   HardDrive,
   User,
   Shield,
   MonitorCog,
   Users,
-  Coins,
+  Zap,
   Headphones,
-  Search,
+  BookOpen,
   BarChart2,
-  MapPin,
+  Lock,
+  Bot,
+  Network,
+  GraduationCap,
 } from "lucide-react";
 
 const PricingTable = () => {
   const LIMITS_CONFIG = {
-    projects: {
-      icon: Database,
-      getLabel: (value: number) =>
-        `${value === 1 ? "Hébergé par mon-agentai.cloud" : "Hébergé sur votre-domain.com"}`,
-      description: "Environnement de développement.",
-    },
-    storage: {
+    hosting: {
       icon: HardDrive,
-      getLabel: (value: number) => `${value} GB Storage`,
-      description: "Stockage des fichiers",
+      getLabel: (value: number) =>
+        value === 1 ? "Hébergé sur mon-agentai.cloud" : "Hébergé sur votre domaine",
+      description: "Environnement souverain et sécurisé",
+    },
+    llm: {
+      icon: Brain,
+      getLabel: (value: number) =>
+        value === 1 ? "Claude & LLM open source" : "LLM premium dernière génération",
+      description: "Modèles d'IA intégrés",
     },
     members: {
       icon: Users,
       getLabel: (value: number) =>
-        `${value} Team ${value === 1 ? "Member" : "Members"}`,
-      description: "Nombre de license membre",
+        value === 1 ? "1 utilisateur" : `${value} utilisateurs`,
+      description: "Licences incluses",
     },
   };
 
   const ADDITIONAL_FEATURES = {
-    free: [
-      { icon: User, label: "Site web professionnel inclus", description: "Inclus dans votre abonnement" },
-      { icon: Search, label: "Stratégie SEO local déployée", description: "Visibilité locale optimisée" },
-      { icon: MonitorCog, label: "Création de contenu mensuel", description: "Contenu régulier pour votre site" },
-      { icon: Shield, label: "Hébergement & maintenance inclus", description: "Zéro souci technique" },
+    solo: [
+      { icon: GraduationCap, label: "Formation Claude de A à Z", description: "Apprenez à maîtriser l'IA au quotidien" },
+      { icon: MonitorCog, label: "Accompagnement intégration personnalisé", description: "Adapté à votre métier" },
+      { icon: BookOpen, label: "Prompts & templates métier inclus", description: "Prêts à l'emploi dès le départ" },
+      { icon: Users, label: "Accès communauté privée", description: "Entraide et ressources exclusives" },
     ],
-    pro: [
-      { icon: MonitorCog, label: "Design sur-mesure responsive", description: "Adapté à tous les écrans" },
-      { icon: Search, label: "Optimisation SEO native", description: "Référencement intégré dès la création" },
-      { icon: BarChart2, label: "Performances maximales", description: "Site rapide et optimisé" },
-      { icon: HardDrive, label: "+ de 5 pages selon votre activité", description: "Structure complète" },
+    team: [
+      { icon: HardDrive, label: "Hébergement Coolify inclus", description: "Infrastructure souveraine RGPD" },
+      { icon: Zap, label: "Automatisation n8n + RAG", description: "Workflows et mémoire vectorielle" },
+      { icon: Brain, label: "LLM open source (Claude & autres)", description: "Modèles configurés pour votre métier" },
+      { icon: Shield, label: "Conformité RGPD complète", description: "Vos données restent les vôtres" },
     ],
-    ultra: [
-      { icon: Search, label: "Audit SEO technique complet", description: "Analyse approfondie de votre site" },
-      { icon: MonitorCog, label: "Recherche de mots-clés stratégiques", description: "Ciblage précis de votre marché" },
-      { icon: BarChart2, label: "Optimisation on-page", description: "Chaque page optimisée" },
-      { icon: Shield, label: "Stratégie de contenu", description: "Plan éditorial sur-mesure" },
+    enterprise: [
+      { icon: BarChart2, label: "KV8 haute performance", description: "Infrastructure plus puissante" },
+      { icon: Brain, label: "Gemma 4 & modèles premium", description: "LLM dernière génération" },
+      { icon: Network, label: "RAG avancé multi-sources", description: "Connexion à vos bases de données" },
+      { icon: Headphones, label: "Support prioritaire dédié", description: "Onboarding équipe complet" },
     ],
   };
 
   const Packs = [
     {
-      title: "Audit de visibilité",
-      price: "97€",
-      subtitle: "alanyse complète de votre présence en ligne avec recommandations personnalisées",
-      cta: "En savoir plus →",
+      title: "Audit I.A. gratuit",
+      price: "Offert",
+      subtitle: "30 min pour identifier vos process automatisables et estimer vos gains concrets.",
+      cta: "Réserver mon audit →",
       ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
     },
     {
-      title: "Optimisattion Fiche Google",
-      price: "247€",
-      subtitle: "à partir de",
-      cta: "En savoir plus →",
+      title: "Intégration sur mesure",
+      price: "Sur devis",
+      subtitle: "Déploiement full stack personnalisé avec intégrations métier spécifiques.",
+      cta: "Nous contacter →",
       ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
     },
     {
-      title: "Référencement web (SEO)",
-      price: "497€",
-      subtitle: "à partir de",
+      title: "Formation équipe",
+      price: "Sur devis",
+      subtitle: "Sessions pratiques avancées sur cas concrets issus de votre métier.",
       cta: "En savoir plus →",
       ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
     },
@@ -81,43 +85,43 @@ const PricingTable = () => {
 
   const plans = [
     {
-      name: "free",
-      displayName: "Clé en main",
-      subtitle: "Votre présence Google gérée de A à Z, avec site web, SEO local et CRM pour le suivi.",
-      price: "79€",
+      name: "solo",
+      displayName: "Solo",
+      subtitle: "Formation complète + accompagnement pour intégrer Claude dans votre quotidien. Idéal pour les indépendants.",
+      price: "97€",
       priceUnit: "/mois",
-      yearlyPrice: "Premier paiement dans 15 jrs",
-      cta: "Démarrer maintenant →",
+      yearlyPrice: "Sans engagement",
+      cta: "Démarrer →",
       ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
       popular: false,
-      limits: { projects: 1, storage: 0.3, members: 1 },
-      additionalFeatures: ADDITIONAL_FEATURES.free,
+      limits: { hosting: 1, llm: 1, members: 1 },
+      additionalFeatures: ADDITIONAL_FEATURES.solo,
     },
     {
-      name: "pro",
-      displayName: "Création de site web",
-      subtitle: "Site web professionnel qui attire, convainc et convertit — pas juste beau, mais conçu pour ramener des clients.",
-      price: "997€",
-      priceUnit: "",
-      yearlyPrice: "tout compris",
-      cta: "En savoir plus →",
+      name: "team",
+      displayName: "Team",
+      subtitle: "Écosystème I.A. complet, souverain et conforme RGPD. Automatisation et LLM open source pour votre équipe.",
+      price: "147€",
+      priceUnit: "/mois",
+      yearlyPrice: "Sans engagement",
+      cta: "Découvrir →",
       ctaStyle: "bg-orange-500 hover:bg-orange-600 text-white",
       popular: true,
-      limits: { projects: 1, storage: 200, members: 1 },
-      additionalFeatures: ADDITIONAL_FEATURES.pro,
+      limits: { hosting: 2, llm: 1, members: 5 },
+      additionalFeatures: ADDITIONAL_FEATURES.team,
     },
     {
-      name: "ultra",
-      displayName: "Référencement web (SEO)",
-      subtitle: "Stratégie SEO complète pour améliorer votre positionnement sur Google.",
-      price: "497€",
-      priceUnit: "",
-      yearlyPrice: "à partir de",
+      name: "enterprise",
+      displayName: "Enterprise",
+      subtitle: "Tout le plan Team avec une infrastructure plus puissante et des modèles de dernière génération.",
+      price: "297€",
+      priceUnit: "/mois",
+      yearlyPrice: "Sans engagement",
       cta: "En savoir plus →",
       ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
       popular: false,
-      limits: { projects: 1, storage: 400, members: 1 },
-      additionalFeatures: ADDITIONAL_FEATURES.ultra,
+      limits: { hosting: 2, llm: 2, members: 10 },
+      additionalFeatures: ADDITIONAL_FEATURES.enterprise,
     },
   ];
 

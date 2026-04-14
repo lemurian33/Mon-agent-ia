@@ -12,8 +12,8 @@ import { Footer } from "@/features/layout/footer";
 import { About } from "@/features/landing/about";
 import { AuditForm } from "@/features/landing/audit/audit-form";
 import { CtaBanner } from "@/features/landing/cta-banner";
-// import PricingTable  from "@/features/plans/pricing-table";
-// import {Pricing} from "@/features/plans/pricing-section";
+import PricingTable  from "@/features/plans/pricing-table";
+import {Pricing} from "@/features/plans/pricing-section";
 
 export default function HomePage() {
   return (
@@ -34,15 +34,15 @@ export default function HomePage() {
 
       <Testimonials />       
 
-      <Partnership/>
+      {/* <Partnership/> */}
 
       <AuditForm />
 
       <CtaBanner />
 
-      {/* <PricingTable /> */}
+      <PricingTable />
 
-      {/* <Pricing /> */}
+      <Pricing />
 
       <SectionDivider />
 
