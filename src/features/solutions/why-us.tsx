@@ -7,6 +7,8 @@ import {
   Gauge,
 } from "lucide-react";
 
+import Link from "next/link";
+
 type Reason = {
   icon: React.ElementType;
   title: string;
