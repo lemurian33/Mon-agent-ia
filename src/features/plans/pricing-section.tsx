@@ -8,31 +8,27 @@ import Link from "next/link";
 import { useState } from "react";
 import { PricingCard } from "./pricing-card";
 
-// Static packs — purely visual, no Stripe logic
 const COMMUNICATION_PACKS = [
   {
-    title: "Audit de visibilité",
-    price: "97€",
-    subtitle: "alanyse complète de votre présence en ligne avec recommandations personnalisées",
-    cta: "En savoir plus →",
-    ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
-    href: "/services/audit-visibilite",
+    title: "Audit I.A. gratuit",
+    price: "Offert",
+    subtitle: "30 min pour identifier vos process automatisables et estimer vos gains concrets. Sans engagement.",
+    cta: "Réserver mon audit →",
+    href: "/#audit-form",
   },
+  // {
+  //   title: "Formation équipe",
+  //   price: "Sur devis",
+  //   subtitle: "Sessions pratiques sur cas concrets issus de votre métier. Pas de théorie inutile.",
+  //   cta: "En savoir plus →",
+  //   href: "/contact",
+  // },
   {
-    title: "Optimisattion Fiche Google",
-    price: "247€",
-    subtitle: "alanyse complète de votre présence en ligne avec recommandations personnalisées",
-    cta: "En savoir plus →",
-    ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
-    href: "/services/partenariat-leads",
-  },
-  {
-    title: "Référencement web (SEO)",
-    price: "497€",
-    subtitle: "alanyse complète de votre présence en ligne avec recommandations personnalisées",
-    cta: "En savoir plus →",
-    ctaStyle: "bg-gray-800 hover:bg-gray-900 text-white",
-    href: "/services/optimisation-fiche-google",
+    title: "Intégration sur mesure",
+    price: "Sur devis",
+    subtitle: "Déploiement full stack personnalisé avec intégrations métier spécifiques et SLA dédié.",
+    cta: "Nous contacter →",
+    href: "/contact",
   },
 ];
 
@@ -46,10 +42,10 @@ export function Pricing() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Choisissez votre forfait
+              Choisissez votre niveau d'intégration I.A.
             </h2>
             <p className="text-muted-foreground max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Choisissez le forfait idéal pour vos besoins. Passez à un forfait supérieur ou inférieur à tout moment.
+              De la formation solo à l'écosystème enterprise — souverain, conforme RGPD et taillé pour votre métier.
             </p>
           </div>
 
@@ -63,7 +59,7 @@ export function Pricing() {
                   : "text-muted-foreground",
               )}
             >
-              Mois
+              Mensuel
             </span>
             <Switch
               checked={isYearly}
@@ -78,12 +74,12 @@ export function Pricing() {
                   : "text-muted-foreground",
               )}
             >
-              <span className="text-sm font-medium">Yearly</span>
+              <span className="text-sm font-medium">Annuel</span>
               <Badge
                 variant="outline"
                 className="border-orange-200 bg-orange-50 text-orange-600 ml-2"
               >
-                Economiser 20%
+                Économiser 20%
               </Badge>
             </div>
           </div>
@@ -92,7 +88,7 @@ export function Pricing() {
         {/* 4-column grid: 1 packs column + 3 plan cards */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
-          {/* Left column — static communication packs */}
+          {/* Left column — static packs */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
               {COMMUNICATION_PACKS.map((pack, index) => (
@@ -131,10 +127,10 @@ export function Pricing() {
         {/* Footer note */}
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            Tous les plans incluent un audit de visibilité gratuit et un accompagnement personnalisé pour booster votre présence en ligne.
+            Tous les plans incluent un audit I.A. gratuit et un accompagnement personnalisé pour identifier vos opportunités d'automatisation.
           </p>
           <p className="text-muted-foreground mt-2">
-            Besoin d'un plan personnalisé ?{" "}
+            Besoin d'une configuration sur mesure ?{" "}
             <Link
               href="/contact"
               className="text-orange-500 font-medium hover:underline"
