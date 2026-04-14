@@ -22,8 +22,8 @@ const NAV_COLUMNS = [
       { label: "Accompagnement",     href: "/offre-solo" },
       { label: "Solution Team",      href: "/offre-team" },
       { label: "Entreprises",        href: "/offre-enterprise" },
-      { label: "Premium",            href: "/offre-premium" },
       { label: "Agent Vocal I.A",    href: "/offre-agent-vocal" },
+      { label: "Premium",            href: "/offre-premium" },
     ],
   },
   {
@@ -40,9 +40,9 @@ const NAV_COLUMNS = [
     links: [
       { label: "Espace client", href: "/signin" },
       { label: "Plan du site",  href: "/plan-du-site" },
+      { label: "Création site",      href: "project-ar-01.vercel.app", target:"_blank" },
       { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
       { label: "Co²",           href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
-      { label: "Création site",      href: "project-ar-01.vercel.app", target:"_blank" },
     ],
   },
 ] as const;

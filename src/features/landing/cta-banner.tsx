@@ -24,7 +24,7 @@ export const CtaBanner = () => {
           </h2>
 
           {/* Sous-titre */}
-          <p className="mx-auto mt-4 max-w-lg text-sm
+          <p className="mx-auto mt-4 max-w-3xl text-sm
                         text-muted-foreground leading-relaxed">
             Appel offert. Sans engagement. On vient préparés avec une analyse
             de votre situation. Vous repartez avec un plan — que vous travailliez 

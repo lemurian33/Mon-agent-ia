@@ -52,7 +52,7 @@ export const HeroSolution = () => {
 
         {/* Sous-titre */}
         <p
-          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed
+          className="mx-auto mt-6 max-w-3xl text-base leading-relaxed
                      text-muted-foreground sm:text-lg"
         >
           Automatisation, agents I.A. et formation sur mesure. Tout ce qu'il faut

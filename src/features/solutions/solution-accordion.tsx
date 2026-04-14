@@ -25,7 +25,7 @@ const SOLUTIONS: Solution[] = [
     description:
       "30 min pour identifier exactement quels process de votre business peuvent être automatisés — et combien ça vous ferait gagner.",
     details:
-      "On analyse vos process métier ensemble : tâches répétitives, points de friction, opportunités d'automatisation. Vous repartez avec un plan d'intégration concret et priorisé, adapté à votre activité. Sans engagement.",
+      "On analyse vos process métier ensemble: tâches répétitives, points de friction, opportunités d'automatisation. Vous repartez avec un plan d'intégration concret et priorisé, adapté à votre activité. Sans engagement.",
     included: [
       "Analyse de vos process métier en 30 min",
       "Identification des tâches automatisables",
