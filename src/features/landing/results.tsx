@@ -23,7 +23,7 @@ type ResultCard = {
 const RESULTS: ResultCard[] = [
   {
     client: "Unlcoaching | Coaching sportif",
-    secteur: "Automatisation administrative",
+    secteur: "Automatisation administrative + onboading client",
     metriques: [
       { icon: Clock,        label: "Temps admin économisé", delta: "-68%",   highlight: true },
       { icon: Users,        label: "Clients suivis",        delta: "+3x",    highlight: true },
@@ -39,17 +39,17 @@ const RESULTS: ResultCard[] = [
       { icon: Clock,        label: "Temps de réponse",      delta: "-80%",   highlight: true },
       { icon: BrainCircuit, label: "Relances automatiques", delta: "24/7",   highlight: false },
     ],
-    tags: ["Agent I.A.", "Chatbot", "RGPD", "Formation"],
+    tags: ["Agent I.A.", "Automatisation complexe", "RGPD", "Formation"],
   },
   {
     client: "Cabinet Médical | Dr Campagne F.",
-    secteur: "Gestion des rendez-vous",
+    secteur: "Gestion des rendez-vous et apel vocal",
     metriques: [
       { icon: Calendar,     label: "RDV automatisés",       delta: "+487%",  highlight: true },
       { icon: ShieldCheck,  label: "Conformité RGPD",       delta: "100%",   highlight: false },
       { icon: Activity,     label: "Charge secrétariat",    delta: "-155%",   highlight: true },
     ],
-    tags: ["Agent I.A.", "RGPD", "Automatisation", "Formation"],
+    tags: ["Agent vocal I.A.", "Automatisation rdv", "Formation","RGPD"],
   },
 ];
 
@@ -81,7 +81,7 @@ export const Results = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            Des résultats mesurables, chez des vrais clients — sans jargon, sans magie.
+            Des résultats mesurables et aucune limite chez des vrais clients — sans jargon, sans magie.
           </Typography>
         </div>
 

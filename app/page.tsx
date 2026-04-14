@@ -7,12 +7,10 @@ import { Results } from "@/features/landing/results";
 import { Offers } from "@/features/landing/offers";
 import { SectionDivider } from "@/features/landing/section-divider";
 import { Testimonials } from "@/features/landing/testimonials";
-// import { Partnership } from "@/features/landing/partnership";
 import { Footer } from "@/features/layout/footer";
 import { About } from "@/features/landing/about";
 import { AuditForm } from "@/features/landing/audit/audit-form";
 import { CtaBanner } from "@/features/landing/cta-banner";
-// import PricingTable  from "@/features/plans/pricing-table";
 import {Pricing} from "@/features/plans/pricing-section";
 
 export default function HomePage() {
@@ -34,15 +32,9 @@ export default function HomePage() {
 
       <Testimonials />       
 
-      {/* <Partnership/> */}
-
       <AuditForm />
 
       <CtaBanner />
-
-      {/* <PricingTable /> */}
-
-      {/* <Pricing /> */}
 
       <SectionDivider />
 

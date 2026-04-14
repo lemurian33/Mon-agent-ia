@@ -11,7 +11,7 @@ const VALUES = [
 ];
 
 const COMMITMENTS = [
-  "Je vous accompagne et vous forme à l'intégration de l'I.A.",
+  "Je vous accompagne et vous forme à l'intégration de l'I.A",
   "J'intègre l'I.A. directement dans vos process métier",
   "Je déploie un écosystème souverain, hébergé et sécurisé",
 ];
@@ -37,7 +37,7 @@ export const About = () => {
             className="mt-4 text-3xl font-semibold tracking-tight
                        text-balance sm:text-4xl"
           >
-            Développeur Full Stack & expert I.A. <br />
+            Développeur Full Stack & expert I.A <br />
             au service de votre business
           </Typography>
 
@@ -45,7 +45,7 @@ export const About = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            Code, automatisation et intelligence artificielle — pour des résultats concrets, pas des promesses.
+            Du code, automatisation et intelligence artificielle — pour des résultats concrets, pas des promesses.
           </Typography>
         </div>
 
@@ -69,7 +69,7 @@ export const About = () => {
               </div>
               {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0
-                              rounded-b-xl bg-black/60 px-4 py-3
+                              rounded-b-xl  bg-black/60 px-4 py-3
                               backdrop-blur-sm">
                 <p className="text-sm font-semibold text-white">
                   Andy Ramaroson
@@ -92,11 +92,12 @@ export const About = () => {
                 <strong className="font-semibold text-foreground">
                   Mon agent Ai
                 </strong>
-                , j'ai passé des années à développer des applications web et à
+                , j'ai passé des années à développer des applications web avec 
+                <Link href="" target="_blank" className=""><strong className="font-semibold text-orange-500">Lemurian Agency</strong></Link>et à
                 explorer l'écosystème I.A. de l'intérieur. Aujourd'hui, je mets
-                cette double expertise au service d'un seul objectif :{" "}
+                cette double expertise au service d'un seul objectif:{" "} <br/>
                 <strong className="font-semibold text-foreground">
-                  vous donner un site qui convertit et une I.A. qui travaille pour vous.
+                  vous donner les clées d'un eco système autonome qui convertit et des agents I.A. qui travaillent pour vous.
                 </strong>
               </p>
 

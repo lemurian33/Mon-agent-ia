@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { BarChart2, Clock, Zap, Users } from "lucide-react";
 import { SectionDivider } from "@/features/landing/section-divider";
@@ -27,7 +25,7 @@ export const Hero = () => {
             <h1 className="text-4xl font-bold tracking-tight text-balance
                            text-foreground sm:text-5xl lg:text-6xl
                            lg:leading-tight">
-              Vous cherchez à intégrer de l'I.A. <br/> {" "}
+              Vous cherchez à intégrer de l'I.A <br/> {" "}
               <span className="text-orange-500">
                 Mais vous ne savez pas par où commencer ?
               </span>
@@ -118,10 +116,10 @@ const BADGES = [
 ] as const;
 
 const STATS = [
-  { icon: BarChart2, value: "+20 audits I.A. réalisés", label: "" },
+  { icon: BarChart2, value: "+15 audits I.A. réalisés", label: "" },
   { icon: Clock,     value: "Réponse < 24h",            label: "" },
   { icon: Zap,       value: "Automatisation rapide",    label: "" },
-  { icon: Users,     value: "Orienté ROI",              label: "" },
+  { icon: Users,     value: "Orienté Zero Employé",     label: "" },
 ] as const;
 
 // ── Background ───────────────────────────────────────────────────

@@ -33,6 +33,7 @@ const OFFERS: Offer[] = [
       "Identification des opportunités I.A.",
       "Estimation des gains concrets",
       "Feuille de route personnalisée",
+      "conseil expertise IA",
     ],
     cta: "Réserver mon audit",
     href: "/#audit-form",
@@ -45,20 +46,19 @@ const OFFERS: Offer[] = [
     price: "97€",
     priceUnit: "par mois",
     description:
-      "Formation complète + accompagnement pour intégrer Claude dans votre quotidien. Idéal pour les indépendants et solopreneurs.",
+      "Formation complète + accompagnement pour intégrer eco systeme Claude dans votre quotidien. Idéal pour les indépendants et solopreneurs.",
     features: [
-      "Formation Claude de A à Z",
-      "Accompagnement intégration personnalisé",
-      "Prompts & templates métier inclus",
-      "Accès communauté privée",
+      "Formation Claude eco systeme de A à Z",
+      "Accompagnement et intégration personnalisé",
+      "On configure ensemble et pas à pas tous vos besoins",
+      "support client",
     ],
     cta: "Démarrer",
     href: "/offre-solo",
-    popular: true,
+    popular: false,
   },
   {
     id: "team",
-    badge: "NOUVEAU",
     title: "Team",
     price: "147€",
     priceUnit: "par mois",
@@ -78,8 +78,8 @@ const OFFERS: Offer[] = [
   },
   {
     id: "enterprise",
-    badge: "PUISSANT",
-    title: "Enterprise",
+    badge: "Puissant",
+    title: "Entreprise",
     price: "297€",
     priceUnit: "par mois",
     description:
@@ -102,16 +102,16 @@ const OFFERS: Offer[] = [
     price: "Sur devis",
     priceUnit: "configuration full custom",
     description:
-      "Configuration complète sur mesure. Pour les structures qui veulent aller plus loin, plus vite, sans compromis.",
+      "Eco systeme ultra performant, Configuration complète sur mesure. Pour les structures qui veulent aller plus loin, plus vite, sans compromis.",
     features: [
       "Audit & architecture I.A. sur mesure",
       "Déploiement full stack personnalisé",
       "Intégrations métier spécifiques",
       "Formation équipes avancée",
-      "SLA & accompagnement long terme",
+      "Accompagnement long terme",
     ],
     cta: "Nous contacter",
-    href: "/contact",
+    href: "/offre-premium",
     popular: false,
   },
   {
@@ -121,7 +121,7 @@ const OFFERS: Offer[] = [
     price: "À partir de 159€",
     priceUnit: "par mois",
     description:
-      "Un agent vocal I.A. 500 min puis 0.25€/min répond à vos appels entrants 24h/24, qualifie vos prospects et prend des rendez-vous — sans secrétaire, sans raté.",
+      "Un agent vocal I.A. répond à vos appels entrants 24h/24, qualifie vos prospects et prend des rendez-vous — sans secrétaire, sans raté.(500 min inclus puis 0.25€/min)",
     features: [
       "Réponse automatique aux appels entrants",
       "Qualification & prise de RDV automatisée",
@@ -182,7 +182,7 @@ export const Offers = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-balance"
           >
-            De la formation solo à l'écosystème enterprise — souverain, conforme RGPD et taillé pour votre métier.
+            De l'accompagnement solo à l'écosystème I.A d'entreprise  — souverain, conforme RGPD et taillé pour votre métier.
           </Typography>
         </div>
 

@@ -81,7 +81,7 @@ export const HowItWorks = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            De l'appel au premier lead — voici comment ça se passe
+            De l'appel à la livraison — voici comment ça se passe
           </Typography>
         </div>
 
