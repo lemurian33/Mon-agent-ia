@@ -24,7 +24,7 @@ const NAV_COLUMNS = [
       { label: "Pour les Entreprises",    href: "/offre-enterprise" },
       { label: "Premium",                 href: "/offre-premium" },
       { label: "Agent Vocal I.A",         href: "/offre-agent-vocal" },
-      { label: "Création site web",       href: "project-ar-01.vercel.app", target="_blank" },
+      { label: "Création site web",       href: "project-ar-01.vercel.app", target:"_blank" },
     ],
   },
   {
@@ -39,10 +39,10 @@ const NAV_COLUMNS = [
   {
     title: "Informations",
     links: [
-      { label: "Espace client",           href: "/signin" },
-      { label: "Plan du site",            href: "/plan-du-site" },
-      { label: "Performance",target:"_blank", href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#" },
-      { label: "Co²",target:"_blank", href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#" },
+      { label: "Espace client", href: "/signin" },
+      { label: "Plan du site",  href: "/plan-du-site" },
+      { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
+      { label: "Co²",           href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
     ],
   },
 ] as const;
