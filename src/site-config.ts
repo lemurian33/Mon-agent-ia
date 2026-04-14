@@ -1,7 +1,7 @@
 export const SiteConfig = {
   title: "Mon agent ai",
-  description: "Aide les entrerpises vers leur treansition numérique",
-  prodUrl: "https://project-ar-04.vercel.app/",
+  description: "Aide les entrerpises intégrer l'I.A dans leur process",
+  prodUrl: "https://mon-agent-ia-seven.vercel.app/",
   appId: "AgentAi",
   domain: "demo.nowts.app",
   appIcon: "/images/icon.png",
