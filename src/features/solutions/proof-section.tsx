@@ -34,6 +34,13 @@ const PROOFS: Proof[] = [
   },
 ];
 
+type Testimonial = {
+  quote: string;
+  author: string;
+  role: string;
+  growth: string;
+};
+
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:

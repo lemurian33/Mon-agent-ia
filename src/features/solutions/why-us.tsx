@@ -1,55 +1,48 @@
 import {
-  Target,
-  BarChart3,
   ShieldCheck,
   Users,
   Clock,
-  MapPin,
+  Bot,
+  Fingerprint,
+  Gauge,
 } from "lucide-react";
-import Link from "next/link";
-
-type Reason = {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-};
 
 const REASONS: Reason[] = [
   {
-    icon: Target,
-    title: "Uniquement le SEO local",
+    icon: Bot,
+    title: "Experts Claude & LLM",
     description:
-      "On ne fait pas tout — on fait une chose parfaitement. Pas de SEO national, pas de pub payante : 100% de notre énergie sur le local.",
-  },
-  {
-    icon: BarChart3,
-    title: "Résultats mesurables",
-    description:
-      "Chaque action est trackée : appels, itinéraires, positions, trafic. Vous voyez l'impact réel, pas des métriques de vanité.",
+      "On ne revend pas des outils grand public — on maîtrise les modèles de fond : Claude, Gemma, RAG, n8n. Chaque solution est pensée pour votre métier, pas copiée d'un template.",
   },
   {
     icon: ShieldCheck,
-    title: "Zéro bullshit",
+    title: "100% conforme RGPD",
     description:
-      "Pas de contrats longs si les résultats ne suivent pas. Si ça ne marche pas, vous ne payez pas. Simple.",
+      "Vos données ne quittent pas votre périmètre. Hébergement souverain, droits d'accès documentés, conformité intégrée dès la conception — pas en option.",
+  },
+  {
+    icon: Fingerprint,
+    title: "Sur mesure, pas du prêt-à-porter",
+    description:
+      "Chaque agent, chaque automatisation est construit sur votre contexte réel. Pas de solution générique revendue à 50 clients — on part de vos process, pas des nôtres.",
   },
   {
     icon: Users,
     title: "Interlocuteur unique",
     description:
-      "Andy gère votre dossier du début à la fin. Pas de junior qui tâtonne, pas de turnover, pas de Chinese whispers.",
+      "Andy gère votre projet du premier audit au déploiement final. Pas de junior qui tâtonne, pas de turnover, pas de perte d'information entre deux interlocuteurs.",
   },
   {
     icon: Clock,
-    title: "Réponse en moins de 24h",
+    title: "Résultats rapides et mesurables",
     description:
-      "Vous avez une question à 22h ? Vous avez une réponse le lendemain matin. L'agilité d'un indépendant, l'expertise d'une agence.",
+      "Premiers agents opérationnels en quelques semaines. Chaque automatisation est trackée : temps gagné, tâches traitées, impact métier réel — pas des métriques de vanité.",
   },
   {
-    icon: MapPin,
-    title: "Ancré en Nouvelle-Aquitaine",
+    icon: Gauge,
+    title: "Formation & autonomie incluses",
     description:
-      "On connaît le terrain : les villes, les habitudes de recherche, les concurrents locaux. C'est un vrai avantage stratégique.",
+      "On ne vous rend pas dépendants. Vos équipes sont formées pour piloter, faire évoluer et tirer le maximum de l'écosystème — même sans nous.",
   },
 ];
 
@@ -76,8 +69,7 @@ export const WhyUs = () => {
             Ce qui nous rend différents
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
-            Beaucoup d'agences promettent le top 1 Google. On préfère vous
-            montrer comment on y arrive — et pourquoi ça dure.
+            Beaucoup parlent d'I.A. On préfère vous montrer comment on l'intègre concrètement — et pourquoi ça dure.
           </p>
         </div>
 
@@ -125,10 +117,10 @@ export const WhyUs = () => {
           >
             <div>
               <p className="text-sm font-bold text-foreground">
-                Garantie résultats 
+                Premiers résultats en moins de 30 jours
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Amélioration mesurable dans les 90 premiers jours.
+                Ou on ajuste jusqu'à ce que ce soit le cas
               </p>
             </div>
             <Link
@@ -138,7 +130,7 @@ export const WhyUs = () => {
                          hover:bg-orange-400 hover:shadow-lg
                          hover:shadow-orange-500/20 active:scale-95"
             >
-              Tester sans risque →
+              Réserver mon audit gratuit →
             </Link>
           </div>
         </div>
