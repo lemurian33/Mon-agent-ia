@@ -1,18 +1,19 @@
 import { Typography } from "@/components/nowts/typography";
-import { ShieldCheck, Target, Zap, AlertTriangle, CheckCircle } from "lucide-react";
+import { ShieldCheck, BrainCircuit, Zap, Code2, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const VALUES = [
-  { icon: ShieldCheck,   label: "Fiabilité totale" },
-  { icon: Target,        label: "SEO orienté conversion" },
-  { icon: Zap,           label: "Réactivité maximale" },
-  { icon: AlertTriangle, label: "Zéro approximation" },
+  { icon: BrainCircuit, label: "Expert Claude & LLM" },
+  { icon: ShieldCheck,  label: "100% conforme RGPD" },
+  { icon: Code2,        label: "Développeur Full Stack" },
+  { icon: Zap,          label: "Résultats concrets" },
 ];
+
 const COMMITMENTS = [
-  "Optimise votre site pour qu'il performe techniquement",
-  "Je capte vos leads dans un CRM opérationnel",
-  "Je vous positionne sur Google avec une stratégie SEO",
+  "Je construis votre site web taillé pour convertir",
+  "J'intègre l'I.A. directement dans vos process métier",
+  "Je déploie un écosystème souverain, hébergé et sécurisé",
 ];
 
 export const About = () => {
@@ -36,14 +37,15 @@ export const About = () => {
             className="mt-4 text-3xl font-semibold tracking-tight
                        text-balance sm:text-4xl"
           >
-            Pourquoi un développeur et I.A <br/>est votre meilleur allié SEO
+            Développeur Full Stack & expert I.A. <br />
+            au service de votre business
           </Typography>
 
           <Typography
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-pretty"
           >
-            Code, data et IA au service de votre visibilité locale.
+            Code, automatisation et intelligence artificielle — pour des résultats concrets, pas des promesses.
           </Typography>
         </div>
 
@@ -73,34 +75,28 @@ export const About = () => {
                   Andy Ramaroson
                 </p>
                 <p className="text-xs text-gray-300">
-                  Fondateur, Lemurian Agency 
+                  Fondateur, Lemurian Agency
                 </p>
                 <p className="text-xs text-gray-300">
-                  Developpeur Full Stack  
+                  Développeur Full Stack & Intégrateur I.A.
                 </p>
               </div>
             </div>
 
             {/* ── Colonne droite — texte ── */}
             <div className="flex flex-col gap-6">
-              {/* <p className="text-sm leading-relaxed text-muted-foreground">
-                Avant de créer{" "}
-                <strong className="font-semibold text-foreground">Lemurian Agency</strong>
-                , j'étais développeur Full stack — obsédé par le détail technique. 
-                Aujourd'hui, je mets ce regard au service d'une seule promesse :{" "}
-                <strong className="font-semibold text-foreground">
-                  un site qui travaille pour vous, même quand vous dormez.
-                </strong>
-              </p> */}
 
               {/* Texte intro */}
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Avant de créer{" "}
-                <strong className="font-semibold text-foreground">Lemurian Agency</strong>
-                , j'ai codé des dizaines de sites pour comprendre ce qui convertit vraiment. 
-                Aujourd'hui, cette expertise sert un seul objectif :{" "}
                 <strong className="font-semibold text-foreground">
-                  transformer votre visibilité Google en clients concrets.
+                  Lemurian Agency
+                </strong>
+                , j'ai passé des années à développer des applications web et à
+                explorer l'écosystème I.A. de l'intérieur. Aujourd'hui, je mets
+                cette double expertise au service d'un seul objectif :{" "}
+                <strong className="font-semibold text-foreground">
+                  vous donner un site qui convertit et une I.A. qui travaille pour vous.
                 </strong>
               </p>
 
@@ -113,10 +109,7 @@ export const About = () => {
                     className="flex items-center gap-2.5 rounded-xl
                                border border-border bg-muted/30 px-4 py-3"
                   >
-                    <Icon
-                      size={15}
-                      className="shrink-0 text-orange-500"
-                    />
+                    <Icon size={15} className="shrink-0 text-orange-500" />
                     <span className="text-xs font-medium text-foreground">
                       {label}
                     </span>
