@@ -109,7 +109,7 @@ const OFFERS: Offer[] = [
       "Réponse automatique aux appels entrants",
       "Qualification & prise de RDV automatisée",
       "Intégration à votre agenda , CRM",
-      "500 min inclus puis 0.25€/min"
+      "500 min inclus puis 0.25€/min",
       "Disponible 24h/24, 7j/7",
       "Conforme RGPD",
     ],
