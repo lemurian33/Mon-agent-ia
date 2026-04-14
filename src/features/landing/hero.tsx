@@ -10,7 +10,7 @@ export const Hero = () => {
       <GradientBackground />
 
       <div className="relative py-24 sm:py-32 lg:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-8xl px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
 
             {/* Badge */}
