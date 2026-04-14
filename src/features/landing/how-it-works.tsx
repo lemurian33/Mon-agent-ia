@@ -1,5 +1,5 @@
 import { Typography } from "@/components/nowts/typography";
-import { ClipboardList, Compass, Rocket, BarChart2, HeartHandshake, Globe } from "lucide-react";
+import { CalendarCheck, BrainCircuit, ShieldCheck, Rocket, BarChart2, HeartHandshake } from "lucide-react";
 
 type Step = {
   number: string;
@@ -11,45 +11,45 @@ type Step = {
 const STEPS: Step[] = [
   {
     number: "01",
-    icon: ClipboardList,
-    title: "Réservez votre appel stratégique",
+    icon: CalendarCheck,
+    title: "Réservez votre audit I.A. gratuit",
     description:
-      "On analyse votre situation ensemble: concurrents, mots-clés, opportunités manquées. 30 min chrono. Pas de blabla, que du concret pour identifier vos leviers de croissance sur Google.",
+      "On analyse vos process métier ensemble : tâches répétitives, points de friction, opportunités d'automatisation. 30 min chrono. Pas de blabla — on identifie concrètement où l'I.A. peut vous faire gagner du temps et de l'argent.",
   },
   {
     number: "02",
-    icon: Compass,
-    title: "Élaboration de votre stratégie",
+    icon: BrainCircuit,
+    title: "Votre feuille de route I.A. sur mesure",
     description:
-      "Vous repartez avec un plan concret, pas des promesses, mais des actions précises et priorisées. On vous explique pourquoi chaque levier est important et comment il va booster votre visibilité locale.",
+      "Vous repartez avec un plan d'intégration concret et priorisé, adapté à votre métier. On vous explique quels outils, quels modèles, et dans quel ordre les déployer pour un impact immédiat.",
   },
   {
     number: "03",
-    icon: Globe,
-    title: "Création de votre site web*",
+    icon: ShieldCheck,
+    title: "Intégration RGPD & sécurisée",
     description:
-      "Votre site deviendra un aiment à client avec des leads. Existant ? On l'optimise. Absent ? On en crée un rapidement et prêt à convertir dès le premier jour.",
+      "Chaque solution est configurée pour respecter le RGPD et rester souveraine. Vos données restent les vôtres — on vous guide sur l'hébergement, les droits d'accès et la conformité dès le départ.",
   },
   {
     number: "04",
     icon: Rocket,
-    title: "Mise en application + suivi",
+    title: "Déploiement de votre écosystème I.A.",
     description:
-      "Nous mettons en œuvre les optimisations et suivons l'évolution de vos positions et leads générés chaque mois.",
+      "On met en place vos agents, automatisations et workflows I.A. — intégrés directement dans vos outils existants. Opérationnel rapidement, sans friction pour vos équipes.",
   },
   {
     number: "05",
     icon: BarChart2,
-    title: "Suivi & reporting mensuel",
+    title: "Formation & montée en compétences",
     description:
-      "Chaque mois, des chiffres qui parlent. Positions, trafic, leads : vous savez exactement ce que ça rapporte.",
+      "Vos équipes apprennent à utiliser, piloter et faire évoluer l'écosystème en autonomie. Sessions pratiques, cas concrets issus de votre métier — pas de théorie inutile.",
   },
   {
     number: "06",
     icon: HeartHandshake,
-    title: "Optimisation continue",
+    title: "Optimisation & accompagnement continu",
     description:
-      "Google change. On s'adapte avant vous. La stratégie évolue pour que vous gardiez toujours une longueur d'avance sur vos concurrents .",
+      "L'I.A. évolue vite. On reste à vos côtés pour ajuster, améliorer et intégrer les nouvelles opportunités — pour que vous gardez toujours une longueur d'avance.",
   },
 ];
 

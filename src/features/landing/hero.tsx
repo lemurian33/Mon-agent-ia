@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { BarChart2, Clock, MapPin, Users } from "lucide-react";
+import { BarChart2, Clock, Zap, Users } from "lucide-react";
 import { SectionDivider } from "@/features/landing/section-divider";
 
 export const Hero = () => {
@@ -27,17 +27,17 @@ export const Hero = () => {
             <h1 className="text-4xl font-bold tracking-tight text-balance
                            text-foreground sm:text-5xl lg:text-6xl
                            lg:leading-tight">
-              Vos clients vous cherchent sur Google. {" "}
+              Vous cherchez à intégrer de l'I.A. dans vos process métier. {" "}
               <span className="text-orange-500">
-                Est-ce qu'ils vous trouvent ?
+                Mais vous ne savez pas par où commencer ?
               </span>
             </h1>
 
             {/* Sous-titre */}
             <p className="mt-6 max-w-2xl text-base leading-relaxed
                           text-muted-foreground sm:text-lg">
-              En 30 minutes, on identifie exactement pourquoi vous perdez des clients
-              face à vos concurrents — et comment inverser la tendance.
+              En 30 minutes, on identifie exactement quels process de votre business
+              peuvent être automatisés avec l'I.A. — et combien ça vous ferait gagner.
             </p>
 
             {/* CTAs */}
@@ -114,14 +114,14 @@ function CircleIcon({ size, className }: { size?: number; className?: string }) 
 const BADGES = [
   { icon: CircleIcon, label: "Sans engagement" },
   { icon: Clock,      label: "Appel de 30 min" },
-  { icon: MapPin,     label: "Créneaux limités" },
+  { icon: Zap,        label: "Résultats rapides" },
 ] as const;
 
 const STATS = [
-  { icon: BarChart2, value: "+20 audits réalisés", label: "" },
-  { icon: Clock,     value: "Réponse < 24h",       label: "" },
-  { icon: MapPin,    value: "SEO local",  label: "" },
-  { icon: Users,     value: "Orienté leads",       label: "" },
+  { icon: BarChart2, value: "+20 audits I.A. réalisés", label: "" },
+  { icon: Clock,     value: "Réponse < 24h",            label: "" },
+  { icon: Zap,       value: "Automatisation rapide",    label: "" },
+  { icon: Users,     value: "Orienté ROI",              label: "" },
 ] as const;
 
 // ── Background ───────────────────────────────────────────────────
