@@ -105,7 +105,7 @@ export const Offers = () => {
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
-    const amount = scrollRef.current.clientWidth / 3 + 8;
+    const amount = 320;
     scrollRef.current.scrollBy({
       left: dir === "left" ? -amount : amount,
       behavior: "smooth",
@@ -218,7 +218,7 @@ const OfferCard = ({
     <div
       data-testid="offer-card"
       className={cn(
-        "relative flex w-[calc((100%-32px)/3)] shrink-0 flex-col rounded-2xl",
+        "relative flex w-[280px] shrink-0 flex-col rounded-2xl",
         "p-6 transition-all overflow-visible",
         "hover:-translate-y-1 hover:shadow-md hover:shadow-black/5",
         "dark:hover:shadow-black/20",

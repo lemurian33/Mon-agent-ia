@@ -11,7 +11,7 @@ const VALUES = [
 ];
 
 const COMMITMENTS = [
-  "Je construis votre site web taillé pour convertir",
+  "Je vous accompagne et vous forme à l'intégration de l'I.A.",
   "J'intègre l'I.A. directement dans vos process métier",
   "Je déploie un écosystème souverain, hébergé et sécurisé",
 ];
@@ -75,7 +75,7 @@ export const About = () => {
                   Andy Ramaroson
                 </p>
                 <p className="text-xs text-gray-300">
-                  Fondateur, Lemurian Agency
+                  Fondateur, Mon agent Ai
                 </p>
                 <p className="text-xs text-gray-300">
                   Développeur Full Stack & Intégrateur I.A.
@@ -90,7 +90,7 @@ export const About = () => {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Avant de créer{" "}
                 <strong className="font-semibold text-foreground">
-                  Lemurian Agency
+                  Mon agent Ai
                 </strong>
                 , j'ai passé des années à développer des applications web et à
                 explorer l'écosystème I.A. de l'intérieur. Aujourd'hui, je mets

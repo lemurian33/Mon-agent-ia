@@ -18,19 +18,9 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    id: "Rui",
-    quote:
-      "Les appels entrants ont clairement augmenté depuis qu'on travaille avec Lemurian. On ressort sur les recherches qui comptent pour nous et ça se ressent directement sur le chiffre.",
-    name: "Rui",
-    role: "Artisant",
-    company: "Segment.C",
-    city: "Bordeaux",
-    color: "bg-teal-700",
-  },
-  {
     id: "Jeremy",
     quote:
-      "Mes clients me trouvent maintenant sans que j'aie à courir après eux. Le site ramène du monde tout seul — c'est exactement ce que je cherchais quand j'ai contacté Andy.",
+      "Andy a automatisé toute ma gestion administrative — rappels, suivis clients, plannings. Je récupère facilement 10h par semaine que je réinvestis dans mes coachings.",
     name: "Jeremy P.",
     role: "Coach sportif",
     company: "Unlcoaching",
@@ -38,31 +28,21 @@ const TESTIMONIALS: Testimonial[] = [
     color: "bg-orange-700",
   },
   {
-    id: "Stéphane",
+    id: "Rui",
     quote:
-      "Mon site d'avant ne me ramenait rien. Celui-là génère des demandes chaque semaine. Pour un plombier, être visible localement sur Google c'est tout — et maintenant c'est le cas.",
-    name: "Stéphane B.",
-    role: "Plombier",
-    company: "Expresse Dépannage",
+      "On a mis en place un agent I.A. pour les devis et les relances. Résultat : trois fois plus de devis envoyés, sans effort supplémentaire de ma part. C'est du concret.",
+    name: "Rui",
+    role: "Artisan menuisier",
+    company: "Segment.C",
     city: "Bordeaux",
-    color: "bg-red-800",
-  },
-  {
-    id: "Fara",
-    quote:
-      "Après une première tentative ratée ailleurs, on était sceptiques. Mais les demandes d'estimation ont commencé à arriver en quelques semaines. Le résultat est là, c'est ce qui compte.",
-    name: "Fara",
-    role: "Gérante",
-    company: "Original",
-    city: "Villeneuve-sur-Lot",
-    color: "bg-stone-600",
+    color: "bg-teal-700",
   },
   {
     id: "François",
     quote:
-      "On est en top 3 sur nos recherches cibles en moins de 3 mois. Pour une menuiserie locale, cette visibilité c'est directement de nouveaux chantiers. L'investissement est largement rentabilisé.",
+      "La gestion des rendez-vous est maintenant totalement automatisée. Moins de charge pour la secrétaire, zéro oubli, et on reste 100% conformes RGPD. Exactement ce qu'on cherchait.",
     name: "Dr Campagne F.",
-    role: "Médecin généraliste ",
+    role: "Médecin généraliste",
     company: "Cabinet médical Vendays-Montalivet",
     city: "Médoc",
     color: "bg-blue-600",
@@ -70,12 +50,32 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "Lucienne",
     quote:
-      "On est en top 3 sur nos recherches cibles en moins de 3 mois. Pour une menuiserie locale, cette visibilité c'est directement de nouveaux chantiers. L'investissement est largement rentabilisé.",
+      "La formation était vraiment adaptée à notre réalité de cabinet. On utilise l'I.A. au quotidien maintenant, sans avoir eu besoin de compétences techniques. Andy explique avec beaucoup de pédagogie.",
     name: "Dr Ramaroson L.",
-    role: "Médecin généraliste ",
+    role: "Médecin généraliste",
     company: "Cabinet médical Vendays-Montalivet",
     city: "Médoc",
     color: "bg-green-600",
+  },
+  {
+    id: "Fara",
+    quote:
+      "On était sceptiques sur l'I.A. après de mauvaises expériences. Mais l'accompagnement était sérieux, les outils bien choisis, et les premiers gains de temps sont arrivés rapidement.",
+    name: "Fara",
+    role: "Gérante",
+    company: "Original",
+    city: "Villeneuve-sur-Lot",
+    color: "bg-stone-600",
+  },
+  {
+    id: "Stéphane",
+    quote:
+      "Je reçois maintenant des devis pré-remplis et des relances automatiques sans toucher à rien. Pour un artisan seul, déléguer ça à une I.A. c'est un gain de temps énorme.",
+    name: "Stéphane B.",
+    role: "Plombier",
+    company: "Expresse Dépannage",
+    city: "Bordeaux",
+    color: "bg-red-800",
   },
 ];
 
