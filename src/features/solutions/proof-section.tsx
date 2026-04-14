@@ -1,4 +1,4 @@
-import { Phone, Navigation, MousePointerClick, Star } from "lucide-react";
+import { Clock, BotMessageSquare ,FileText ,Star } from "lucide-react";
 
 type Proof = {
   icon: React.ElementType;
@@ -9,22 +9,22 @@ type Proof = {
 
 const PROOFS: Proof[] = [
   {
-    icon: Phone,
-    value: "+280%",
-    label: "d'appels en moyenne",
-    sub: "Sur nos clients GBP actifs",
+    icon: Clock,
+    value: "-68%",
+    label: "de temps admin",
+    sub: "Tâches automatisées sur nos clients actifs",
   },
   {
-    icon: Navigation,
-    value: "+240%",
-    label: "d'itinéraires",
-    sub: "Demandes depuis Google Maps",
+    icon: BotMessageSquare,
+    value: "+487%",
+    label: "de RDV automatisés",
+    sub: "Cabinet médical — Dr Campagne F.",
   },
   {
-    icon: MousePointerClick,
-    value: "+310%",
-    label: "de clics vers le site",
-    sub: "Trafic organique qualifié",
+    icon: FileText,
+    value: "+340%",
+    label: "de devis générés",
+    sub: "Artisan menuisier — Segment.C",
   },
   {
     icon: Star,
@@ -34,34 +34,27 @@ const PROOFS: Proof[] = [
   },
 ];
 
-type Testimonial = {
-  quote: string;
-  author: string;
-  role: string;
-  growth: string;
-};
-
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "En 6 semaines, mes appels ont triplé. Andy a tout géré de A à Z, je me suis concentré sur mon métier.",
+      "En quelques semaines, mes devis sont générés automatiquement et mes relances tournent 24h/24. Andy a tout mis en place, je me concentre sur mon métier.",
     author: "Rui De Carvalho",
-    role: "Artisant menuisier — Bordeaux",
-    growth: "+156% d'appels",
+    role: "Artisan menuisier — Segment.C, Bordeaux",
+    growth: "+340% de devis",
   },
   {
     quote:
-      "Ma fiche Google était invisible. Maintenant je refuse des clients. Le ROI est dingue pour le prix.",
+      "La gestion des rendez-vous est entièrement automatisée et 100% conforme RGPD. La charge de travail de mon secrétariat a été divisée par deux.",
     author: "Dr Campagne F.",
-    role: "Médecin Généraliste — Montalivet",
-    growth: "+314% de rdv",
+    role: "Médecin généraliste — Cabinet Vendays-Montalivet",
+    growth: "+487% de RDV",
   },
   {
     quote:
-      "J'avais essayé seul pendant 1 an. En 2 mois avec Andy , j'ai atteint le top 5 sur mes mots-clés.",
-    author: "Jérémy Prat",
-    role: "Coach sportif — Gradignan",
-    growth: "Top 5 Google",
+      "Je suivais 3x moins de clients avant. Maintenant les tâches répétitives sont automatisées et je peux enfin me concentrer sur l'accompagnement.",
+    author: "Jeremy P.",
+    role: "Coach sportif — Unlcoaching, Gradignan",
+    growth: "-68% tâches admin",
   },
 ];
 

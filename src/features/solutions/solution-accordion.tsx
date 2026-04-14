@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Globe, MapPin, Search, Megaphone, Rocket, Info } from "lucide-react";
+import { ChevronDown, ScanSearch, GraduationCap, Bot, Server, Wrench, PhoneCall, Info } from "lucide-react";
 import Link from "next/link";
 
 type Solution = {
@@ -19,122 +19,122 @@ type Solution = {
 const SOLUTIONS: Solution[] = [
   {
     id: "audit",
-    icon: Search,
+    icon: ScanSearch,
     tag: "Gratuit",
     title: "Audit I.A. gratuit",
     description:
-      "30 min pour identifier exactement quels process de votre business peuvent être automatisés — et combien ça vous ferait gagner.",
+      "30 min pour cartographier vos process et identifier exactement où l'I.A. peut vous faire gagner du temps et de l'argent.",
     details:
-      "On analyse vos process métier ensemble: tâches répétitives, points de friction, opportunités d'automatisation. Vous repartez avec un plan d'intégration concret et priorisé, adapté à votre activité. Sans engagement.",
+      "On plonge dans votre quotidien métier : tâches chronophages, goulots d'étranglement, opportunités cachées. À la fin de l'appel, vous avez une vision claire de ce qui peut être automatisé, dans quel ordre, et avec quel impact réel. Zéro jargon, zéro engagement.",
     included: [
-      "Analyse de vos process métier en 30 min",
-      "Identification des tâches automatisables",
-      "Estimation des gains de temps et d'argent",
-      "Feuille de route I.A. personnalisée",
-      "Recommandations outils et modèles",
+      "Analyse complète de vos process métier en 30 min",
+      "Identification des tâches automatisables à fort impact",
+      "Estimation concrète des gains de temps et d'argent",
+      "Feuille de route I.A. personnalisée et priorisée",
+      "Recommandations outils, modèles et ordre de déploiement",
     ],
     price: "Gratuit",
     cta: "Réserver mon audit",
   },
   {
     id: "solo",
-    icon: Globe,
+    icon: GraduationCap,
     tag: "Formation",
     title: "Formation & montée en compétences I.A.",
     description:
-      "Vos équipes apprennent à utiliser, piloter et faire évoluer l'I.A. en autonomie. Sessions pratiques, cas concrets.",
+      "Vos équipes maîtrisent l'I.A. en autonomie — avec des cas pratiques tirés directement de votre métier.",
     details:
-      "Pas de théorie inutile — on part directement de vos outils et de votre métier. Vos collaborateurs repartent avec des prompts, des workflows et les réflexes pour intégrer l'I.A. dans leur quotidien dès le lendemain.",
+      "On ne fait pas de théorie pour faire de la théorie. Chaque session est construite autour de vos outils, vos process et vos vrais blocages. Vos collaborateurs repartent avec des prompts opérationnels, des workflows prêts à l'emploi et les bons réflexes pour faire évoluer l'I.A. au fil des semaines.",
     included: [
       "Formation Claude et LLM de A à Z",
-      "Prompts & templates métier inclus",
-      "Ateliers pratiques sur vos cas d'usage",
-      "Accès communauté privée",
-      "Support post-formation",
+      "Prompts & templates calibrés pour votre métier",
+      "Ateliers pratiques sur vos cas d'usage réels",
+      "Accès communauté privée & ressources exclusives",
+      "Support post-formation pour ancrer les acquis",
     ],
     price: "À partir de 97 €/mois",
     cta: "Démarrer la formation",
   },
   {
-    id: "Team",
-    icon: Rocket,
+    id: "team",
+    icon: Bot,
     tag: "Agent I.A.",
     title: "Intégration d'agents I.A.",
     description:
-      "Des agents I.A. déployés directement dans vos outils existants — devis, relances, support, prise de RDV, et plus.",
+      "Des agents I.A. déployés dans vos outils du quotidien — devis, relances, support, prise de RDV, qualification de leads.",
     details:
-      "On configure et déploie des agents I.A. sur mesure connectés à vos process métier. Chaque agent est entraîné sur votre contexte, intégré à vos outils existants (CRM, agenda, messagerie) et conforme RGPD dès le départ.",
+      "On conçoit, configure et déploie des agents I.A. sur mesure, directement connectés à votre environnement métier. Chaque agent est entraîné sur votre contexte, intégré à vos outils existants (CRM, agenda, messagerie) et conforme RGPD dès le premier jour. Résultat : vos process tournent, même quand vous dormez.",
     included: [
-      "Audit et cartographie de vos process",
-      "Développement d'agents I.A. sur mesure",
-      "Intégration à vos outils existants",
-      "Automatisation n8n + RAG",
-      "Conformité RGPD complète",
-      "Formation à la prise en main",
-      "Support et optimisation continue",
+      "Audit et cartographie de vos process existants",
+      "Développement d'agents I.A. calibrés pour votre activité",
+      "Intégration native à vos outils (CRM, agenda, messagerie)",
+      "Automatisation n8n + RAG sur vos données métier",
+      "Conformité RGPD complète dès la conception",
+      "Formation à la prise en main et à l'évolution",
+      "Support et optimisation continue inclus",
     ],
     price: "À partir de 147 €/mois",
     cta: "Déployer un agent I.A.",
   },
   {
     id: "entreprise",
-    icon: MapPin,
+    icon: Server,
     tag: "Écosystème",
     title: "Écosystème I.A. souverain",
     description:
-      "Infrastructure I.A. complète, hébergée sur votre domaine, conforme RGPD — vos données restent les vôtres.",
+      "Une infrastructure I.A. complète, hébergée sur votre domaine, 100% conforme RGPD — vos données ne quittent jamais votre périmètre.",
     details:
-      "On déploie votre écosystème I.A. complet : hébergement Coolify, automatisation n8n, stockage vectoriel, LLM open source configurés pour votre métier. Une infrastructure souveraine où vous gardez le contrôle total.",
+      "On déploie l'intégralité de votre stack I.A. : hébergement Coolify sur votre domaine, automatisation n8n, stockage vectoriel, LLM open source configurés pour votre secteur. Vous gardez le contrôle total — sur les données, les accès et l'évolution du système.",
     included: [
-      "Hébergement Coolify sur votre domaine",
+      "Hébergement Coolify souverain sur votre domaine",
       "Automatisation n8n + RAG multi-sources",
-      "LLM open source (Claude, Gemma & autres)",
-      "Stockage vectoriel KV4 ou KV8",
-      "Conformité RGPD complète",
-      "Onboarding et formation équipe",
+      "LLM open source configurés (Claude, Gemma & autres)",
+      "Stockage vectoriel KV4 ou KV8 selon vos besoins",
+      "Conformité RGPD complète et documentée",
+      "Onboarding équipe et formation à la gouvernance I.A.",
     ],
     price: "À partir de 297 €/mois",
     cta: "Déployer mon écosystème",
   },
   {
-    id: "premium",
-    icon: Rocket,
-    tag: "Sur mesure",
-    title: "Configuration full custom",
-    description:
-      "Architecture I.A. sur mesure pour les structures qui veulent aller plus loin, plus vite, sans compromis.",
-    details:
-      "Pour les projets complexes ou les besoins spécifiques : audit complet, déploiement full stack personnalisé, intégrations métier avancées et SLA dédié. On construit exactement ce dont vous avez besoin.",
-    included: [
-      "Audit & architecture I.A. sur mesure",
-      "Déploiement full stack personnalisé",
-      "Intégrations métier spécifiques",
-      "Formation équipes avancée",
-      "SLA & accompagnement long terme",
-      "Support prioritaire dédié",
-    ],
-    price: "Sur devis",
-    cta: "Nous contacter",
-  },
-  {
-    id: "agent-vocal-IA",
-    icon: Megaphone,
+    id: "agent-vocal-ia",
+    icon: PhoneCall,
     tag: "Agent vocal",
     title: "Agent vocal I.A.",
     description:
-      "Un agent vocal répond à vos appels 24h/24, qualifie vos prospects et prend des rendez-vous — sans secrétaire.",
+      "Votre téléphone répond tout seul — 24h/24, 7j/7. Qualification, prise de RDV, zéro appel manqué.",
     details:
-      "Votre agent vocal I.A. répond instantanément à chaque appel entrant, pose les bonnes questions, qualifie le prospect et enregistre les informations dans votre CRM. Disponible en dehors des heures d'ouverture, sans jamais rater un appel.",
+      "Chaque appel entrant est pris en charge instantanément par votre agent vocal I.A. : il répond, pose les bonnes questions, qualifie le prospect et enregistre tout dans votre CRM. Fini les appels perdus en dehors des heures d'ouverture. Votre agenda se remplit, vous vous concentrez sur vos clients.",
     included: [
-      "Réponse automatique aux appels entrants",
+      "Réponse automatique et immédiate aux appels entrants",
       "Qualification des prospects en temps réel",
-      "Prise de rendez-vous automatisée",
-      "Intégration agenda et CRM",
-      "Disponible 24h/24, 7j/7",
-      "Conforme RGPD",
+      "Prise de rendez-vous directement dans votre agenda",
+      "Synchronisation CRM automatique",
+      "Disponible 24h/24, 7j/7 — week-ends et jours fériés inclus",
+      "Conforme RGPD, données hébergées en France",
     ],
     price: "À partir de 159 €/mois",
     cta: "Découvrir l'agent vocal",
+  },
+  {
+    id: "premium",
+    icon: Wrench,
+    tag: "Sur mesure",
+    title: "Configuration full custom",
+    description:
+      "Architecture I.A. pensée de zéro pour votre structure — pour aller plus loin, plus vite, sans compromis.",
+    details:
+      "Pour les projets ambitieux ou les besoins hors standard : on part d'une page blanche et on construit exactement ce qu'il vous faut. Audit stratégique, déploiement full stack, intégrations métier complexes et SLA dédié. Vous avez un interlocuteur unique, de la conception au suivi long terme.",
+    included: [
+      "Audit stratégique & architecture I.A. sur mesure",
+      "Déploiement full stack entièrement personnalisé",
+      "Intégrations métier spécifiques et complexes",
+      "Formation équipes avancée et accompagnement terrain",
+      "SLA dédié & accompagnement long terme",
+      "Support prioritaire avec interlocuteur unique",
+    ],
+    price: "Sur devis",
+    cta: "Nous contacter",
   },
 ];
 
