@@ -1,0 +1,104 @@
+---
+title: "About"
+description: "Section à propos — photo Andy + valeurs + engagement"
+keywords: ["about", "founder", "landing", "trust"]
+tags: ["component", "landing"]
+order: 8
+subcategory: "Landing"
+---
+
+# About
+
+> Section **"À propos"** — grande carte avec photo d'Andy Ramaroson à gauche,
+> texte intro + 4 badges valeurs + bloc engagement à droite.
+
+---
+
+## 📁 Location
+
+| Fichier | Description |
+|---------|-------------|
+| `src/features/landing/about.tsx` | Composant principal |
+| `src/features/landing/__tests__/about.test.tsx` | **14 tests ✅** |
+
+---
+
+## 🗂 Structure
+```
+section
+├── Header
+│   ├── Badge "À propos"
+│   ├── Titre h2
+│   └── Sous-titre
+└── Carte (rounded-2xl border bg-card)
+    ├── 📸 Photo Andy (+ caption overlay)
+    └── Colonne droite
+        ├── Texte intro
+        ├── Grid 2×2 — 4 badges valeurs
+        ├── Bloc "Mon engagement" (3 items ✓)
+        └── CTA → /about
+```
+
+---
+
+## 🎨 Dark mode
+
+| Élément | Light | Dark |
+|---------|-------|------|
+| Carte | `bg-card` | automatique |
+| Bordure | `border-border` | automatique |
+| Badges valeurs | `bg-muted/30` | automatique |
+| Icônes | `text-orange-500` | identique |
+| Bloc engagement | `bg-orange-500/5` | identique |
+| Bordure engagement | `border-orange-500/30` | identique |
+| CTA | `text-orange-500` | identique |
+
+---
+
+## 🖼 Image requise
+
+Placer la photo dans **`/public/andy.jpg`**
+```bash
+cp votre-photo.jpg public/andy.jpg
+```
+
+---
+
+## 🧪 Testing
+
+### Mocks requis
+
+| Mock | Remplace | Par |
+|------|----------|-----|
+| `next/image` | `<Image>` | `<img>` |
+| `next/link` | `<Link>` | `<a>` |
+| `@/components/nowts/typography` | `<Typography>` | stub `data-testid` |
+
+### Couverture des tests
+
+| Catégorie | Tests | Statut |
+|-----------|-------|--------|
+| Header | badge, titre, sous-titre | ✅ |
+| Photo | `alt="Andy Ramaroson"` | ✅ |
+| Identité | nom, rôle "Fondateur Lemurian" | ✅ |
+| Valeurs | 4 badges présents | ✅ |
+| Valeurs | "Rigueur non négociable", "Précision avant tout" | ✅ |
+| Engagement | bloc présent, 3 items | ✅ |
+| Engagement | "Vous ne payez que les résultats" | ✅ |
+| CTA | lien → `/about` | ✅ |
+
+---
+
+## 💡 Usage
+```tsx
+// app/page.tsx
+import { About } from "@/features/landing/about";
+
+export default function Page() {
+  return (
+    <main>
+      <About />
+    </main>
+  );
+}
+```

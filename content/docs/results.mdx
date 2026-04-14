@@ -1,0 +1,61 @@
+---
+title: "Results"
+description: "Section résultats clients — 3 cartes avec métriques en liste et tags"
+keywords: ["results", "metrics", "landing", "clients"]
+tags: ["component", "landing"]
+order: 5
+subcategory: "Landing"
+---
+
+# Results
+
+Section résultats — 3 cartes clients avec métriques en liste
+(icône + label + delta orange), tags, et CTA lien.
+
+## Location
+```
+src/features/landing/results.tsx
+__tests__/results.test.tsx — 13 tests ✅
+```
+
+## Structure
+```
+section
+├── Header (badge Résultats, titre, sous-titre)
+├── Grille sm:grid-cols-3
+│   ├── ResultCardItem — Unlcoaching / Gradignan
+│   ├── ResultCardItem — Segment.C / Bordeaux
+│   └── ResultCardItem — Cabinet Medical Vendays / Montalivet
+└── CTA "Voir toutes nos réalisations →" → /realisations
+```
+
+## Dark mode
+
+| Élément | Classe |
+|---------|--------|
+| Carte | `bg-card border-border` |
+| Delta positif | `text-orange-500` |
+| Delta neutre (Top 3) | `text-muted-foreground` |
+| Tags | `bg-muted/50 border-border` |
+| CTA | `text-orange-500 hover:text-orange-400` |
+
+## Testing
+
+### Mocks
+
+| Mock | Reason |
+|------|--------|
+| `next/link` | Remplace `<Link>` par `<a>` |
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Catégorie | Tests |
+|-----------|-------|
+| Header | badge, titre, sous-titre |
+| Cartes | 3 présentes |
+| Clients | Unlcoaching, Segment.C, Cabinet Medical Vendays |
+| Villes | Gradignan, Bordeaux, Montalivet |
+| Métriques | 9 total, deltas +292% +540% +287% |
+| Tags | présents |
+| CTA | lien → `/realisations` |

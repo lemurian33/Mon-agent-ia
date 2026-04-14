@@ -1,0 +1,102 @@
+---
+title: "LandingHeader"
+description: "Fixed dark navigation header with scroll-aware animations and mobile Sheet drawer"
+keywords: ["header", "navigation", "landing", "mobile", "scroll", "framer-motion"]
+tags: ["component", "layout", "landing"]
+order: 1
+subcategory: "Landing"
+---
+
+# LandingHeader
+
+Fixed dark navigation header with scroll-aware height animation and a mobile Sheet drawer.
+
+## Location
+```
+src/features/landing/landing-header.tsx
+__tests__/landing-header.test.tsx — 12 tests ✅
+```
+
+## Description
+
+Header fixe `bg-[#111111]` avec animation de hauteur au scroll via `useBoundedScroll(400)`.
+
+- **Desktop** : logo cliquable + nav pill centrée + actions droite (Espace client ghost / Prendre RDV orange)
+- **Mobile** : bouton hamburger → Sheet shadcn slide-in depuis la droite
+
+## Props
+
+No props — self-contained component.
+
+## Navigation Links
+
+| Label | Href |
+|-------|------|
+| `Solutions` | `/solutions` |
+| `Formations` | `/formations` |
+| `Réalisations` | `/realisations` |
+| `Avis` | `/avis` |
+| `FAQ` | `/faq` |
+| `Blog` | `/posts` |
+| `Documentation` | `/docs` |
+| `Contact` | `/contact` |
+| `About` | `/about` |
+
+## Examples
+```tsx
+// app/layout.tsx
+import { LandingHeader } from "@/features/landing/landing-header";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <LandingHeader />
+      <main>{children}</main>
+    </>
+  );
+}
+```
+
+## Behavior
+```
+scroll 0px   → height: 72px, nav opacity: 1
+scroll 400px → height: 52px, nav opacity: 0
+```
+
+The `useBoundedScroll` hook clamps scroll delta so the header re-appears
+when scrolling back up, even mid-page.
+
+## Testing
+
+### Mocks Required
+
+| Mock | Reason |
+|------|--------|
+| `next/image` | Replaces `<Image>` with `<img>` |
+| `next/link` | Replaces `<Link>` with `<a>` |
+| `next/navigation` | `useRouter` → `mockPush` spy |
+| `motion/react` | Strips animations, `useTransform` → `0` |
+
+### Coverage
+
+| Category | Tests |
+|----------|-------|
+| Render | logo, brand name, 9 nav links, CTA Prendre RDV |
+| Hrefs | All 9 links verified with correct href |
+| Logo interaction | click → `router.push('/')` |
+| Mobile drawer | open via hamburger, close via Close button, close via Escape, links accessible |
+
+### Known Limitations
+
+- **Logo / brand name** : Sheet shadcn is lazy-rendered — only the desktop
+  logo is in the DOM when the drawer is closed. Use `toBeGreaterThanOrEqual(1)`
+  instead of `toHaveLength(2)`.
+
+- **Link click closes drawer** : jsdom does not navigate, so the Sheet stays
+  open after clicking a link. Test verifies link presence instead of drawer close.
+
+- **Overlay click** : No custom overlay div — Sheet handles this internally.
+  Drawer close is tested via `{Escape}` keyboard event.
+
+- **Hamburger aria-label** : Always `"Ouvrir le menu"` — Sheet manages its own
+  open/close state, no label toggle needed.

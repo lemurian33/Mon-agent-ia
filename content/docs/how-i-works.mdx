@@ -1,0 +1,66 @@
+---
+title: "HowItWorks"
+description: "Section processus en 3 étapes — numéros filigrane orange, icônes, cartes dark"
+keywords: ["how-it-works", "steps", "process", "landing"]
+tags: ["component", "landing"]
+order: 4
+subcategory: "Landing"
+---
+
+# HowItWorks
+
+Section "Comment ça marche" — 3 étapes en grille avec numéros en filigrane
+orange, icônes colorées et cartes dark.
+
+## Location
+```
+src/features/landing/how-it-works.tsx
+__tests__/how-it-works.test.tsx — 10 tests ✅
+```
+
+## Structure
+```
+section
+├── Header (badge Processus, titre h2, sous-titre)
+└── Grille md:grid-cols-3
+    ├── StepCard 01 — ClipboardList — Réservez votre appel
+    ├── StepCard 02 — Compass      — Élaboration de votre stratégie
+    └── StepCard 03 — Rocket       — Mise en application + suivi
+```
+
+## Dark mode
+
+| Élément | Light | Dark |
+|---------|-------|------|
+| Carte | `bg-card border-border` | automatique |
+| Numéro filigrane | `text-orange-500/20` | identique |
+| Icône bg | `bg-orange-50 border-orange-200` | `dark:bg-orange-950/40` |
+| Badge | `bg-orange-50 text-orange-700` | `dark:bg-orange-950/60 dark:text-orange-300` |
+
+## Différences vs ancienne version
+
+| | Avant | Après |
+|---|---|---|
+| Icônes | absentes | présentes (lucide) |
+| Numéros | box 4.5rem | filigrane `text-6xl opacity-20` |
+| Connecteurs | `data-testid="step-connector"` | supprimés |
+| Layout | flex + connecteur | `grid-cols-3` simple |
+
+## Testing
+
+### Mocks
+
+| Mock | Reason |
+|------|--------|
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Catégorie | Tests |
+|-----------|-------|
+| Header | badge, titre, sous-titre |
+| Cartes | 3 `data-testid="step-card"` |
+| Numéros | 01, 02, 03 présents |
+| Titres | les 3 titres |
+| Descriptions | 3 non vides |
+| Connecteurs | 0 (supprimés) |

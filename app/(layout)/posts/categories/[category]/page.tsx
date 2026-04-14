@@ -1,0 +1,82 @@
+import { Typography } from "@/components/nowts/typography";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import {
+  Layout,
+  LayoutContent,
+  LayoutHeader,
+  LayoutTitle,
+} from "@/features/page/layout";
+import { PostCard } from "@/features/posts/post-card";
+import { getPosts, getPostsTags } from "@/features/posts/post-manager";
+import { SiteConfig } from "@/site-config";
+import type { PageParams } from "@/types/next";
+import { FileQuestion } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export async function generateMetadata(
+  props: CategoryParams,
+): Promise<Metadata> {
+  const params = await props.params;
+  return {
+    title: `${SiteConfig.title}' | article à propos ${params.category}`,
+    description: SiteConfig.description,
+    openGraph: {
+      title: `${SiteConfig.title}'| article à propos ${params.category}`,
+      description: SiteConfig.description,
+      url: `https://codeline.app/posts/categories/${params.category}`,
+      type: "article",
+    },
+  };
+}
+
+type CategoryParams = PageParams<{
+  category: string;
+}>;
+
+export default async function RoutePage(props: CategoryParams) {
+  const tags = await getPostsTags();
+  const params = await props.params;
+  const posts = await getPosts([params.category]);
+
+  return (
+    <Layout className="max-w-7xl mx-auto">
+      <LayoutHeader>
+        <LayoutTitle className="mt-16">Article de blog concernant {params.category}</LayoutTitle>
+      </LayoutHeader>
+      <LayoutContent className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <Link
+            key={tag}
+            href={{
+              pathname: `/posts/categories/${tag}`,
+            }}
+          >
+            <Badge variant={params.category === tag ? "default" : "outline"}>
+              {tag}
+            </Badge>
+          </Link>
+        ))}
+      </LayoutContent>
+
+      {posts.length === 0 ? (
+        <LayoutContent className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center rounded-lg border-2 border-dashed p-4 lg:gap-6 lg:p-8">
+            <FileQuestion />
+            <Typography variant="h2">Pas de post trouver</Typography>
+            <Link className={buttonVariants({ variant: "link" })} href="/posts">
+              Voir tous les articles
+            </Link>
+          </div>
+        </LayoutContent>
+      ) : (
+        <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </LayoutContent>
+      )}
+    </Layout>
+  );
+}

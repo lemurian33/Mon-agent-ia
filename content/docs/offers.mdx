@@ -1,0 +1,66 @@
+---
+title: "Offers"
+description: "Section offres — carousel 5 cartes avec prix, features et CTA"
+keywords: ["offers", "pricing", "carousel", "landing"]
+tags: ["component", "landing"]
+order: 6
+subcategory: "Landing"
+---
+
+# Offers
+
+Section "Nos offres" — carousel horizontal de 5 cartes pricing avec
+badge Populaire, prix, features checkmark, et CTA.
+
+## Location
+```
+src/features/landing/offers.tsx
+src/features/landing/__tests__/offers.test.tsx — 13 tests ✅
+```
+
+## Structure
+```
+section
+├── Header (badge, titre h2, sous-titre)
+├── Flèches (ChevronLeft / ChevronRight)
+└── Carousel [overflow-x-auto]
+    ├── OfferCard — Partenariat leads (popular, border orange, CTA orange)
+    ├── OfferCard — Audit de visibilité
+    ├── OfferCard — Optimisation Fiche Google
+    ├── OfferCard — Référencement web (SEO)
+    └── OfferCard — Création de site internet
+```
+
+## Dark mode
+
+| Élément | Classe |
+|---------|--------|
+| Carte standard | `bg-card border-border` |
+| Carte populaire | `border-orange-500/50` |
+| Badge populaire | `bg-orange-500 text-white` |
+| Prix € | `text-orange-500` |
+| Checkmark | `text-orange-500` |
+| CTA populaire | `bg-orange-500 hover:bg-orange-400` |
+| CTA standard | `border-border hover:border-orange-500/50` |
+
+## Testing
+
+### Mocks
+
+| Mock | Reason |
+|------|--------|
+| `next/link` | Remplace `<Link>` par `<a>` |
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Catégorie | Tests |
+|-----------|-------|
+| Header | badge, titre, sous-titre |
+| Carousel | présent, flèches, bouton gauche désactivé au départ |
+| Cartes | 5 présentes |
+| Badge | POPULAIRE présent |
+| Titres | les 5 titres |
+| Prix | 0€, 97€, 247€ présents |
+| Features | 15 au total |
+| CTAs | 5 × "En savoir plus", href[0] correct |

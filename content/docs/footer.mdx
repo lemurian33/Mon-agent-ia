@@ -1,0 +1,70 @@
+---
+title: "Footer"
+description: "Dark footer with brand, contact info, nav columns and CTA"
+keywords: ["footer", "navigation", "landing", "contact", "legal"]
+tags: ["component", "layout", "landing"]
+order: 3
+subcategory: "Landing"
+---
+
+# Footer
+
+Dark footer cohérent avec le header (`bg-[#111111]`). Grille 2 colonnes :
+brand + contact à gauche, 3 colonnes de navigation à droite.
+
+## Location
+```
+src/features/landing/footer.tsx
+__tests__/footer.test.tsx — 15 tests ✅
+```
+
+## Structure
+```
+footer#footer
+├── Brand (logo + tagline + contact)
+│   ├── Logo → /
+│   ├── Description
+│   └── Contact (MapPin, Mail, Phone, Clock)
+├── Nav columns
+│   ├── Services  (Solutions, Formations, Réalisations, Avis, FAQ)
+│   ├── Ressources (Blog, Documentation, About, Contact)
+│   └── Légal (Mentions légales, CGV, Politique confidentialité)
+└── Bottom bar
+    ├── Copyright © {year}
+    └── CTA "Prendre RDV" → #audit-form
+```
+
+## Examples
+```tsx
+// app/layout.tsx
+import { Footer } from "@/features/landing/footer";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+}
+```
+
+## Testing
+
+### Mocks Required
+
+| Mock | Reason |
+|------|--------|
+| `next/image` | Replaces `<Image>` with `<img>` |
+| `next/link` | Replaces `<Link>` with `<a>` |
+
+### Coverage
+
+| Category | Tests |
+|----------|-------|
+| Brand | logo présent, nom "lemurian", lien vers `/` |
+| Contact | ville, email, horaires |
+| Nav titres | Services, Ressources, Légal |
+| Nav liens | Solutions SEO → `/solutions`, Blog → `/posts`, Mentions légales |
+| CTA | Prendre RDV → `#audit-form` |
+| Copyright | année courante présente |

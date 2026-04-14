@@ -1,0 +1,385 @@
+---
+title: "Solutions site-web"
+description: "Section résultats clients — 3 cartes avec métriques en liste et tags"
+keywords: ["results", "metrics", "landing", "clients"]
+tags: ["component", "landing"]
+order: 3
+subcategory: "Solution"
+---
+# 📄 Solution Site — Page `/solutions/site`
+
+Documentation des composants de la page Création de site web de Lemurian.
+
+---
+
+## 📁 Structure des fichiers
+
+```
+src/features/solution-site/
+├── hero-site.tsx              ← Server Component
+├── site-includes.tsx          ← Server Component
+├── site-benefits.tsx          ← Server Component
+├── site-process.tsx           ← Server Component
+├── site-pricing.tsx           ← Server Component
+├── site-faq.tsx               ← Client Component ("use client")
+├── cta-banner-site.tsx        ← Server Component
+└── __tests__/
+    ├── hero-site.test.tsx
+    ├── site-includes.test.tsx
+    ├── site-benefits.test.tsx
+    ├── site-process.test.tsx
+    ├── site-pricing.test.tsx
+    ├── site-faq.test.tsx
+    └── cta-banner-site.test.tsx
+
+src/app/(layout)/solutions/site/
+└── page.tsx
+```
+
+---
+
+## 🚀 `HeroSite`
+
+**Fichier** : `hero-site.tsx`  
+**Type** : Server Component
+
+Hero de la page création de site. Centré, fond dégradé orange subtil.
+
+### Structure
+
+```
+<section>
+  Badge "Création de site internet"
+  <h1> Un site qui travaille + <span orange> pour vous </span>
+  <p> Sous-titre
+  CTA "Créer mon site →"        → #audit-form
+  CTA "Voir nos réalisations"   → /realisations
+  Highlights × 3 (icône + label)
+</section>
+```
+
+### Highlights
+
+| Icône | Label |
+|---|---|
+| Monitor | Design responsive |
+| Zap | Performances maximales |
+| Search | SEO natif |
+
+### Tests (9)
+
+- Badge, h1, titre, accent orange, sous-titre présents
+- 3 highlights présents
+- CTA primaire → `#audit-form`
+- CTA secondaire → `/realisations`
+
+---
+
+## 📦 `SiteIncludes`
+
+**Fichier** : `site-includes.tsx`  
+**Type** : Server Component
+
+Grille 6 features "clé en main" avec une carte badgée "Inclus SEO".
+
+### Structure
+
+```
+<section>
+  Badge "Ce qui est inclus"
+  <h2> Un site complet, clé en main
+
+  Grille 3×2 [data-testid="site-feature-card"]
+    icône + titre + description
+    optionnel: [data-testid="site-feature-badge"]
+```
+
+### Features
+
+| Icône | Titre | Badge |
+|---|---|---|
+| Paintbrush | Design sur-mesure | — |
+| Smartphone | Responsive & mobile-first | — |
+| Search | Optimisation SEO native | **Inclus SEO** |
+| Zap | Performances maximales | — |
+| MessageSquare | Formulaires de contact | — |
+| GraduationCap | Formation à la gestion | — |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `site-feature-card` | Carte feature |
+| `site-feature-badge` | Badge "Inclus SEO" |
+
+### Tests (10)
+
+- Badge, titre présents
+- 6 `site-feature-card`
+- 6 titres présents
+- 1 `site-feature-badge` → texte "Inclus SEO"
+
+---
+
+## 📈 `SiteBenefits`
+
+**Fichier** : `site-benefits.tsx`  
+**Type** : Server Component
+
+Liste des 7 bénéfices concrets + 2 métriques (90+ perf, 100% SEO ready).
+
+### Structure
+
+```
+<section>
+  Badge "Résultats"
+  <h2> Ce que votre site vous apporte
+
+  Layout 2 colonnes:
+    Gauche: carte bénéfices [data-testid="site-benefit"] × 7
+    Droite: 2 cartes métriques [data-testid="site-metric"]
+              → "90+" + label
+              → "100%" + "SEO ready"
+```
+
+### Bénéfices (7)
+
+1. Présence professionnelle / inspire confiance
+2. Retient les visiteurs / réduit le taux de rebond
+3. Référencement naturel intégré
+4. Formulaires qui convertissent
+5. Design adapté à tous les écrans
+6. Administration simple
+7. Avance technique sur les concurrents
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `site-benefit` | `<li>` bénéfice |
+| `site-metric` | Carte métrique |
+
+### Tests (9)
+
+- Badge, titre présents
+- 7 `site-benefit`
+- Bénéfices "inspire confiance" et "référencement naturel" présents
+- 2 `site-metric`
+- Valeurs "90+", "100%", "SEO ready" présentes
+
+---
+
+## 🔄 `SiteProcess`
+
+**Fichier** : `site-process.tsx`  
+**Type** : Server Component
+
+4 étapes numérotées du brief à la mise en ligne.
+
+### Structure
+
+```
+<section>
+  Badge "Processus"
+  <h2> De l'idée au site en ligne
+
+  Grille 1×4 [data-testid="site-step"] × 4
+    numéro filigrane 01-04
+    icône + titre + [data-testid="site-step-description"]
+```
+
+### Étapes
+
+| N° | Icône | Titre |
+|---|---|---|
+| 01 | ClipboardList | Brief & cahier des charges |
+| 02 | Paintbrush | Maquette & design |
+| 03 | Code2 | Développement & SEO |
+| 04 | Rocket | Mise en ligne & formation |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `site-step` | Carte étape |
+| `site-step-description` | `<p>` description |
+
+### Tests (9)
+
+- Badge, titre présents
+- 4 `site-step`
+- Numéros 01-04 présents
+- 4 titres présents
+- 4 descriptions non vides
+
+---
+
+## 💰 `SitePricing`
+
+**Fichier** : `site-pricing.tsx`  
+**Type** : Server Component
+
+Carte pricing centrée avec prix, 8 features et CTA.
+
+### Structure
+
+```
+<section>
+  Badge "Tarif unique"
+  [data-testid="site-pricing-card"]
+    [data-testid="site-price"] → "997"
+    "€" (orange)
+    label "Tarif adapté à la complexité..."
+    sous-titre
+    Grille 2×4 [data-testid="site-pricing-feature"] × 8
+    CTA "Créer mon site →" → #audit-form
+    note "Sans engagement. Devis personnalisé sous 24h."
+```
+
+### Features incluses (8)
+
+| Colonne gauche | Colonne droite |
+|---|---|
+| Design sur-mesure responsive | Optimisation SEO native complète |
+| Performances maximales (Lighthouse 90+) | Hébergement & suivi de sécurité |
+| Système de Contact Formulaire intégré | Hébergement à vie sauf résiliation |
+| Formation à la gestion du site | Support inclus pendant 30 jours |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `site-pricing-card` | Conteneur carte |
+| `site-price` | `<span>` avec "997" |
+| `site-pricing-feature` | Ligne feature |
+
+### Tests (10)
+
+- Badge "Tarif unique" présent
+- `site-pricing-card` présent
+- `site-price` → "997"
+- "€" présent
+- 8 `site-pricing-feature`
+- 3 features spécifiques présentes
+- CTA → `#audit-form`
+- Note "Sans engagement" présente
+
+---
+
+## ❓ `SiteFaq`
+
+**Fichier** : `site-faq.tsx`  
+**Type** : `"use client"` — accordion exclusif, `openIndex` (0 par défaut)
+
+6 questions spécifiques à la création de site.
+
+### Questions
+
+1. Combien de temps faut-il pour créer un site ?
+2. Est-ce que je peux modifier mon site moi-même ?
+3. Mon site sera-t-il bien référencé sur Google ?
+4. Que comprend l'hébergement ?
+5. Que se passe-t-il après la mise en ligne ?
+6. Quelle est la différence avec un template ou un site gratuit ?
+
+### Comportement accordion
+
+- Premier item ouvert par défaut (`useState(0)`)
+- Un seul item ouvert à la fois
+- Cliquer sur l'ouvert → le ferme (`openIndex = null`)
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `site-faq-item` | Conteneur question + réponse |
+
+### Tests (12)
+
+- Badge, titre présents
+- 6 `site-faq-item`
+- Premier item `aria-expanded="true"` par défaut
+- 4 questions spécifiques présentes
+- Ouverture au clic
+- Fermeture de l'ancien à l'ouverture du nouveau
+- Fermeture au second clic
+- Email → `mailto:lemurian734@gmail.com`
+
+---
+
+## 📣 `CtaBannerSite`
+
+**Fichier** : `cta-banner-site.tsx`  
+**Type** : Server Component
+
+Carte de conversion finale.
+
+### Structure
+
+```
+<section>
+  <div> carte orange/5
+    Badge "Non contractuel"
+    <h2> Faites le premier pas + <span orange> visibilité qui convertit </span>
+    <p> Sous-titre
+    CTA "Réserver un appel stratégique" → #audit-form
+    CTA "Voir toute la FAQ →"           → /solutions/faq
+```
+
+### Tests (7)
+
+- Badge "Non contractuel" présent
+- h2 présent
+- Accent orange "visibilité qui convertit" présent
+- Sous-titre présent
+- CTA primaire → `#audit-form`
+- CTA secondaire → `/solutions/faq`
+
+---
+
+## 🔗 Assemblage `page.tsx`
+
+```tsx
+// src/app/(layout)/solutions/site/page.tsx
+<main>
+  <HeroSite />           // hero centré
+  <SiteIncludes />       // 6 features clé en main
+  <SiteBenefits />       // 7 bénéfices + 2 métriques
+  <SiteProcess />        // 4 étapes processus
+  <SitePricing />        // carte 997€
+  <SiteFaq />            // 6 questions création site
+  <CtaBannerSite />      // CTA final
+  <AuditForm />          // id="audit-form" — partagé
+</main>
+```
+
+---
+
+## 🧪 Résumé des tests
+
+| Composant | Tests | Client |
+|---|---|---|
+| `hero-site.test.tsx` | 9 | ❌ |
+| `site-includes.test.tsx` | 10 | ❌ |
+| `site-benefits.test.tsx` | 9 | ❌ |
+| `site-process.test.tsx` | 9 | ❌ |
+| `site-pricing.test.tsx` | 10 | ❌ |
+| `site-faq.test.tsx` | 12 | ✅ |
+| `cta-banner-site.test.tsx` | 7 | ❌ |
+| **Total** | **66** | |
+
+---
+
+## 🎨 Tokens Tailwind utilisés
+
+```
+bg-background    text-foreground
+bg-card          border-border
+bg-muted/30      text-muted-foreground
+bg-orange-500    text-orange-500
+border-orange-200 / dark:border-orange-800/60
+bg-orange-50     / dark:bg-orange-950/40
+bg-orange-500/5  border-orange-500/20
+```
+
+Aucune couleur hardcodée. Adaptatif light/dark automatique via CSS vars.

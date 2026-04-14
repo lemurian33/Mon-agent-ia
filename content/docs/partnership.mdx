@@ -1,0 +1,56 @@
+---
+title: "Partnership"
+description: "Section partenariat — carte dark, titre orange, 4 badges, 2 CTAs"
+keywords: ["partnership", "partenariat", "landing", "leads"]
+tags: ["component", "landing"]
+order: 9
+subcategory: "Landing"
+---
+
+# Partnership
+
+Section partenariat — grande carte avec badge, titre bicolore, description,
+4 badges icônes et 2 CTAs.
+
+## Location
+```
+src/features/landing/partnership.tsx
+src/features/landing/__tests__/partnership.test.tsx — 14 tests ✅
+```
+
+## Structure
+```
+section
+└── Carte (rounded-2xl border bg-card)
+    ├── Colonne gauche
+    │   ├── Badge "Partenariat"
+    │   ├── Titre (blanc + orange)
+    │   ├── Description
+    │   ├── 4 badges icônes (grid 2×2 → 4×1 sm)
+    │   └── CTAs (orange + ghost)
+    └── Colonne droite (lg only)
+        └── Placeholder image 220×220
+```
+
+## Pour remplacer le placeholder
+```tsx
+// Remplacer le div placeholder par :
+<Image
+  src="/votre-image.png"
+  alt="description"
+  width={220}
+  height={220}
+  className="rounded-2xl object-cover"
+/>
+```
+
+## Dark mode
+
+| Élément | Classe |
+|---------|--------|
+| Carte | `bg-card border-border` |
+| Badges | `bg-muted/30 border-border` |
+| Icônes | `text-orange-500` |
+| Titre orange | `text-orange-500` |
+| CTA primaire | `bg-orange-500 hover:bg-orange-400` |
+| CTA secondaire | `border-border hover:bg-muted` |

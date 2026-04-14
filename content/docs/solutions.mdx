@@ -1,0 +1,377 @@
+---
+title: "Solutions"
+description: "Section résultats clients — 3 cartes avec métriques en liste et tags"
+keywords: ["results", "metrics", "landing", "clients"]
+tags: ["component", "landing"]
+order: 3
+subcategory: "Solution"
+---
+# 📄 Solutions — Page `/solutions`
+
+Documentation des composants de la page Solutions de Lemurian.
+
+---
+
+## 📁 Structure des fichiers
+
+```
+src/features/solutions/
+├── hero-solution.tsx          ← Server Component
+├── solution-accordion.tsx     ← Client Component ("use client")
+├── proof-section.tsx          ← Server Component
+├── why-us.tsx                 ← Server Component
+├── faq-accordion.tsx          ← Client Component ("use client")
+├── cta-banner-solutions.tsx   ← Server Component
+└── __tests__/
+    ├── hero-solution.test.tsx
+    ├── solution-accordion.test.tsx
+    ├── proof-section.test.tsx
+    ├── why-us.test.tsx
+    ├── faq-accordion.test.tsx
+    └── cta-banner-solutions.test.tsx
+
+src/app/(layout)/solutions/
+└── page.tsx                   ← Assemblage de la page
+```
+
+---
+
+## 🚀 `HeroSolution`
+
+**Fichier** : `hero-solution.tsx`  
+**Type** : Server Component
+
+Section hero de la page solutions. Centré, avec fond dégradé orange subtil.
+
+### Structure
+
+```
+<section>
+  Badge "Nos solutions SEO local"
+  <h1> Visibilité Google + <span orange> génère de vrais clients </span>
+  <p> Sous-titre
+  Highlights × 3 (CheckCircle + label)
+  CTA "Démarrer mon audit gratuit" → #audit-form
+  CTA "Découvrir les offres ↓"    → #solutions
+</section>
+```
+
+### Data
+
+| Highlight | —
+|---|---|
+| Sans engagement | ✓ |
+| Résultats mesurables | ✓ |
+| Accompagnement local | ✓ |
+
+### Thème
+
+| Élément | Light | Dark |
+|---|---|---|
+| Badge | `border-orange-200 bg-orange-50 text-orange-700` | `dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300` |
+| Titre accent | `text-orange-500` | identique |
+| CTA primaire | `bg-orange-500 text-white` | identique |
+| CTA secondaire | `border-border text-foreground` | suit le thème |
+
+### Tests (9)
+
+- Badge présent
+- `<h1>` présent
+- Accent orange présent
+- Sous-titre présent
+- 3 highlights présents
+- CTA primaire présent + `href="#audit-form"`
+- CTA secondaire présent + `href="#solutions"`
+
+---
+
+## 🗂️ `SolutionAccordion`
+
+**Fichier** : `solution-accordion.tsx`  
+**Type** : `"use client"` — état `open` par item
+
+Affiche les 4 solutions sous forme d'accordion. Chaque item peut être ouvert indépendamment.
+
+### Structure
+
+```
+<section id="solutions">
+  Badge "Solutions"
+  <h2> Ce qu'on fait pour vous
+
+  × 4 <SolutionItem>
+    [fermé]  icône + tag + titre + description (line-clamp) + prix (desktop) + chevron
+    [ouvert] details + liste inclus + prix + CTA → #audit-form
+```
+
+### Solutions
+
+| id | Tag | Titre | Prix |
+|---|---|---|---|
+| `audit` | Gratuit | Audit de visibilité | Gratuit |
+| `gbp` | GBP | Optimisation Fiche Google | À partir de 297 €/mois |
+| `seo` | SEO | Référencement web (SEO) | À partir de 497 €/mois |
+| `site` | Site | Création de site web | À partir de 997 € |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `solution-item` | Conteneur de chaque solution |
+
+### Tests (12)
+
+- Badge présent
+- Titre de section présent
+- 4 `solution-item` présents
+- 4 titres présents
+- Items fermés par défaut
+- Ouverture au clic → `aria-expanded="true"`
+- Contenu visible après ouverture
+- CTA visible après ouverture
+- Fermeture au second clic → `aria-expanded="false"`
+
+---
+
+## 📊 `ProofSection`
+
+**Fichier** : `proof-section.tsx`  
+**Type** : Server Component
+
+Affiche 4 stats chiffrées + 3 témoignages clients avec badge de croissance.
+
+### Structure
+
+```
+<section>
+  Badge "Preuves"
+  <h2> Des chiffres, pas des promesses
+
+  Grille 4 stats [data-testid="proof-stat"]
+    icône + valeur orange + label + sous-label
+
+  Grille 3 témoignages [data-testid="proof-testimonial"]
+    ★★★★★ + citation + auteur + rôle + badge croissance
+```
+
+### Stats
+
+| Valeur | Label |
+|---|---|
+| +280% | d'appels en moyenne |
+| +240% | d'itinéraires |
+| +310% | de clics vers le site |
+| 4.9/5 | satisfaction client |
+
+### Témoignages
+
+| Auteur | Rôle | Croissance |
+|---|---|---|
+| Thomas R. | Plombier — Toulouse | +336% d'appels |
+| Nadia K. | Kinésithérapeute — Bordeaux | +314% de RDV |
+| Marc D. | Cabinet dentaire Nice | Top 3 Google |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `proof-stat` | Carte stat individuelle |
+| `proof-testimonial` | Carte témoignage |
+
+### Tests (12)
+
+- Badge, titre présents
+- 4 `proof-stat` présents
+- Valeurs +280%, +240%, +310%, 4.9/5 présentes
+- 3 `proof-testimonial` présents
+- 3 auteurs présents
+- 3 badges de croissance présents
+
+---
+
+## 🏆 `WhyUs`
+
+**Fichier** : `why-us.tsx`  
+**Type** : Server Component
+
+Grille 6 raisons de choisir Lemurian + bloc garantie 60 jours.
+
+### Structure
+
+```
+<section>
+  Badge "Pourquoi nous"
+  <h2> Ce qui nous rend différents
+
+  Grille 3×2 [data-testid="why-us-card"]
+    icône + titre + description
+
+  Bloc garantie
+    texte + CTA "Tester sans risque →" → #audit-form
+```
+
+### Raisons
+
+| Icône | Titre |
+|---|---|
+| Target | Uniquement le SEO local |
+| BarChart3 | Résultats mesurables |
+| ShieldCheck | Zéro bullshit |
+| Users | Interlocuteur unique |
+| Clock | Réponse en moins de 24h |
+| MapPin | Ancré en Nouvelle-Aquitaine |
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `why-us-card` | Carte raison individuelle |
+
+### Tests (11)
+
+- Badge, titre présents
+- 6 `why-us-card` présents
+- 6 titres présents
+- Bloc garantie présent
+- CTA garantie → `href="#audit-form"`
+
+---
+
+## ❓ `FaqAccordion`
+
+**Fichier** : `faq-accordion.tsx`  
+**Type** : `"use client"` — état `openIndex` (un seul ouvert à la fois)
+
+8 questions fréquentes. Le premier item est ouvert par défaut (`useState(0)`).
+
+### Comportement
+
+- Un seul item ouvert à la fois (accordion exclusif)
+- Cliquer sur l'item ouvert → le ferme (`openIndex = null`)
+- Cliquer sur un item fermé → ouvre celui-ci, ferme le précédent
+- Premier item ouvert par défaut
+
+### Questions
+
+1. Combien de temps avant de voir des résultats ?
+2. Vous intervenez dans quelles villes ?
+3. J'ai déjà un site. Vous pouvez l'optimiser ?
+4. Quelle est la différence entre GBP et SEO ?
+5. Y a-t-il un engagement de durée ?
+6. Comment se passe le suivi ?
+7. Est-ce que je dois vous donner les accès à mon compte Google ?
+8. Vous garantissez la 1ère place sur Google ?
+
+### `data-testid`
+
+| Sélecteur | Élément |
+|---|---|
+| `faq-item` | Conteneur question + réponse |
+
+### Tests (11)
+
+- Badge, titre présents
+- 8 `faq-item` présents
+- Premier item `aria-expanded="true"` par défaut
+- Ouverture au clic → `aria-expanded="true"`
+- Fermeture de l'ancien à l'ouverture du nouveau
+- Fermeture au second clic → `aria-expanded="false"`
+- Lien email `mailto:lemurian734@gmail.com` présent
+
+---
+
+## 📣 `CtaBannerSolutions`
+
+**Fichier** : `cta-banner-solutions.tsx`  
+**Type** : Server Component
+
+Carte centrée de conversion en fin de page.
+
+### Structure
+
+```
+<section>
+  <div> carte orange/5 arrondie
+    Blob décoratif (aria-hidden)
+    Badge "Appel gratuit · 30 min"
+    <h2> Prêt à dominer + <span orange> Google dans votre ville </span>
+    <p> Sous-titre
+    CTA "Réserver mon appel gratuit" → #audit-form
+    CTA "Voir les résultats clients" → /realisations
+    Micro-preuves : +30 audits · < 24h · Bordeaux
+```
+
+### Tests (8)
+
+- Badge présent
+- `<h2>` présent
+- Titre partiel présent
+- Accent orange présent
+- CTA primaire présent + `href="#audit-form"`
+- CTA secondaire → `/realisations`
+- Micro-preuves présentes
+
+---
+
+## 🔗 Assemblage `page.tsx`
+
+```tsx
+// src/app/(layout)/solutions/page.tsx
+<main>
+  <HeroSolution />        // section hero
+  <SolutionAccordion />   // id="solutions"
+  <ProofSection />        // stats + témoignages
+  <WhyUs />               // grille 6 raisons
+  <FaqAccordion />        // 8 questions
+  <CtaBannerSolutions />  // CTA final
+  <AuditForm />           // id="audit-form" — partagé avec landing
+</main>
+```
+
+---
+
+## 🧪 Résumé des tests
+
+| Composant | Tests | Client |
+|---|---|---|
+| `hero-solution.test.tsx` | 9 | ❌ |
+| `solution-accordion.test.tsx` | 12 | ✅ |
+| `proof-section.test.tsx` | 12 | ❌ |
+| `why-us.test.tsx` | 11 | ❌ |
+| `faq-accordion.test.tsx` | 11 | ✅ |
+| `cta-banner-solutions.test.tsx` | 8 | ❌ |
+| **Total** | **63** | |
+
+---
+
+## 📌 Règles de test à retenir
+
+```ts
+// Client components : mock "use client" dependencies si nécessaire
+// Server components : pas de mock motion/react nécessaire
+
+// Accordion exclusif (FaqAccordion)
+// → cliquer item 2 ferme item 1
+// → screen.getAllByRole("button")[0] = premier item
+
+// SolutionAccordion
+// → items fermés par défaut : queryByText("Gratuit") → null
+// → après clic : getByText("Gratuit") → présent
+```
+
+---
+
+## 🎨 Tokens utilisés
+
+Tous les composants utilisent exclusivement les CSS variables Tailwind :
+
+```
+bg-background    text-foreground
+bg-card          border-border
+bg-muted/30      text-muted-foreground
+bg-orange-500    text-orange-500
+border-orange-200/dark:border-orange-800/60
+bg-orange-50/dark:bg-orange-950/40
+```
+
+Aucune couleur hardcodée — adaptatif light/dark automatique.

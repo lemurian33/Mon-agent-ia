@@ -1,0 +1,46 @@
+---
+title: "AuditForm"
+description: "Formulaire multi-steps 3 étapes — coordonnées, activité, projet"
+keywords: ["form", "audit", "multi-steps", "landing", "contact"]
+tags: ["component", "landing", "form"]
+order: 10
+subcategory: "Landing"
+---
+
+# AuditForm
+
+Formulaire d'audit multi-steps 3 étapes avec stepper visuel, validation
+zod par étape, et action serveur.
+
+## Location
+```
+src/features/landing/audit-form.tsx
+src/features/landing/audit-form.schema.ts
+src/features/landing/audit-form.action.ts
+src/features/landing/__tests__/audit-form.test.tsx — 10 tests ✅
+```
+
+## Étapes
+
+| Étape | Champs |
+|-------|--------|
+| 1 | Prénom, Nom, Téléphone, Email |
+| 2 | Activité, Ville, Site web (optionnel) |
+| 3 | Objectif, Budget, Message (optionnel) |
+
+## Validation
+
+Validation par étape avec `trigger()` avant `setStep()` :
+```ts
+const schema = step === 1 ? Step1Schema : step === 2 ? Step2Schema : Step3Schema;
+const fields = Object.keys(schema.shape) as (keyof AuditFormData)[];
+const ok = await trigger(fields);
+if (ok) setStep((s) => s + 1);
+```
+
+## Dark mode
+
+Tous les éléments utilisent les variables CSS :
+`bg-background`, `border-border`, `text-foreground`, `text-muted-foreground`
+
+Focus ring : `focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/10`

@@ -1,0 +1,62 @@
+---
+title: "CallProcess"
+description: "Section déroulement de l'appel — 5 cartes en grille 3+2"
+keywords: ["call", "process", "landing", "cards"]
+tags: ["component", "landing"]
+order: 3
+subcategory: "Landing"
+---
+
+# CallProcess
+
+Section présentant le déroulement de l'appel stratégique en 5 cartes
+disposées en grille 3+2.
+
+## Location
+```
+src/features/landing/call-process.tsx
+__tests__/call-process.test.tsx — 11 tests ✅
+```
+
+## Structure
+```
+section
+├── Header (badge orange, titre h2, sous-titre)
+└── Grille
+    ├── Ligne 1 — 3 cartes (sm:grid-cols-3)
+    │   ├── Diagnostic de votre visibilité
+    │   ├── Stratégie personnalisée
+    │   └── Analyse concurrentielle
+    └── Ligne 2 — 2 cartes centrées (sm:grid-cols-2)
+        ├── Conseils actionnables
+        └── Feuille de route prioritaire
+```
+
+## Dark mode
+
+Utilise exclusivement les variables CSS Tailwind :
+
+| Élément | Light | Dark |
+|---------|-------|------|
+| Carte | `bg-card border-border` | automatique |
+| Icône bg | `bg-orange-50 border-orange-200` | `dark:bg-orange-950/40` |
+| Icône couleur | `text-orange-500` | identique |
+| Badge | `bg-orange-50 text-orange-700` | `dark:bg-orange-950/60 dark:text-orange-300` |
+
+## Testing
+
+### Mocks Required
+
+| Mock | Reason |
+|------|--------|
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Catégorie | Tests |
+|-----------|-------|
+| Header | badge, titre, sous-titre |
+| Cartes | 5 `data-testid="process-card"` |
+| Icônes | 5 `data-testid="process-card-icon"` |
+| Descriptions | 5 non vides |
+| Titres cartes | les 5 titres présents |

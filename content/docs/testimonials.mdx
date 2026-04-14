@@ -1,0 +1,66 @@
+---
+title: "Testimonials"
+description: "Section avis clients — carousel 6 cartes avec étoiles, quote, avatar initiale"
+keywords: ["testimonials", "avis", "carousel", "landing"]
+tags: ["component", "landing"]
+order: 7
+subcategory: "Landing"
+---
+
+# Testimonials
+
+Section "Avis clients" — carousel horizontal de 6 cartes avec étoiles
+orange, citation, avatar initiale colorée, et localisation.
+
+## Location
+```
+src/features/landing/testimonials.tsx
+src/features/landing/__tests__/testimonials.test.tsx — 15 tests ✅
+```
+
+## Structure
+```
+section
+├── Header (badge, titre h2, sous-titre)
+├── Carousel [overflow-x-auto]
+│   ├── Flèche gauche (visible si scrollLeft > 0)
+│   ├── Flèche droite (visible si pas en fin de scroll)
+│   └── 6 × TestimonialCard
+│       ├── 5 étoiles orange
+│       ├── Quote
+│       └── Avatar (initiale) + nom/rôle/company + ville
+└── CTA "Voir tous les avis →" → /avis
+```
+
+## Dark mode
+
+| Élément | Classe |
+|---------|--------|
+| Carte | `bg-card border-border` |
+| Étoiles | `fill-orange-500 text-orange-500` |
+| Quote | `text-foreground` |
+| Rôle/company | `text-muted-foreground` |
+| Ville | `text-muted-foreground` |
+| CTA | `text-orange-500 hover:text-orange-400` |
+
+## Testing
+
+### Mocks
+
+| Mock | Reason |
+|------|--------|
+| `next/link` | Remplace `<Link>` par `<a>` |
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Catégorie | Tests |
+|-----------|-------|
+| Header | badge, titre, sous-titre |
+| Carousel | présent, flèche gauche absente, flèche droite présente |
+| Cartes | 6 présentes |
+| Étoiles | 6 blocs |
+| Quotes | 6 non vides |
+| Avatars | 6 initiales |
+| Auteurs | Isabelle/Tarbes, Éric/Toulouse, Claire/Montpellier |
+| CTA | lien → `/avis` |

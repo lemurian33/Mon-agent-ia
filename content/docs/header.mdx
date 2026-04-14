@@ -1,0 +1,76 @@
+---
+title: "Header"
+description: "Internal pages navigation header wrapping HeaderBase"
+keywords: ["header", "navigation", "layout", "internal"]
+tags: ["component", "layout"]
+order: 2
+subcategory: "Layout"
+---
+
+# Header
+
+Navigation header used on all internal pages (non-landing). Wraps `HeaderBase`
+which provides the scroll-aware animated shell.
+
+## Location
+```
+src/features/layout/header.tsx
+__tests__/header.test.tsx — 3 tests ✅
+```
+
+## Description
+
+Thin wrapper around `HeaderBase` — injects nav links and CTA as children.
+Inherits scroll animation, mobile Sheet, and session-aware auth buttons from `HeaderBase`.
+
+## Navigation Links
+
+| Label | Href | Variant |
+|-------|------|---------|
+| `Solutions` | `/solutions` | ghost |
+| `Formations` | `/formations` | ghost |
+| `Réalisations` | `/realisations` | ghost |
+| `Avis` | `/avis` | ghost |
+| `FAQ` | `/faq` | ghost |
+| `Blog` | `/posts` | ghost |
+| `Documentation` | `/docs` | ghost |
+| `Contact` | `/contact` | ghost |
+| `Prendre RDV` | `/#audit-form` | default |
+
+## Examples
+```tsx
+// app/(app)/layout.tsx
+import { Header } from "@/features/layout/header";
+
+export default function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
+  );
+}
+```
+
+## Testing
+
+### Mocks Required
+
+| Mock | Reason |
+|------|--------|
+| `next/image` | Replaces `<Image>` with `<img>` |
+| `next/link` | Replaces `<Link>` with `<a>` |
+| `next/navigation` | `useRouter`, `usePathname` |
+| `framer-motion` | Strip scroll animations from HeaderBase |
+| `motion/react` | Same — HeaderBase may use either |
+| `@/lib/auth-client` | `useSession` → `{ data: null }` |
+| `@/features/auth/auth-button-client` | Stub `AuthButtonClient` |
+| `@/components/nowts/typography` | Stub `Typography` |
+
+### Coverage
+
+| Category | Tests |
+|----------|-------|
+| Render | 8 nav links present |
+| Hrefs | All 8 links verified |
+| CTA | Prendre RDV → `/#audit-form` |
