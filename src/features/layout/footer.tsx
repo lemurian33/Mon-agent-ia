@@ -18,12 +18,11 @@ const NAV_COLUMNS = [
   {
     title: "Services",
     links: [
-      { label: "Audit I.A.",         href: "/audit" },
-      { label: "Accompagnement",     href: "/offre-solo" },
-      { label: "Solution Team",      href: "/offre-team" },
-      { label: "Entreprises",        href: "/offre-enterprise" },
-      { label: "Agent Vocal I.A",    href: "/offre-agent-vocal" },
-      { label: "Premium",            href: "/offre-premium" },
+      { label: "Audit",              href: "/audit" },
+      { label: "Essentielle",        href: "/essentielle" },
+      { label: "Pro",                href: "/pro" },
+      { label: "Entreprise",         href: "/entreprise" },
+      { label: "Premium",            href: "/premium" },
     ],
   },
   {
@@ -31,7 +30,7 @@ const NAV_COLUMNS = [
     links: [
       { label: "Claude",       target:"_blank", href: "https://claude.ai/" },
       { label: "Hostinger",    target:"_blank", href: "https://www.hostinger.com/fr?REFERRALCODE=XUCIAAGENFE3" },
-      { label: "Call Rounded", target:"_blank", href: "https://callrounded.com" },
+      { label: "Call Rounded", target:"_Blank", href: "https://callrounded.com" },
       { label: "LLm local",    target:"_blank", href: "https://ollama.com/" },
     ],
   },
@@ -39,10 +38,10 @@ const NAV_COLUMNS = [
     title: "Informations",
     links: [
       { label: "Espace client", href: "/signin" },
-      { label: "Plan du site",  href: "/plan-du-site" },
-      { label: "Création site",      href: "project-ar-01.vercel.app", target:"_blank" },
-      { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
-      { label: "Co²",           href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-ar-01.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
+      { label: "Plan du site",  href: "/#" },
+      { label: "Création site", href: "www.project-ar-01.vercel.app", target:"_blank" },
+      { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
+      { label: "Co²",           href: "https://www.websitecarbon.com/website/mon-agent-ia-seven-vercel-app/", target:"_blank" },
     ],
   },
 ] as const;
