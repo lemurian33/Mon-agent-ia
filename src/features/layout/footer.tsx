@@ -123,17 +123,15 @@ export function Footer() {
                   {title}
                 </h4>
                 <nav className="flex flex-col gap-2">
-                  {links.map(({ label, href, target }) => (
+                  {links.map((link) => (
                     <Link
-                      key={href}
-                      href={href}
-                      target={target}
-                      rel={
-                        target === "_blank" ? "noopener noreferrer" : undefined
-                      }
+                      key={link.href}
+                      href={link.href}
+                      target={"target" in link ? link.target : undefined}
+                      rel={"target" in link && link.target === "_blank" ? "noopener noreferrer" : undefined}
                       className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                     >
-                      {label}
+                      {link.label}
                     </Link>
                   ))}
                 </nav>

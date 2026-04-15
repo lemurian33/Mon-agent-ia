@@ -4,7 +4,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 export const CtaBannerSolutions = () => {
   return (
     <section className="py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div
           className="relative overflow-hidden rounded-3xl border
                      border-orange-500/20 bg-orange-500/5 px-8 py-14
