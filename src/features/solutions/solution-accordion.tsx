@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ScanSearch, GraduationCap, Bot, Server, Wrench, PhoneCall, Info } from "lucide-react";
+import { ChevronDown, ScanSearch, Bot, Server, PhoneCall, Info } from "lucide-react";
 import Link from "next/link";
 
 type Solution = {
@@ -37,9 +37,9 @@ const SOLUTIONS: Solution[] = [
     cta: "Réserver mon audit",
   },
   {
-    id: "solo",
-    icon: GraduationCap,
-    tag: "Formation",
+    id: "essentiel",
+    icon: Bot,
+    tag: "Essentiel",
     title: "Formation & montée en compétences I.A.",
     description:
       "Vos équipes maîtrisent l'I.A. en autonomie — avec des cas pratiques tirés directement de votre métier.",
@@ -56,9 +56,9 @@ const SOLUTIONS: Solution[] = [
     cta: "Démarrer la formation",
   },
   {
-    id: "team",
-    icon: Bot,
-    tag: "Agent I.A.",
+    id: "pro",
+    icon: Server,
+    tag: "Pro",
     title: "Intégration d'agents I.A.",
     description:
       "Des agents I.A. déployés dans vos outils du quotidien — devis, relances, support, prise de RDV, qualification de leads.",
@@ -79,7 +79,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: "entreprise",
     icon: Server,
-    tag: "Écosystème",
+    tag: "Entreprise",
     title: "Écosystème I.A. souverain",
     description:
       "Une infrastructure I.A. complète, hébergée sur votre domaine, 100% conforme RGPD — vos données ne quittent jamais votre périmètre.",
@@ -96,30 +96,30 @@ const SOLUTIONS: Solution[] = [
     price: "À partir de 297 €/mois",
     cta: "Déployer mon écosystème",
   },
-  {
-    id: "agent-vocal-ia",
-    icon: PhoneCall,
-    tag: "Agent vocal",
-    title: "Agent vocal I.A.",
-    description:
-      "Votre téléphone répond tout seul — 24h/24, 7j/7. Qualification, prise de RDV, zéro appel manqué.",
-    details:
-      "Chaque appel entrant est pris en charge instantanément par votre agent vocal I.A. : il répond, pose les bonnes questions, qualifie le prospect et enregistre tout dans votre CRM. Fini les appels perdus en dehors des heures d'ouverture. Votre agenda se remplit, vous vous concentrez sur vos clients.",
-    included: [
-      "Réponse automatique et immédiate aux appels entrants",
-      "Qualification des prospects en temps réel",
-      "Prise de rendez-vous directement dans votre agenda",
-      "Synchronisation CRM automatique",
-      "Disponible 24h/24, 7j/7 — week-ends et jours fériés inclus",
-      "Conforme RGPD, données hébergées en France",
-    ],
-    price: "À partir de 159 €/mois",
-    cta: "Découvrir l'agent vocal",
-  },
+  // {
+  //   id: "agent-vocal-ia",
+  //   icon: PhoneCall,
+  //   tag: "Agent vocal",
+  //   title: "Agent vocal I.A.",
+  //   description:
+  //     "Votre téléphone répond tout seul — 24h/24, 7j/7. Qualification, prise de RDV, zéro appel manqué.",
+  //   details:
+  //     "Chaque appel entrant est pris en charge instantanément par votre agent vocal I.A. : il répond, pose les bonnes questions, qualifie le prospect et enregistre tout dans votre CRM. Fini les appels perdus en dehors des heures d'ouverture. Votre agenda se remplit, vous vous concentrez sur vos clients.",
+  //   included: [
+  //     "Réponse automatique et immédiate aux appels entrants",
+  //     "Qualification des prospects en temps réel",
+  //     "Prise de rendez-vous directement dans votre agenda",
+  //     "Synchronisation CRM automatique",
+  //     "Disponible 24h/24, 7j/7 — week-ends et jours fériés inclus",
+  //     "Conforme RGPD, données hébergées en France",
+  //   ],
+  //   price: "À partir de 159 €/mois",
+  //   cta: "Découvrir l'agent vocal",
+  // },
   {
     id: "premium",
-    icon: Wrench,
-    tag: "Sur mesure",
+    icon: Server,
+    tag: "Premium",
     title: "Configuration full custom",
     description:
       "Architecture I.A. pensée de zéro pour votre structure — pour aller plus loin, plus vite, sans compromis.",

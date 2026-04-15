@@ -40,13 +40,13 @@ const OFFERS: Offer[] = [
     popular: false,
   },
   {
-    id: "solo",
+    id: "essentiel",
     badge: "POPULAIRE",
-    title: "Solo",
+    title: "Essentiel",
     price: "97€",
     priceUnit: "par mois",
     description:
-      "Accompagnement pour intégrer eco systeme Claude dans votre quotidien, formation complète. Idéal pour les indépendants et solopreneurs.",
+      "Accompagnement pour intégrer eco système Claude dans votre quotidien mais vous serez tributaire d'eux. Formation complète. Idéal pour les indépendants et solopreneurs.",
     features: [
       "Formation Claude eco systeme",
       "Accompagnement et intégration personnalisé",
@@ -55,12 +55,12 @@ const OFFERS: Offer[] = [
       "support client",
     ],
     cta: "Démarrer",
-    href: "/solo",
+    href: "/essentiel",
     popular: false,
   },
   {
-    id: "team",
-    title: "Team Agent",
+    id: "pro",
+    title: "Pro",
     price: "147€",
     priceUnit: "par mois",
     description:
@@ -74,11 +74,11 @@ const OFFERS: Offer[] = [
       "coût API claude (non-inclus)",
     ],
     cta: "Découvrir",
-    href: "/team-agent",
+    href: "/pro",
     popular: false,
   },
   {
-    id: "enterprise",
+    id: "entreprise",
     badge: "Puissant",
     title: "Entreprise",
     price: "297€",
