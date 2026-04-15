@@ -8,58 +8,76 @@ const NAV_COLUMNS = [
   {
     title: "Navigation",
     links: [
-      { label: "Solutions",    href: "/solutions" },
+      { label: "Solutions", href: "/solutions" },
       { label: "Réalisations", href: "/realisations" },
-      { label: "Blog",         href: "/posts" },
-      { label: "Contact",      href: "/contact" },
-      { label: "À propos",     href: "/about" },
+      { label: "Blog", href: "/posts" },
+      { label: "Contact", href: "/contact" },
+      { label: "À propos", href: "/about" },
     ],
   },
   {
     title: "Services",
     links: [
-      { label: "Audit",              href: "/audit" },
-      { label: "Essentielle",        href: "/essentielle" },
-      { label: "Pro",                href: "/pro" },
-      { label: "Entreprise",         href: "/entreprise" },
-      { label: "Premium",            href: "/premium" },
+      { label: "Audit", href: "/audit" },
+      { label: "Essentielle", href: "/essentielle" },
+      { label: "Pro", href: "/pro" },
+      { label: "Entreprise", href: "/entreprise" },
+      { label: "Premium", href: "/premium" },
     ],
   },
   {
     title: "RGPD",
     links: [
-      { label: "Claude",       target:"_blank", href: "https://claude.ai/" },
-      { label: "Hostinger",    target:"_blank", href: "https://www.hostinger.com/fr?REFERRALCODE=XUCIAAGENFE3" },
-      { label: "Call Rounded", target:"_Blank", href: "https://callrounded.com" },
-      { label: "LLm local",    target:"_blank", href: "https://ollama.com/" },
+      { label: "Claude", target: "_blank", href: "https://claude.ai/" },
+      {
+        label: "Hostinger",
+        target: "_blank",
+        href: "https://www.hostinger.com/fr?REFERRALCODE=XUCIAAGENFE3",
+      },
+      {
+        label: "Call Rounded",
+        target: "_Blank",
+        href: "https://callrounded.com",
+      },
+      { label: "LLm local", target: "_blank", href: "https://ollama.com/" },
     ],
   },
   {
     title: "Informations",
     links: [
       { label: "Espace client", href: "/signin" },
-      { label: "Plan du site",  href: "/#" },
-      { label: "Création site", href: "www.project-ar-01.vercel.app", target:"_blank" },
-      { label: "Performance",   href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#", target:"_blank" },
-      { label: "Co²",           href: "https://www.websitecarbon.com/website/mon-agent-ia-seven-vercel-app/", target:"_blank" },
+      { label: "Plan du site", href: "/#" },
+      {
+        label: "Création site",
+        href: "https://www.project-ar-01.vercel.app",
+        target: "_blank",
+      },
+      {
+        label: "Performance",
+        href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#",
+        target: "_blank",
+      },
+      {
+        label: "Co²",
+        href: "https://www.websitecarbon.com/website/mon-agent-ia-seven-vercel-app/",
+        target: "_blank",
+      },
     ],
   },
 ] as const;
 
 const CONTACT = [
-  { icon: Mail,   label: "Email",     value: "lemurian734@gmail.com" },
-  { icon: Phone,  label: "Téléphone", value: "06 30 83 28 75" },
-  { icon: MapPin, label: "Adresse",   value: "Bordeaux, Gironde" },
+  { icon: Mail, label: "Email", value: "lemurian734@gmail.com" },
+  { icon: Phone, label: "Téléphone", value: "06 30 83 28 75" },
+  { icon: MapPin, label: "Adresse", value: "Bordeaux, Gironde" },
 ] as const;
 
 export function Footer() {
   return (
-    <footer id="footer" className="border-t border-border bg-background">
+    <footer id="footer" className="border-border bg-background border-t">
       <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
-
         {/* ── Grille principale ── */}
         <div className="mt-4 grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_2fr]">
-
           {/* ── Colonne gauche — brand + contact ── */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-2">
@@ -69,31 +87,28 @@ export function Footer() {
                 width={24}
                 height={24}
               />
-              <span className="text-lg font-bold text-foreground">
+              <span className="text-foreground text-lg font-bold">
                 Mon agent AI
               </span>
             </Link>
 
-            <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-             J'intègre et déploie un écosystème d'agents I.A. directement dans vos process métier — pour des résultats concrets et mesurables.
+            <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
+              J'intègre et déploie un écosystème d'agents I.A. directement dans
+              vos process métier — pour des résultats concrets et mesurables.
             </p>
 
             {/* Contact */}
             <ul className="flex flex-col gap-3">
               {CONTACT.map(({ icon: Icon, label, value }) => (
                 <li key={label} className="flex items-center gap-3">
-                  <div className="flex size-8 shrink-0 items-center
-                                  justify-center rounded-full
-                                  border border-border bg-muted/30">
+                  <div className="border-border bg-muted/30 flex size-8 shrink-0 items-center justify-center rounded-full border">
                     <Icon size={13} className="text-orange-500" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs text-muted-foreground">
+                    <span className="text-muted-foreground text-xs">
                       {label}
                     </span>
-                    <span className="text-sm text-foreground">
-                      {value}
-                    </span>
+                    <span className="text-foreground text-sm">{value}</span>
                   </div>
                 </li>
               ))}
@@ -104,17 +119,19 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
             {NAV_COLUMNS.map(({ title, links }) => (
               <div key={title} className="flex flex-col gap-4">
-                <h4 className="border-l-2 border-orange-500 pl-3
-                               text-sm font-semibold text-foreground">
+                <h4 className="text-foreground border-l-2 border-orange-500 pl-3 text-sm font-semibold">
                   {title}
                 </h4>
                 <nav className="flex flex-col gap-2">
-                  {links.map(({ label, href }) => (
+                  {links.map(({ label, href, target }) => (
                     <Link
                       key={href}
                       href={href}
-                      className="text-sm text-muted-foreground
-                                 transition-colors hover:text-foreground"
+                      target={target}
+                      rel={
+                        target === "_blank" ? "noopener noreferrer" : undefined
+                      }
+                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                     >
                       {label}
                     </Link>
@@ -129,25 +146,21 @@ export function Footer() {
         <div className="mt-12">
           <Link
             href="/zone-intervention"
-            className="flex items-center justify-between rounded-xl
-                       border border-orange-500/20 bg-orange-500/5
-                       px-6 py-4 transition-all
-                       hover:border-orange-500/40 hover:bg-orange-500/10"
+            className="flex items-center justify-between rounded-xl border border-orange-500/20 bg-orange-500/5 px-6 py-4 transition-all hover:border-orange-500/40 hover:bg-orange-500/10"
           >
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-orange-500" />
-                <span className="text-xs font-bold tracking-widest
-                                 text-orange-500 uppercase">
+                <span className="text-xs font-bold tracking-widest text-orange-500 uppercase">
                   Zone d'intervention
                 </span>
               </div>
               <div className="h-4 w-px bg-orange-500/30" />
               <div>
-                <p className="text-sm font-semibold text-foreground">
+                <p className="text-foreground text-sm font-semibold">
                   Nouvelle-Aquitaine
                 </p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-muted-foreground text-xs">
                   Bordeaux, Mérignac, Pessac, Talence et toute la région
                 </p>
               </div>
@@ -157,11 +170,9 @@ export function Footer() {
         </div>
 
         {/* ── Bas de page ── */}
-        <div className="mt-4 flex flex-col items-center justify-end
-                        gap-4 border-t border-border pt-2 sm:flex-row">
+        <div className="border-border mt-4 flex flex-col items-center justify-end gap-4 border-t pt-2 sm:flex-row">
           <ScrollTopButton />
         </div>
-
       </div>
     </footer>
   );
