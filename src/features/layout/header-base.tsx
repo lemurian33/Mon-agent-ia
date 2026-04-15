@@ -12,7 +12,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
         <div className="flex items-center gap-2">
           <Image
             src={SiteConfig.appIcon}
-            alt="Lemurian app logo"
+            alt="Mon agent Ai app logo"
             width={24}
             height={24}
           />

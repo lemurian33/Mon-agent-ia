@@ -27,13 +27,13 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src={SiteConfig.appIcon}
-            alt="lemurian app logo"
+            alt="mon agent ai app logo"
             width={24}
             height={24}
             className="rounded-sm"
           />
           <span className="text-base font-bold text-foreground">
-            Lemurian Agency
+            Mon agent ai
           </span>
         </Link>
 
@@ -88,13 +88,13 @@ export function Header() {
                 <Link href="/" className="flex items-center gap-2">
                   <Image
                     src={SiteConfig.appIcon}
-                    alt="lemurian app logo"
+                    alt="Mon agent Ai app logo"
                     width={24}
                     height={24}
                     className="rounded-sm"
                     />
                   <span className="text-base font-bold text-foreground">
-                    Lemurian Agency
+                    Mon agent Ai
                   </span>
                 </Link>
                 <ThemeToggle />
