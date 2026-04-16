@@ -44,7 +44,7 @@ const NAV_COLUMNS = [
     ],
   },
   {
-    title: "RGPD",
+    title: "Models I.A",
     links: [
       { label: "Claude", target: "_blank", href: "/claude" },
       { label: "LLm local", target: "_blank", href: "/llm" },
