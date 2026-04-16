@@ -76,7 +76,7 @@ export const CtaBannerSolutions = () => {
 
           {/* Micro-preuves */}
           <p className="mt-6 text-xs text-muted-foreground">
-            +20 audits I.A. réalisés · Réponse en moins de 24h · Conforme RGPD · Bordeaux,Nouvelle-Aquitaine
+            +15 audits I.A. réalisés · Réponse en moins de 24h · Conforme RGPD · Bordeaux,Nouvelle-Aquitaine
           </p>
         </div>
       </div>

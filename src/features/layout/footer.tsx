@@ -19,10 +19,28 @@ const NAV_COLUMNS = [
     title: "Services",
     links: [
       { label: "Audit", href: "/audit" },
-      { label: "Essentielle", href: "/essentielle" },
+      { label: "Essentiel", href: "/essentiel" },
       { label: "Pro", href: "/pro" },
       { label: "Entreprise", href: "/entreprise" },
       { label: "Premium", href: "/premium" },
+      { label: "Création site", href: "https://www.project-ar-01.vercel.app", target: "_blank"},
+    ],
+  },
+  {
+    title: "Informations",
+    links: [
+      { label: "Espace client", href: "/signin" },
+      { label: "Plan du site", href: "/#" },
+      {
+        label: "Performance",
+        href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#",
+        target: "_blank",
+      },
+      {
+        label: "Carbon Co²",
+        href: "https://www.websitecarbon.com/website/mon-agent-ia-seven-vercel-app/",
+        target: "_blank",
+      },
     ],
   },
   {
@@ -34,34 +52,12 @@ const NAV_COLUMNS = [
         target: "_blank",
         href: "https://www.hostinger.com/fr?REFERRALCODE=XUCIAAGENFE3",
       },
-      {
-        label: "Call Rounded",
-        target: "_Blank",
-        href: "https://callrounded.com",
-      },
+      // {
+      //   label: "Call Rounded",
+      //   target: "_Blank",
+      //   href: "https://callrounded.com",
+      // },
       { label: "LLm local", target: "_blank", href: "https://ollama.com/" },
-    ],
-  },
-  {
-    title: "Informations",
-    links: [
-      { label: "Espace client", href: "/signin" },
-      { label: "Plan du site", href: "/#" },
-      {
-        label: "Création site",
-        href: "https://www.project-ar-01.vercel.app",
-        target: "_blank",
-      },
-      {
-        label: "Performance",
-        href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#",
-        target: "_blank",
-      },
-      {
-        label: "Co²",
-        href: "https://www.websitecarbon.com/website/mon-agent-ia-seven-vercel-app/",
-        target: "_blank",
-      },
     ],
   },
 ] as const;
