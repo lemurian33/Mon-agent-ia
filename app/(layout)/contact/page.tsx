@@ -13,14 +13,22 @@ import { Building2, Mail, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Contact ${SiteConfig.title}`,
+  title: `Contact | ${SiteConfig.title} - Automatisation & Agents IA`,
   description:
-    "Contactez Lemurian Agency pour toute question sur la création de site web, le référencement local ou nos partenariats TPE/PME. Nous répondons sous 24h.",
-  keywords: ["contact", "agence web", "SEO local", "Bordeaux", "devis", "partenariat"],
+    "Contactez Lemurian pour automatiser votre activité avec des agents IA, générer plus de leads et gagner du temps. Réponse sous 24h.",
+  keywords: [
+    "contact agent IA",
+    "automatisation entreprise",
+    "génération de leads IA",
+    "agent IA entreprise",
+    "IA artisans",
+    "automatisation TPE PME",
+    "Bordeaux IA",
+  ],
   openGraph: {
-    title: `Contact ${SiteConfig.title}`,
+    title: `Contact ${SiteConfig.title} - Agents IA & Automatisation`,
     description:
-      "Contactez Lemurian Agency pour toute question sur la création de site web, le référencement local ou nos partenariats TPE/PME.",
+      "Besoin d’automatiser votre business ou générer plus de clients ? Contactez Lemurian pour mettre en place des agents IA adaptés à votre activité.",
     url: `${SiteConfig.prodUrl}/contact`,
     type: "website",
   },
@@ -46,10 +54,9 @@ export default function ContactPage() {
               variant="p"
               className="text-muted-foreground mt-6 text-lg/8"
             >
-              Vous souhaitez créer ou refondre votre site, améliorer votre
-              visibilité locale ou en savoir plus sur notre modèle de
-              partenariat ? Nous sommes disponibles pour étudier votre situation
-              et vous proposer une solution adaptée.
+              Vous souhaitez automatiser votre activité, générer plus de clients ou intégrer un agent IA dans votre entreprise ?
+              J'analyse votre situation pour vous proposer des solutions concrètes, rentables et adaptées à vos objectifs.
+              Prenez contact avec moi pour échanger sur votre projet.
             </Typography>
             <dl className="text-muted-foreground mt-10 flex flex-col gap-4 text-base/7">
               <div className="flex gap-x-4">
