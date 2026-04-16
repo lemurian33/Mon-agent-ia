@@ -42,7 +42,7 @@ const SOLUTIONS: Solution[] = [
     tag: "Essentiel",
     title: "Formation & montée en compétences I.A.",
     description:
-      "Vos équipes maîtrisent l'I.A. en autonomie — avec des cas pratiques tirés directement de votre métier.",
+      "Je vous montre comment maîtriser l'I.A. en autonomie — avec des cas pratiques tirés directement de votre métier.",
     details:
       "On ne fait pas de théorie pour faire de la théorie. Chaque session est construite autour de vos outils, vos process et vos vrais blocages. Vos collaborateurs repartent avec des prompts opérationnels, des workflows prêts à l'emploi et les bons réflexes pour faire évoluer l'I.A. au fil des semaines.",
     included: [
@@ -52,7 +52,7 @@ const SOLUTIONS: Solution[] = [
       "Accès communauté privée & ressources exclusives",
       "Support post-formation pour ancrer les acquis",
     ],
-    price: "À partir de 97 €/mois",
+    price: "147 €/mois",
     cta: "Démarrer la formation",
   },
   {
@@ -73,7 +73,7 @@ const SOLUTIONS: Solution[] = [
       "Formation à la prise en main et à l'évolution",
       "Support et optimisation continue inclus",
     ],
-    price: "À partir de 147 €/mois",
+    price: "À partir de 297 €/mois",
     cta: "Déployer un agent I.A.",
   },
   {
@@ -93,29 +93,9 @@ const SOLUTIONS: Solution[] = [
       "Conformité RGPD complète et documentée",
       "Onboarding équipe et formation à la gouvernance I.A.",
     ],
-    price: "À partir de 297 €/mois",
+    price: "Sur devis",
     cta: "Déployer mon écosystème",
   },
-  // {
-  //   id: "agent-vocal-ia",
-  //   icon: PhoneCall,
-  //   tag: "Agent vocal",
-  //   title: "Agent vocal I.A.",
-  //   description:
-  //     "Votre téléphone répond tout seul — 24h/24, 7j/7. Qualification, prise de RDV, zéro appel manqué.",
-  //   details:
-  //     "Chaque appel entrant est pris en charge instantanément par votre agent vocal I.A. : il répond, pose les bonnes questions, qualifie le prospect et enregistre tout dans votre CRM. Fini les appels perdus en dehors des heures d'ouverture. Votre agenda se remplit, vous vous concentrez sur vos clients.",
-  //   included: [
-  //     "Réponse automatique et immédiate aux appels entrants",
-  //     "Qualification des prospects en temps réel",
-  //     "Prise de rendez-vous directement dans votre agenda",
-  //     "Synchronisation CRM automatique",
-  //     "Disponible 24h/24, 7j/7 — week-ends et jours fériés inclus",
-  //     "Conforme RGPD, données hébergées en France",
-  //   ],
-  //   price: "À partir de 159 €/mois",
-  //   cta: "Découvrir l'agent vocal",
-  // },
   {
     id: "premium",
     icon: Server,

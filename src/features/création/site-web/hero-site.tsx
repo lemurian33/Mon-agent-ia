@@ -58,7 +58,7 @@ export const HeroSite = () => {
                      text-muted-foreground sm:text-lg"
         >
           Développé sur mesure, optimisé SEO dès le premier jour. Pendant que vos concurrents
-          ont un joli site, le vôtre génère des appels et des demandes.
+          ont un joli site, le vôtre génère des appels et des demandes une fois connecter à L'IA.
         </p>
 
         {/* CTAs */}
