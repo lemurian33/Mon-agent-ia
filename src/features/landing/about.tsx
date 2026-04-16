@@ -93,7 +93,7 @@ export const About = () => {
                   Mon agent Ai
                 </strong>
                 , j'ai passé des années à développer des applications web avec {" "} 
-                <Link href="www.project-ar-01.vercel.app" target="_blank" className=""><strong className="font-semibold text-orange-500">Lemurian Agency</strong></Link>{" "} et à
+                <Link href="https://www.project-ar-01.vercel.app" target="_blank" className=""><strong className="font-semibold text-orange-500">Lemurian Agency</strong></Link>{" "} et à
                 explorer l'écosystème I.A. de l'intérieur. Aujourd'hui, je mets
                 cette double expertise au service d'un seul objectif:{" "} <br/>
                 <strong className="font-semibold text-foreground">
