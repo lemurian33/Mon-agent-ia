@@ -242,8 +242,8 @@ export const OllamaModels = () => {
   const [active, setActive] = useState<"kv4" | "kv8">("kv4");
 
   const tabs = [
-    { id: "kv4" as const, label: "VPS KV4", sub: "~16 Go RAM" },
-    { id: "kv8" as const, label: "VPS KV8", sub: "~32–64 Go RAM" },
+    { id: "kv4" as const, label: "VPS KV4", sub: "16 Go RAM" },
+    { id: "kv8" as const, label: "VPS KV8", sub: "32–64 Go RAM" },
   ];
 
   const sections = active === "kv4" ? KV4_SECTIONS : KV8_SECTIONS;
@@ -269,8 +269,8 @@ export const OllamaModels = () => {
             variant="h2"
             className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
           >
-            Modèles Ollama compatibles <br />
-            VPS KV4 &amp; KV8
+            Modèles Ollama compatibles 
+						{/* <br />VPS KV4 &amp; KV8 */}
           </Typography>
 
           <Typography
@@ -283,10 +283,10 @@ export const OllamaModels = () => {
         </div>
 
         {/* ── Card ── */}
-        <div className="mx-auto mt-16 max-w-5xl rounded-2xl border border-border bg-card p-6 sm:p-10">
+        <div className="mx-auto mt-16 max-w-4xl rounded-2xl border border-border bg-card p-6 sm:p-10">
 
           {/* ── Tabs ── */}
-          <div className="mb-8 flex gap-3">
+          <div className="mb-8 flex justify-end gap-3">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
