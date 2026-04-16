@@ -41,7 +41,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "essentiel",
-    badge: "POPULAIRE",
+    // badge: "POPULAIRE",
     title: "Essentiel",
     price: "97€",
     priceUnit: "par mois",
@@ -60,6 +60,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "pro",
+    badge: "VPS KV4 | CLAUDE",
     title: "Pro",
     price: "147€",
     priceUnit: "par mois",
@@ -79,7 +80,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "Puissant",
+    badge: "VPS KV4",
     title: "Entreprise",
     price: "297€",
     priceUnit: "par mois",
@@ -99,7 +100,7 @@ const OFFERS: Offer[] = [
   },
   // {
   //   id: "Agent-vocal",
-  //   badge: "NOUVEAU",
+  //   badge: "SERVEUR VPS",
   //   title: "Agent vocal",
   //   price: "À partir de 159€",
   //   priceUnit: "par mois",
@@ -119,6 +120,7 @@ const OFFERS: Offer[] = [
   // },
   {
     id: "premium",
+    badge: "VPS KV8",
     title: "Premium",
     price: "Sur devis",
     priceUnit: "configuration sky limits",
