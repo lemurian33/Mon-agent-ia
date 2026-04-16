@@ -46,9 +46,9 @@ const OFFERS: Offer[] = [
     price: "147€",
     priceUnit: "par mois",
     description:
-      "Accompagnement pour intégrer eco système Claude dans votre quotidien. Formation complète sur cowork, management agent. Idéal pour les indépendants et solopreneurs.",
+      "Accompagnement pour intégrer eco système Claude dans votre quotidien. Formation complète sur cowork ou management agent. Idéal pour les indépendants et solopreneurs.",
     features: [
-      "Formation Claude, Cowork, Routine, ...",
+      "Formation Claude, Cowork, Routine",
       "Accompagnement et intégration personnalisé",
       "On configure ensemble et pas à pas tous vos besoins",
       "Claude Agent management",
@@ -61,7 +61,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "pro",
-    badge: "SERVEUR VPS KV4",
+    badge: "SERVEUR VPS",
     title: "Pro",
     price: "297€",
     priceUnit: "par mois",
@@ -81,7 +81,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "SERVEUR VPS KV8",
+    badge: "SERVEUR VPS",
     title: "Entreprise",
     price: "Sur devis",
     priceUnit: "par mois",
@@ -102,7 +102,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "premium",
-    badge: "SERVEUR VPS KV8",
+    badge: "SERVEUR VPS",
     title: "Premium",
     price: "Sur devis",
     priceUnit: "configuration sur mesure",

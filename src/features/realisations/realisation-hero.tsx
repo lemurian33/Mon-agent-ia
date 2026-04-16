@@ -28,7 +28,7 @@ export const RealisationsHero = () => {
         </h1>
 
         {/* Sous-titre */}
-        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
           Pas de démos. Pas de promesses. Ces entreprises ont intégré l'I.A.
           dans leurs process — et mesurent aujourd'hui un gain de temps
           et de revenus concrets.

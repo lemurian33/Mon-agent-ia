@@ -1,10 +1,10 @@
 import { Typography } from "@/components/nowts/typography";
-import { ShieldCheck, BrainCircuit, Zap, Code2, CheckCircle } from "lucide-react";
+import { ShieldCheck, Bot, Zap, Code2, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const VALUES = [
-  { icon: BrainCircuit, label: "Expert Claude & LLM" },
+  { icon: Bot, label: "Expert Claude & LLM" },
   { icon: ShieldCheck,  label: "100% conforme RGPD" },
   { icon: Code2,        label: "Développeur Full Stack" },
   { icon: Zap,          label: "Résultats concrets" },
