@@ -33,12 +33,12 @@ export const metadata: Metadata = {
 
 export default function RealisationsPage() {
   return (
-    <main>
+    <>
       <RealisationsHero />
       <RealisationsGrid/>
       <CaseStudies />
       <CtaBanner/>
       <AuditForm />
-    </main>
+    </>
   );
 }

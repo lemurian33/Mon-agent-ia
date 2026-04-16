@@ -8,7 +8,7 @@ import { FAQSection } from "@/features/landing/faq-accordion";
 
 export default function SolutionsPage() {
   return (
-    <main>
+    <>
       <HeroSolution />
       <SolutionAccordion />
       <ProofSection />
@@ -59,6 +59,6 @@ export default function SolutionsPage() {
 
       <CtaBannerSolutions />
       <AuditForm />
-    </main>
+    </>
   );
 }

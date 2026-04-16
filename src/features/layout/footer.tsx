@@ -30,7 +30,7 @@ const NAV_COLUMNS = [
     links: [
       { label: "Espace client", href: "/signin" },
       { label: "Plan du site", href: "/#" },
-      { label: "Création site", href: "https://project-ar-01.vercel.app", target: "_blank"},
+      { label: "Création site", href: "/site-web"},
       {
         label: "Performance",
         href: "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmon-agent-ia-seven.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#",

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function SiteWebPage() {
   return (
-    <main>
+    <>
       <HeroSite />
       <SiteIncludes />
       <PortfolioShowcase/>
@@ -85,6 +85,6 @@ export default function SiteWebPage() {
       />
       <CtaBannerSite />
       <AuditForm />
-    </main>
+    </>
   );
 }
