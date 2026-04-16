@@ -57,7 +57,7 @@ const NAV_COLUMNS = [
       //   target: "_Blank",
       //   href: "https://callrounded.com",
       // },
-      { label: "LLm local", target: "_blank", href: "https://ollama.com/" },
+      { label: "LLm local", target: "_blank", href: "/llm" },
     ],
   },
 ] as const;

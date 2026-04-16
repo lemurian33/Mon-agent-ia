@@ -5,7 +5,7 @@ import { WhyUs } from "@/features/solutions/why-us";
 import { CtaBannerSolutions } from "@/features/solutions/cta-banner-solutions";
 import { AuditForm } from "@/features/landing/audit/audit-form";
 import { FAQSection } from "@/features/landing/faq-accordion";
-import { OllamaModels } from "@/features/solutions/ollama-models";
+// import { OllamaModels } from "@/features/solutions/ollama-models";
 
 export default function SolutionsPage() {
   return (
