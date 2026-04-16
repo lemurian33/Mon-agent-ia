@@ -47,17 +47,12 @@ const NAV_COLUMNS = [
     title: "RGPD",
     links: [
       { label: "Claude", target: "_blank", href: "/claude" },
+      { label: "LLm local", target: "_blank", href: "/llm" },
       {
-        label: "Hostinger",
+        label: "Hébergement",
         target: "_blank",
         href: "https://www.hostinger.com/fr?REFERRALCODE=XUCIAAGENFE3",
       },
-      // {
-      //   label: "Call Rounded",
-      //   target: "_Blank",
-      //   href: "https://callrounded.com",
-      // },
-      { label: "LLm local", target: "_blank", href: "/llm" },
     ],
   },
 ] as const;
