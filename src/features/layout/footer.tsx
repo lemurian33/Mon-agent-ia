@@ -46,7 +46,7 @@ const NAV_COLUMNS = [
   {
     title: "RGPD",
     links: [
-      { label: "Claude", target: "_blank", href: "https://claude.ai/" },
+      { label: "Claude", target: "_blank", href: "/claude" },
       {
         label: "Hostinger",
         target: "_blank",
