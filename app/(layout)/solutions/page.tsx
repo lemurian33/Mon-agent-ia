@@ -1,5 +1,5 @@
 import { HeroSolution } from "@/features/solutions/hero-solution";
-import { SolutionAccordion } from "@/features/solutions/solution-accordion";
+import { SolutionAccordion } from "@/features/solutions/solution-accordion-v2";
 import { ProofSection } from "@/features/solutions/proof-section";
 import { WhyUs } from "@/features/solutions/why-us";
 import { CtaBannerSolutions } from "@/features/solutions/cta-banner-solutions";
