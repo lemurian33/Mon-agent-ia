@@ -63,8 +63,8 @@ const OFFERS: Offer[] = [
     id: "pro",
     badge: "SERVEUR VPS",
     title: "Pro",
-    price: "108€",
-    priceUnit: "par mois",
+    price: "108€/mois",
+    priceUnit: "Configuration sur mesure",
     description:
       "Votre propre écosystème I.A. hébergé en France, indépendant des Big Tech. Vos données restent chez vous, vos agents travaillent pour vous.",
     features: [
@@ -83,8 +83,8 @@ const OFFERS: Offer[] = [
     id: "entreprise",
     badge: "SERVEUR VPS",
     title: "Entreprise",
-    price: "150€",
-    priceUnit: "par mois",
+    price: "199€/mois",
+    priceUnit: "Configuration sur mesure",
     description:
       "Une équipe d'agents I.A. qui collaborent entre eux pour piloter vos process — comme avoir des collaborateurs disponibles en permanence.",
     features: [
@@ -105,7 +105,7 @@ const OFFERS: Offer[] = [
     badge: "SERVEUR VPS",
     title: "Premium",
     price: "Sur devis",
-    priceUnit: "configuration sur mesure",
+    priceUnit: "Configuration sur mesure",
     description:
       "L'I.A. taillée exactement pour votre business. Architecture pensée de A à Z selon vos process, vos équipes et vos objectifs.",
     features: [
