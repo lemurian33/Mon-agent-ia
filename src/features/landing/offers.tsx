@@ -61,7 +61,6 @@ const OFFERS: Offer[] = [
   },
   {
     id: "pro",
-    badge: "SERVEUR VPS",
     title: "Pro",
     price: "108€",
     priceUnit: "/mois",
@@ -84,7 +83,6 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "SERVEUR VPS",
     title: "Entreprise",
     price: "199€",
     priceUnit: "/mois",
@@ -103,11 +101,10 @@ const OFFERS: Offer[] = [
     ],
     cta: "En savoir plus",
     href: "/entreprise",
-    popular: false,
+    popular: true,
   },
   {
     id: "premium",
-    badge: "SERVEUR VPS",
     title: "Premium",
     price: "Sur devis",
     priceUnit: "Configuration sur mesure",
