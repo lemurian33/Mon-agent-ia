@@ -52,8 +52,8 @@ const SOLUTIONS: Solution[] = [
       "Accès communauté privée & ressources exclusives",
       "Support post-formation pour ancrer les acquis",
     ],
-    price: "147 €/mois",
-    cta: "Démarrer la formation",
+    price: "79€/mois",
+    cta: "Démarrer l'accompagnement'",
   },
   {
     id: "pro",
@@ -73,8 +73,8 @@ const SOLUTIONS: Solution[] = [
       "Formation à la prise en main et à l'évolution",
       "Support et optimisation continue inclus",
     ],
-    price: "À partir de 297 €/mois",
-    cta: "Déployer un agent I.A.",
+    price: "108 €/mois",
+    cta: "Déployer mon écosystème",
   },
   {
     id: "entreprise",
@@ -93,7 +93,7 @@ const SOLUTIONS: Solution[] = [
       "Conformité RGPD complète et documentée",
       "Onboarding équipe et formation à la gouvernance I.A.",
     ],
-    price: "Sur devis",
+    price: "199€/mois",
     cta: "Déployer mon écosystème",
   },
   {
