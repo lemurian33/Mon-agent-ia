@@ -63,7 +63,6 @@ const SOLUTIONS: Solution[] = [
     tech: {
       prereqs: [
         "Aucun prérequis technique",
-        "Disponibilité de 30 min",
         "Accès à vos process actuels",
       ],
       delai: "Disponible sous 48h",
@@ -105,8 +104,8 @@ const SOLUTIONS: Solution[] = [
     tech: {
       prereqs: [
         "Aucune compétence technique requise",
-        "1 à 5 participants max par session",
-        "Accès à Claude.ai ou ChatGPT",
+        "Session individuel",
+        "Accès à Claude.ai",
       ],
       delai: "Démarrage sous 1 semaine",
       format: "Sessions en ligne, 1h à 2h, cadence hebdomadaire",
@@ -150,9 +149,9 @@ const SOLUTIONS: Solution[] = [
       prereqs: [
         "Accès admin à vos outils (CRM, messagerie)",
         "Données structurées ou semi-structurées",
-        "Compte Make ou n8n (ou on crée le vôtre)",
+        "on crée le vôtre",
       ],
-      delai: "Premier agent en prod sous 3 semaines",
+      delai: "Premier agent en prod sous 1-2 semaines",
       format: "Déploiement asynchrone + sessions de recette",
       stack: ["n8n", "Make", "Claude API", "Pinecone", "Airtable", "HubSpot", "Cal.com"],
       questions: [
@@ -197,15 +196,14 @@ const SOLUTIONS: Solution[] = [
       prereqs: [
         "Serveur dédié ou VPS (on peut provisioner)",
         "Nom de domaine et accès DNS",
-        "Budget infra minimum ~30 €/mois HT",
       ],
-      delai: "Stack complète opérationnelle sous 4–6 semaines",
+      delai: "Stack complète opérationnelle sous 1–2 semaines",
       format: "Déploiement DevOps assuré par notre équipe",
-      stack: ["Coolify", "n8n", "Qdrant", "Mistral", "Gemma", "PostgreSQL", "MinIO", "Traefik"],
+      stack: ["Coolify", "paperclip", "n8n", "Qdrant", "Mistral", "Gemma", "PostgreSQL", "Dockers", "Traefik"],
       questions: [
         {
           q: "Quel hébergeur recommandez-vous ?",
-          a: "Hetzner (Allemagne) est notre recommandation par défaut. OVH, Scaleway ou Infomaniak sont des alternatives FR/CH valides.",
+          a: "Hostinger est notre recommandation par défaut. Hetzner, OVH, Scaleway ou Infomaniak sont des alternatives FR valides.",
         },
         {
           q: "Les modèles open source sont-ils aussi performants ?",
@@ -226,7 +224,7 @@ const SOLUTIONS: Solution[] = [
     id: "premium",
     icon: Gem,
     tag: "Premium",
-    title: "Configuration full custom",
+    title: "Configuration sur mesure",
     desc: "Architecture I.A. pensée de zéro pour votre structure — pour aller plus loin sans compromis.",
     detail:
       "Pour les projets ambitieux ou les besoins hors standard : audit stratégique, déploiement full stack, intégrations métier complexes et SLA dédié. Un interlocuteur unique de la conception au suivi.",
@@ -305,7 +303,7 @@ const Modal = ({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-xl"
+        className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
