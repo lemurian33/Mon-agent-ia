@@ -41,9 +41,9 @@ const OFFERS: Offer[] = [
   },
   {
     id: "essentiel",
-    badge: "ECO SYSTEM CLAUDE",
+    badge: "PROPULSER PAR CLAUDE",
     title: "Essentiel",
-    price: "147€",
+    price: "79€",
     priceUnit: "par mois",
     description:
       "Accompagnement pour intégrer eco système Claude dans votre quotidien. Formation complète sur cowork ou management agent. Idéal pour les indépendants et solopreneurs.",
@@ -52,8 +52,8 @@ const OFFERS: Offer[] = [
       "Accompagnement et intégration personnalisé",
       "On configure ensemble et pas à pas tous vos besoins",
       "Claude Agent management",
-      "Coût API claude (non-inclus)",
       "Support client",
+      "Coût API claude (non-inclus)",
     ],
     cta: "Démarrer",
     href: "/essentiel",
@@ -63,7 +63,7 @@ const OFFERS: Offer[] = [
     id: "pro",
     badge: "SERVEUR VPS",
     title: "Pro",
-    price: "297€",
+    price: "108€",
     priceUnit: "par mois",
     description:
       "Votre propre écosystème I.A. hébergé en France, indépendant des Big Tech. Vos données restent chez vous, vos agents travaillent pour vous.",
@@ -83,7 +83,7 @@ const OFFERS: Offer[] = [
     id: "entreprise",
     badge: "SERVEUR VPS",
     title: "Entreprise",
-    price: "Sur devis",
+    price: "150€",
     priceUnit: "par mois",
     description:
       "Une équipe d'agents I.A. qui collaborent entre eux pour piloter vos process — comme avoir des collaborateurs disponibles en permanence.",
