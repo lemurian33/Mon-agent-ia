@@ -43,8 +43,8 @@ const OFFERS: Offer[] = [
     id: "essentiel",
     badge: "PROPULSER PAR CLAUDE",
     title: "Essentiel",
-    price: "79€ par mois",
-    priceUnit: "Accompagnement sur mesure",
+    price: "79€",
+    priceUnit: "/mois -- Accompagnement sur mesure",
     description:
       "Accompagnement pour intégrer eco système Claude dans votre quotidien. Formation complète sur cowork ou management agent. Idéal pour les indépendants et solopreneurs.",
     features: [
@@ -63,8 +63,8 @@ const OFFERS: Offer[] = [
     id: "pro",
     badge: "SERVEUR VPS",
     title: "Pro",
-    price: "108€ par mois",
-    priceUnit: "Configuration sur mesure",
+    price: "108€",
+    priceUnit: "/mois -- Configuration sur mesure",
     description:
       "Votre propre écosystème I.A. hébergé en France, indépendant des Big Tech. Vos données restent chez vous, vos agents travaillent pour vous.",
     features: [
@@ -83,8 +83,8 @@ const OFFERS: Offer[] = [
     id: "entreprise",
     badge: "SERVEUR VPS",
     title: "Entreprise",
-    price: "199€ par mois",
-    priceUnit: "Configuration sur mesure",
+    price: "199€",
+    priceUnit: "/mois -- Configuration sur mesure",
     description:
       "Une équipe d'agents I.A. qui collaborent entre eux pour piloter vos process — comme avoir des collaborateurs disponibles en permanence.",
     features: [
