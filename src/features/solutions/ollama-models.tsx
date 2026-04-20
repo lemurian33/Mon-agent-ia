@@ -5,20 +5,20 @@ import { Typography } from "@/components/nowts/typography";
 import { Cpu, Code2, Eye, Mic, Database, BrainCircuit } from "lucide-react";
 
 /* ─── Types ─────────────────────────────────────────── */
-type BadgeType = "gen" | "code" | "reason" | "embed" | "vision" | "audio";
+type BadgeType = "gen" | "code" | "reason" | "embed" | "vision" | "audio" | "actif";
 
-interface Model {
+type Model = {
   name: string;
   ram: string;
   types: BadgeType[];
   usage: string;
-}
+};
 
-interface Section {
+type Section = {
   title: string;
   icon: React.ElementType;
   models: Model[];
-}
+};
 
 /* ─── Badge config ───────────────────────────────────── */
 const BADGE_CONFIG: Record<BadgeType, { label: string; className: string }> = {
@@ -28,6 +28,7 @@ const BADGE_CONFIG: Record<BadgeType, { label: string; className: string }> = {
   embed:  { label: "Embedding",    className: "bg-gray-100  text-gray-600   dark:bg-gray-800      dark:text-gray-300"   },
   vision: { label: "Vision",       className: "bg-purple-50 text-purple-700 dark:bg-purple-950/60 dark:text-purple-300" },
   audio:  { label: "Audio",        className: "bg-orange-50 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300" },
+  actif:  { label: "Actif",        className: "bg-red-50 text-red-700 dark:bg-red-950/60 dark:text-red-300" },
 };
 
 /* ─── Data ───────────────────────────────────────────── */
@@ -56,9 +57,9 @@ const KV4_SECTIONS: Section[] = [
     title: "Code",
     icon: Code2,
     models: [
-      { name: "qwen2.5-coder:7b",  ram: "~5 Go", types: ["code"], usage: "Génération, debug, automatisation scripts" },
-      { name: "codellama:7b",      ram: "~5 Go", types: ["code"], usage: "Complétion de code, refactoring" },
-      { name: "deepseek-coder:6.7b",ram: "~5 Go",types: ["code"], usage: "Code multi-langages, génération automatisée" },
+      { name: "qwen2.5-coder:7b",   ram: "~5 Go", types: ["code"], usage: "Génération, debug, automatisation scripts" },
+      { name: "codellama:7b",       ram: "~5 Go", types: ["code"], usage: "Complétion de code, refactoring" },
+      { name: "deepseek-coder:6.7b",ram: "~5 Go", types: ["code"], usage: "Code multi-langages, génération automatisée" },
     ],
   },
   {
@@ -94,14 +95,14 @@ const KV8_SECTIONS: Section[] = [
     title: "Généraliste haute performance",
     icon: Cpu,
     models: [
-      { name: "gemma4:26b",        ram: "~16 Go", types: ["gen", "vision"], usage: "Agent orchestrateur, raisonnement avancé, multimodal" },
-      { name: "gemma4:31b",        ram: "~22 Go", types: ["gen", "vision"], usage: "Agent CEO, analyse complexe, décisionnel" },
-      { name: "llama3.3:70b",      ram: "~42 Go", types: ["gen"],           usage: "Analyse longue, pilotage, orchestration" },
-      { name: "mistral-small3:22b",ram: "~14 Go", types: ["gen"],           usage: "Rédaction pro, synthèse longue, qualité élevée" },
-      { name: "qwen3:14b",         ram: "~10 Go", types: ["gen"],           usage: "Multilingue avancé, mode thinking" },
-      { name: "qwen3:32b",         ram: "~22 Go", types: ["gen"],           usage: "Raisonnement poussé, analyses longues" },
-      { name: "gemma3:27b",        ram: "~18 Go", types: ["gen"],           usage: "Agent généraliste haute qualité" },
-      { name: "phi4:14b",          ram: "~10 Go", types: ["gen"],           usage: "Raisonnement, maths, tâches structurées" },
+      { name: "gemma4:26b",        ram: "~16 Go", types: ["gen", "vision"],        usage: "Agent orchestrateur, raisonnement avancé, multimodal" },
+      { name: "gemma4:31b",        ram: "~22 Go", types: ["gen", "vision", "actif"], usage: "Agent CEO, analyse complexe, décisionnel" },
+      { name: "llama3.3:70b",      ram: "~42 Go", types: ["gen"],                  usage: "Analyse longue, pilotage, orchestration" },
+      { name: "mistral-small3:22b",ram: "~14 Go", types: ["gen"],                  usage: "Rédaction pro, synthèse longue, qualité élevée" },
+      { name: "qwen3:14b",         ram: "~10 Go", types: ["gen"],                  usage: "Multilingue avancé, mode thinking" },
+      { name: "qwen3:32b",         ram: "~22 Go", types: ["gen"],                  usage: "Raisonnement poussé, analyses longues" },
+      { name: "gemma3:27b",        ram: "~18 Go", types: ["gen"],                  usage: "Agent généraliste haute qualité" },
+      { name: "phi4:14b",          ram: "~10 Go", types: ["gen"],                  usage: "Raisonnement, maths, tâches structurées" },
     ],
   },
   {
@@ -127,9 +128,9 @@ const KV8_SECTIONS: Section[] = [
     title: "Vision / Multimodal",
     icon: Eye,
     models: [
-      { name: "llava:34b",     ram: "~22 Go", types: ["vision"], usage: "Analyse images haute précision" },
-      { name: "qwen2-vl:7b",   ram: "~5 Go",  types: ["vision"], usage: "Vision multilingue, documents, OCR" },
-      { name: "minicpm-v:8b",  ram: "~6 Go",  types: ["vision"], usage: "OCR, vidéo, image haute résolution" },
+      { name: "llava:34b",    ram: "~22 Go", types: ["vision"], usage: "Analyse images haute précision" },
+      { name: "qwen2-vl:7b",  ram: "~5 Go",  types: ["vision"], usage: "Vision multilingue, documents, OCR" },
+      { name: "minicpm-v:8b", ram: "~6 Go",  types: ["vision"], usage: "OCR, vidéo, image haute résolution" },
     ],
   },
   {
@@ -151,46 +152,41 @@ const KV8_SECTIONS: Section[] = [
 ];
 
 /* ─── Sub-components ─────────────────────────────────── */
-function Badge({ type }: { type: BadgeType }) {
+type BadgeProps = {
+  type: BadgeType;
+};
+
+function Badge({ type }: BadgeProps) {
   const { label, className } = BADGE_CONFIG[type];
   return (
-    <span
-      className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold ${className}`}
-    >
+    <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold ${className}`}>
       {label}
     </span>
   );
 }
 
-function ModelTable({ section }: { section: Section }) {
+type ModelTableProps = {
+  section: Section;
+};
+
+function ModelTable({ section }: ModelTableProps) {
   const Icon = section.icon;
   return (
     <div className="mb-6">
-      {/* Section header */}
       <div className="mb-2 flex items-center gap-2">
         <Icon size={13} className="shrink-0 text-orange-500" />
         <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
           {section.title}
         </span>
       </div>
-
-      {/* Table */}
       <div className="overflow-hidden rounded-xl border border-border">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border bg-muted/30">
-              <th className="px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Modèle
-              </th>
-              <th className="px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                RAM
-              </th>
-              <th className="hidden px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground sm:table-cell">
-                Type
-              </th>
-              <th className="hidden px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground md:table-cell">
-                Usage
-              </th>
+              <th className="px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Modèle</th>
+              <th className="px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">RAM</th>
+              <th className="hidden px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground sm:table-cell">Type</th>
+              <th className="hidden px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground md:table-cell">Usage</th>
             </tr>
           </thead>
           <tbody>
@@ -201,21 +197,12 @@ function ModelTable({ section }: { section: Section }) {
                   i < section.models.length - 1 ? "border-b border-border" : ""
                 }`}
               >
-                {/* Model name */}
                 <td className="px-4 py-3">
-                  <span className="font-mono text-xs font-medium text-orange-500">
-                    {model.name}
-                  </span>
+                  <span className="font-mono text-xs font-medium text-orange-500">{model.name}</span>
                 </td>
-
-                {/* RAM */}
                 <td className="px-4 py-3">
-                  <span className="text-xs font-semibold text-muted-foreground whitespace-nowrap">
-                    {model.ram}
-                  </span>
+                  <span className="text-xs font-semibold text-muted-foreground whitespace-nowrap">{model.ram}</span>
                 </td>
-
-                {/* Badges */}
                 <td className="hidden px-4 py-3 sm:table-cell">
                   <div className="flex flex-wrap gap-1">
                     {model.types.map((t) => (
@@ -223,11 +210,7 @@ function ModelTable({ section }: { section: Section }) {
                     ))}
                   </div>
                 </td>
-
-                {/* Usage */}
-                <td className="hidden px-4 py-3 text-xs text-muted-foreground md:table-cell">
-                  {model.usage}
-                </td>
+                <td className="hidden px-4 py-3 text-xs text-muted-foreground md:table-cell">{model.usage}</td>
               </tr>
             ))}
           </tbody>
@@ -241,9 +224,9 @@ function ModelTable({ section }: { section: Section }) {
 export const OllamaModels = () => {
   const [active, setActive] = useState<"kv4" | "kv8">("kv4");
 
-  const tabs = [
-    { id: "kv4" as const, label: "VPS KV4", sub: "16 Go RAM" },
-    { id: "kv8" as const, label: "VPS KV8", sub: "32–64 Go RAM" },
+  const tabs: { id: "kv4" | "kv8"; label: string; sub: string }[] = [
+    { id: "kv4", label: "VPS KV4", sub: "16 Go RAM" },
+    { id: "kv8", label: "VPS KV8", sub: "32–64 Go RAM" },
   ];
 
   const sections = active === "kv4" ? KV4_SECTIONS : KV8_SECTIONS;
@@ -255,37 +238,19 @@ export const OllamaModels = () => {
   return (
     <section className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-        {/* ── Header ── */}
         <div className="mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center rounded-full
-                           border border-orange-200 bg-orange-50 px-4 py-1.5
-                           text-xs font-semibold tracking-widest text-orange-700 uppercase
-                           dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
+          <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
             Modèles I.A.
           </span>
-
-          <Typography
-            variant="h2"
-            className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
-          >
-            Modèles Ollama compatibles 
-						{/* <br />VPS KV4 &amp; KV8 */}
+          <Typography variant="h2" className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+            Modèles Ollama compatibles
           </Typography>
-
-          <Typography
-            variant="large"
-            className="text-muted-foreground mt-4 text-lg text-pretty"
-          >
-            Sélectionnez votre configuration VPS pour afficher les modèles
-            compatibles, leur empreinte mémoire et leurs cas d'usage.
+          <Typography variant="large" className="text-muted-foreground mt-4 text-lg text-pretty">
+            Sélectionnez votre configuration VPS pour afficher les modèles compatibles, leur empreinte mémoire et leurs cas d'usage.
           </Typography>
         </div>
 
-        {/* ── Card ── */}
         <div className="mx-auto mt-16 max-w-4xl rounded-2xl border border-border bg-card p-6 sm:p-10">
-
-          {/* ── Tabs ── */}
           <div className="mb-8 flex justify-end gap-3">
             {tabs.map((tab) => (
               <button
@@ -298,23 +263,17 @@ export const OllamaModels = () => {
                 }`}
               >
                 <span className="text-sm font-semibold">{tab.label}</span>
-                <span
-                  className={`text-xs ${
-                    active === tab.id ? "text-orange-100" : "text-muted-foreground"
-                  }`}
-                >
+                <span className={`text-xs ${active === tab.id ? "text-orange-100" : "text-muted-foreground"}`}>
                   {tab.sub}
                 </span>
               </button>
             ))}
           </div>
 
-          {/* ── Sections ── */}
           {sections.map((section) => (
             <ModelTable key={section.title} section={section} />
           ))}
 
-          {/* ── Note ── */}
           <div className="mt-2 rounded-r-xl border-l-2 border-orange-500 bg-muted/30 px-4 py-3">
             <p className="text-xs text-muted-foreground">{note}</p>
           </div>

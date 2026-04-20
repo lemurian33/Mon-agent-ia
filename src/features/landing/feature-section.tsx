@@ -21,7 +21,7 @@ export const FeaturesSection = ({
   features?: FeatureLineProps[];
 }) => {
   return (
-    <SectionLayout size="sm" className="relative" id="features">
+    <SectionLayout size="lg" className="relative" id="features">
       <div className="relative flex flex-col gap-16 lg:gap-28">
         <div className="flex flex-col items-center gap-2">
           <Badge>The features you NEED.</Badge>
