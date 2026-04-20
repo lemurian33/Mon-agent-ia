@@ -103,26 +103,26 @@ const OFFERS: Offer[] = [
     href: "/entreprise",
     popular: true,
   },
-  // {
-  //   id: "premium",
-  //   title: "Premium",
-  //   price: "Sur devis",
-  //   priceUnit: "Configuration sur mesure",
-  //   description:
-  //     "L'I.A. taillée exactement pour votre business. Architecture pensée de A à Z selon vos process, vos équipes et vos objectifs.",
-  //   features: [
-  //     "Audit complet de votre organisation",
-  //     "Architecture I.A. 100% sur mesure",
-  //     "Intégration à tous vos outils métier",
-  //     "Agents entraînés sur votre secteur",
-  //     "Formation avancée de vos équipes",
-  //     "Accompagnement sur la durée",
-  //     "ROI mesuré et suivi",
-  //   ],
-  //   cta: "Nous contacter",
-  //   href: "/premium",
-  //   popular: false,
-  // },
+  {
+    id: "premium",
+    title: "Premium",
+    price: "Sur devis",
+    priceUnit: "Configuration sur mesure",
+    description:
+      "L'I.A. taillée exactement pour votre business. Architecture pensée de A à Z selon vos process, vos équipes et vos objectifs.",
+    features: [
+      "Audit complet de votre organisation",
+      "Architecture I.A. 100% sur mesure",
+      "Intégration à tous vos outils métier",
+      "Agents entraînés sur votre secteur",
+      "Formation avancée de vos équipes",
+      "Accompagnement sur la durée",
+      "ROI mesuré et suivi",
+    ],
+    cta: "Nous contacter",
+    href: "/premium",
+    popular: false,
+  },
 ];
 
 export const Offers = () => {
