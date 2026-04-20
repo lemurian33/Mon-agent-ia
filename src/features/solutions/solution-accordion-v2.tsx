@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import {
   ChevronDown,
@@ -11,7 +12,6 @@ import {
   Info,
   X,
 } from "lucide-react";
-import Link from "next/link";
 
 // ─────────────────────────────────────────────
 // Types
@@ -99,7 +99,7 @@ const SOLUTIONS: Solution[] = [
       "Accès communauté privée & ressources exclusives",
       "Support post-formation pour ancrer les acquis",
     ],
-    price: "79 €/mois",
+    price: "79€/mois",
     cta: "Démarrer l'accompagnement",
     tech: {
       prereqs: [
@@ -143,7 +143,7 @@ const SOLUTIONS: Solution[] = [
       "Formation à la prise en main",
       "Support et optimisation continue",
     ],
-    price: "108 €/mois",
+    price: "208€/mois",
     cta: "Déployer mes agents",
     tech: {
       prereqs: [
@@ -190,7 +190,7 @@ const SOLUTIONS: Solution[] = [
       "Conformité RGPD complète et documentée",
       "Onboarding équipe et formation à la gouvernance",
     ],
-    price: "199 €/mois",
+    price: "297€/mois",
     cta: "Déployer mon écosystème",
     tech: {
       prereqs: [
