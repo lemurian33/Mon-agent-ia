@@ -55,8 +55,6 @@ export default function SolutionsPage() {
             "On garantit une amélioration mesurable dans les 30 premiers jours — ou on ajuste jusqu'à ce que ce soit le cas. Toute agence qui vous promet un résultat précis sans connaître votre contexte vous survend. Ce qu'on promet : des actions concrètes, un suivi rigoureux et une totale transparence sur l'impact.",
         },
       ]} />
-
-
       <CtaBannerSolutions />
       <AuditForm />
     </>
