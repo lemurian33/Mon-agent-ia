@@ -225,8 +225,8 @@ export const OllamaModels = () => {
   const [active, setActive] = useState<"kv4" | "kv8">("kv4");
 
   const tabs: { id: "kv4" | "kv8"; label: string; sub: string }[] = [
-    { id: "kv4", label: "VPS KV4", sub: "16 Go RAM" },
-    { id: "kv8", label: "VPS KV8", sub: "32–64 Go RAM" },
+    { id: "kv4", label: "PRO", sub: "16 Go RAM" },
+    { id: "kv8", label: "PREMIUM", sub: "32–64 Go RAM" },
   ];
 
   const sections = active === "kv4" ? KV4_SECTIONS : KV8_SECTIONS;
