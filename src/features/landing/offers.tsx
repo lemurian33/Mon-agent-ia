@@ -61,7 +61,6 @@ const OFFERS: Offer[] = [
   },
   {
     id: "pro",
-    badge: "ECO SYSTEM",
     title: "Pro",
     price: "208€",
     priceUnit: "/mois",
@@ -83,7 +82,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "ECO SYSTEM",
+    badge: "SOUVERAIN",
     title: "Entreprise",
     price: "297€",
     priceUnit: "/mois",
@@ -105,6 +104,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "premium",
+    badge: "SOUVERAIN",
     title: "Premium",
     price: "Sur devis",
     priceUnit: "Configuration sur mesure",
