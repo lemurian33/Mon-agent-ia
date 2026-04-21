@@ -131,14 +131,14 @@ const SOLUTIONS: Solution[] = [
     icon: Star,
     tag: "Pro",
     title: "Infrastrure + Agents I.A. sur mesure",
-    desc: "5 agents I.A. déployés sur votre VPS, connectés à vos outils métier — vos données restent chez vous.",
+    desc: "5 agents I.A. déployés un serveur VPS mutualisé, connectés à vos outils métier — vos données restent chez vous.",
     detail:
       "On conçoit et déploie jusqu'à 3 agents I.A. directement sur votre serveur. Chaque agent est configuré sur mesure pour vos process : relances, qualification, support, prise de RDV. Zéro donnée qui transite en dehors de votre infrastructure.",
     included: [
       "Déploiement de 5 agents I.A. sur votre VPS mutualié",
       "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
+      "Dashboard Fermé",
       "Intégration native à vos outils (CRM, agenda, messagerie)",
-      "Automatisation n8n + RAG sur vos données",
       "Conformité RGPD complète",
       "Formation à la prise en main",
       "Support et optimisation continue",
@@ -227,7 +227,7 @@ const SOLUTIONS: Solution[] = [
     icon: Gem,
     tag: "Premium",
     title: "Configuration sur mesure",
-    desc: "Architecture I.A. pensée de zéro pour votre structure — pour aller plus loin sans compromis.",
+    desc: "Architecture I.A. pensée de zéro pour votre structure — le client garde le contrôle.",
     detail:
       "Pour les projets ambitieux ou les besoins hors standard : audit stratégique, déploiement full stack, intégrations métier complexes et SLA dédié. Un interlocuteur unique de la conception au suivi.",
     included: [
@@ -256,7 +256,7 @@ const SOLUTIONS: Solution[] = [
         },
         {
           q: "Quel est l'ordre de grandeur du budget ?",
-          a: "Les projets custom démarrent généralement à partir de 2 000 € HT/mois. Un devis détaillé est fourni après l'audit stratégique gratuit.",
+          a: "Les projets custom démarrent généralement à partir de 500 € HT/mois + setup. Un devis détaillé est fourni après l'audit stratégique gratuit.",
         },
         {
           q: "Le code développé nous appartient-il ?",
