@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// import Image from "next/image";
+
 import { LandingHeader } from "@/features/landing/landing-header";
 import { Hero } from "@/features/landing/hero";
 import { HowItWorks } from "@/features/landing/how-it-works";
@@ -12,7 +11,6 @@ import { About } from "@/features/landing/about";
 import { AuditForm } from "@/features/landing/audit/audit-form";
 import { CtaBanner } from "@/features/landing/cta-banner";
 import { FAQSection } from "@/features/landing/faq-accordion";
-// import {Pricing} from "@/features/plans/pricing-section";
 
 
 export default function HomePage() {

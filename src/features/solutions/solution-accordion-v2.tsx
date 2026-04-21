@@ -115,10 +115,10 @@ const SOLUTIONS: Solution[] = [
           q: "C'est pour quel niveau ? Faut-il savoir coder ?",
           a: "Zéro code requis. La formation est conçue pour des profils métier : comptable, RH, commercial, consultant. On travaille avec vos outils existants.",
         },
-        {
-          q: "On peut former toute l'équipe ?",
-          a: "Oui, jusqu'à 5 personnes par session. Au-delà, on découpe en groupes homogènes pour que chaque atelier soit pertinent pour tout le monde.",
-        },
+      {
+        q: "On peut former toute l'équipe ?",
+        a: "Non, les sessions sont individuelles — j'anime personnellement chaque accompagnement, donc je travaille en tête-à-tête avec chaque participant.",
+      },
         {
           q: "Que contient le support post-formation ?",
           a: "Un canal de messagerie dédié avec réponse garantie sous 24h, des ressources mises à jour chaque mois et un accès à la communauté privée.",
@@ -126,18 +126,18 @@ const SOLUTIONS: Solution[] = [
       ],
     },
   },
-  {
+ {
     id: "pro",
     icon: Star,
     tag: "Pro",
-    title: "Intégration d'agents I.A.",
-    desc: "Agents I.A. déployés dans vos outils — devis, relances, support, prise de RDV.",
+    title: "Infrastrure + Agents I.A. sur mesure",
+    desc: "5 agents I.A. déployés sur votre VPS, connectés à vos outils métier — vos données restent chez vous.",
     detail:
-      "On conçoit, configure et déploie des agents I.A. sur mesure, directement connectés à votre environnement métier. Chaque agent est entraîné sur votre contexte, conforme RGPD.",
+      "On conçoit et déploie jusqu'à 3 agents I.A. directement sur votre serveur. Chaque agent est configuré sur mesure pour vos process : relances, qualification, support, prise de RDV. Zéro donnée qui transite en dehors de votre infrastructure.",
     included: [
-      "Audit et cartographie de vos process",
-      "Développement d'agents I.A. sur mesure",
-      "Intégration native à vos outils (CRM, agenda)",
+      "Déploiement de 5 agents I.A. sur votre VPS mutualié",
+      "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
+      "Intégration native à vos outils (CRM, agenda, messagerie)",
       "Automatisation n8n + RAG sur vos données",
       "Conformité RGPD complète",
       "Formation à la prise en main",
@@ -147,13 +147,13 @@ const SOLUTIONS: Solution[] = [
     cta: "Déployer mes agents",
     tech: {
       prereqs: [
+        "Serveur VPS dédié",
         "Accès admin à vos outils (CRM, messagerie)",
         "Données structurées ou semi-structurées",
-        "on crée le vôtre",
       ],
-      delai: "Premier agent en prod sous 1-2 semaines",
+      delai: "Premier agent en prod sous 1 semaines",
       format: "Déploiement asynchrone + sessions de recette",
-      stack: ["n8n", "Make", "Claude API", "Pinecone", "Airtable", "HubSpot", "Cal.com"],
+      stack: ["n8n", "Claude API", "Pinecone", "Airtable", "HubSpot"],
       questions: [
         {
           q: "Les agents fonctionnent-ils avec mes outils actuels ?",
@@ -161,7 +161,7 @@ const SOLUTIONS: Solution[] = [
         },
         {
           q: "Combien d'agents peut-on déployer ?",
-          a: "L'offre inclut jusqu'à 3 agents actifs. Chaque agent couvre un périmètre fonctionnel : relances, support, qualification leads, prise de RDV, etc.",
+          a: "L'offre inclut 5 agents actifs déployés sur votre VPS. Chaque agent couvre un périmètre fonctionnel précis : relances, support, qualification leads, prise de RDV, etc.",
         },
         {
           q: "Que se passe-t-il si l'agent fait une erreur ?",
@@ -169,7 +169,7 @@ const SOLUTIONS: Solution[] = [
         },
         {
           q: "La conformité RGPD est-elle documentée ?",
-          a: "Oui, un registre de traitement est fourni à la livraison. Les données ne transitent que par des hébergeurs EU ou des API avec DPA signé.",
+          a: "Oui, un registre de traitement est fourni à la livraison. Les données restent sur votre VPS et ne transitent que par des API avec DPA signé.",
         },
       ],
     },
@@ -183,10 +183,12 @@ const SOLUTIONS: Solution[] = [
     detail:
       "Déploiement intégral de votre stack I.A. : hébergement Coolify, automatisation n8n, stockage vectoriel, LLM open source configurés. Contrôle total sur les données, accès et évolution.",
     included: [
-      "Hébergement Coolify souverain sur votre domaine",
+      "Déploiement des agents I.A. sur votre VPS privé",
+      "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
+      "Hébergement possible sur votre domaine",
       "Automatisation n8n + RAG multi-sources",
-      "LLM open source configurés (Gemma, Mistral…)",
-      "Stockage vectoriel KV4 ou KV8",
+      "LLM open source configurés (Gemma4, Mistral…)",
+      "Stockage vectoriel",
       "Conformité RGPD complète et documentée",
       "Onboarding équipe et formation à la gouvernance",
     ],
@@ -194,12 +196,12 @@ const SOLUTIONS: Solution[] = [
     cta: "Déployer mon écosystème",
     tech: {
       prereqs: [
-        "Serveur dédié ou VPS (on peut provisioner)",
+        "Serveur VPS dédié",
         "Nom de domaine et accès DNS",
       ],
       delai: "Stack complète opérationnelle sous 1–2 semaines",
       format: "Déploiement DevOps assuré par notre équipe",
-      stack: ["Coolify", "paperclip", "n8n", "Qdrant", "Mistral", "Gemma", "PostgreSQL", "Dockers", "Traefik"],
+      stack: ["Coolify", "paperclip", "n8n", "Qdrant", "Mistral", "Gemma", "PostgreSQL", "Dockers", "Traefik","kv8"],
       questions: [
         {
           q: "Quel hébergeur recommandez-vous ?",
