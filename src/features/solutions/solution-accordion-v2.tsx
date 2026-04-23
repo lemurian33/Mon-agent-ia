@@ -133,7 +133,7 @@ const SOLUTIONS: Solution[] = [
     title: "Infrastrure + Agents I.A. sur mesure",
     desc: "5 agents I.A. déployés un serveur VPS mutualisé, connectés à vos outils métier — vos données restent chez vous.",
     detail:
-      "On conçoit et déploie jusqu'à 3 agents I.A. directement sur votre serveur. Chaque agent est configuré sur mesure pour vos process : relances, qualification, support, prise de RDV. Zéro donnée qui transite en dehors de votre infrastructure.",
+      "On conçoit et déploie jusqu'à 5 agents I.A. directement sur votre serveur. Chaque agent est configuré sur mesure pour vos process : relances, qualification, support, prise de RDV. Zéro donnée qui transite en dehors de votre infrastructure.",
     included: [
       "Déploiement de 5 agents I.A. sur votre VPS mutualié",
       "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
@@ -192,7 +192,7 @@ const SOLUTIONS: Solution[] = [
       "Conformité RGPD complète et documentée",
       "Onboarding équipe et formation à la gouvernance",
     ],
-    price: "297€/mois",
+    price: "349€/mois",
     cta: "Déployer mon écosystème",
     tech: {
       prereqs: [

@@ -62,10 +62,11 @@ const OFFERS: Offer[] = [
   {
     id: "pro",
     title: "Pro",
+    badge: "Mutualisé",
     price: "208€",
     priceUnit: "/mois",
     description:
-      "Votre propre écosystème I.A. hébergé en France, indépendant des Big Tech. Vos données restent chez vous, vos agents travaillent pour vous.",
+      "Une équipe d'agents I.A. qui collaborent entre eux pour piloter vos process — comme avoir des collaborateurs disponibles en permanence.",
     features: [
       "Configuration sur mesure",
       "Modèle open sources",
@@ -82,12 +83,33 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "SOUVERAIN",
+    badge: "Privatiser",
     title: "Entreprise",
-    price: "297€",
+    price: "349€",
     priceUnit: "/mois",
     description:
-      "Une équipe d'agents I.A. qui collaborent entre eux pour piloter vos process — comme avoir des collaborateurs disponibles en permanence.",
+          "Votre propre écosystème I.A. hébergé en France, indépendant des Big Tech. Vos données restent chez vous, vos agents travaillent pour vous.",
+    features: [
+      "Audit complet de votre organisation",
+      "Architecture I.A. 100% sur mesure",
+      "Intégration à tous vos outils métier",
+      "Agents entraînés sur votre secteur",
+      "Formation avancée de vos équipes",
+      "Accompagnement sur la durée",
+      "ROI mesuré et suivi",
+    ],
+    cta: "En savoir plus",
+    href: "/entreprise",
+    popular: true,
+  },
+  {
+    id: "premium",
+    badge: "Privatiser",
+    title: "Premium",
+    price: "Sur devis",
+    priceUnit: "Configuration sur mesure",
+    description:
+      "L'I.A. taillée exactement pour votre business, souverain. Architecture pensée de A à Z selon vos process, vos équipes et vos objectifs.",
     features: [
       "Configuration sur mesure",
       "Agents I.A. spécialisés par métier",
@@ -97,27 +119,6 @@ const OFFERS: Offer[] = [
       "Connexion à vos outils existants",
       "Formation et prise en main équipe",
       "Support prioritaire dédié",
-    ],
-    cta: "En savoir plus",
-    href: "/entreprise",
-    popular: true,
-  },
-  {
-    id: "premium",
-    badge: "SOUVERAIN",
-    title: "Premium",
-    price: "Sur devis",
-    priceUnit: "Configuration sur mesure",
-    description:
-      "L'I.A. taillée exactement pour votre business. Architecture pensée de A à Z selon vos process, vos équipes et vos objectifs.",
-    features: [
-      "Audit complet de votre organisation",
-      "Architecture I.A. 100% sur mesure",
-      "Intégration à tous vos outils métier",
-      "Agents entraînés sur votre secteur",
-      "Formation avancée de vos équipes",
-      "Accompagnement sur la durée",
-      "ROI mesuré et suivi",
     ],
     cta: "Nous contacter",
     href: "/premium",
