@@ -26,7 +26,7 @@ const OFFERS: Offer[] = [
   {
     id: "essentiel",
     badge: "Propulsé par Claude",
-    badgeStyle: { background: "#EAF3DE", color: "#27500A" },
+    badgeStyle: { background: "#EAF3DE", color: "#FF8904" },
     title: "Essentiel",
     price: "79€",
     priceUnit: "/mois HT",
@@ -43,12 +43,12 @@ const OFFERS: Offer[] = [
     ],
     roi: { value: "+5h", label: "récupérées dès la première semaine" },
     cta: "Démarrer",
-    href: "/essentiel",
+    href: "#",
   },
   {
     id: "pro",
     badge: "Agents IA actifs",
-    badgeStyle: { background: "#E6F1FB", color: "#0C447C" },
+    badgeStyle: { background: "#E6F1FB", color: "#FF8904"  },
     title: "Pro",
     price: "208€",
     priceUnit: "/mois HT",
@@ -66,14 +66,14 @@ const OFFERS: Offer[] = [
     ],
     roi: { value: "8–12h", label: "récupérées par semaine" },
     cta: "Découvrir",
-    href: "/pro",
+    href: "#",
   },
   {
     id: "entreprise",
     badge: "Le plus choisi",
     title: "Entreprise",
-    price: "349€",
-    priceUnit: "/mois HT",
+    price: "Sur devis",
+    priceUnit: "",
     description:
       "Votre propre écosystème IA, dédié à votre entreprise. Vos données restent chez vous.",
     strongFeatures: [
@@ -89,16 +89,16 @@ const OFFERS: Offer[] = [
     ],
     roi: { value: "+2 500€", label: "économisés vs embauche secrétariat" },
     cta: "Choisir ce pack",
-    href: "/entreprise",
+    href: "#",
     featured: true,
   },
   {
     id: "elite",
     badge: "Multi-équipes",
-    badgeStyle: { background: "#FAEEDA", color: "#633806" },
+    badgeStyle: { background: "#FAEEDA", color: "#FF8904"  },
     title: "Elite",
-    price: "420€",
-    priceUnit: "/mois HT",
+    price: "Sur devis",
+    priceUnit: "",
     description:
       "Pour les groupes BTP ou franchises avec plusieurs équipes terrain à coordonner.",
     strongFeatures: [
@@ -113,7 +113,7 @@ const OFFERS: Offer[] = [
     ],
     roi: { value: "+3 500€", label: "économisés vs équipe admin dédiée" },
     cta: "En savoir plus",
-    href: "/elite",
+    href: "#",
   },
 ];
 
@@ -225,11 +225,11 @@ export const Offers = () => {
         </div>
 
         {/* ── Stats ── */}
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="mt-6 max-w-6xl grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
-            { num: "24/7", lbl: "Agents actifs sur chantier" },
+            { num: "24/7", lbl: "Agents actifs" },
             { num: "France", lbl: "Données sécurisées" },
-            { num: "<1j", lbl: "Premiers résultats" },
+            { num: "< 1j", lbl: "Premiers résultats" },
             { num: "0 impayé", lbl: "Oublié sans relance" },
           ].map(({ num, lbl }) => (
             <div key={lbl} className="rounded-xl bg-muted px-4 py-3 text-center">
@@ -240,7 +240,7 @@ export const Offers = () => {
         </div>
 
         {/* ── Bloc bas ── */}
-        <div className="mx-auto mt-8 max-w-6xl rounded-2xl border
+        {/* <div className="mx-auto mt-8 max-w-6xl rounded-2xl border
                         border-orange-500/20 bg-orange-500/5 px-8 py-6">
           <div className="flex flex-col items-center justify-between
                           gap-4 text-center sm:flex-row sm:text-left">
@@ -262,7 +262,7 @@ export const Offers = () => {
               Réserver mon audit gratuit →
             </Link>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

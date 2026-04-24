@@ -40,7 +40,6 @@ const OFFERS: Offer[] = [
       "Formation complète à votre rythme (sessions 1h)",
       "Routines IA pour devis, relances, réponses clients",
       "Accompagnement pas à pas, support WhatsApp",
-			"20€ crédits API offers",
     ],
     roi: { value: "+5h", label: "récupérées dès la première semaine" },
     cta: "Démarrer",
@@ -212,7 +211,7 @@ export const Offers = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Header */}
-        <div className="mx-auto max-w-3xl text-center mb-10">
+        <div className="mx-auto max-w-4xl text-center mb-10">
           <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
             Nos offres
           </span>
@@ -258,7 +257,7 @@ export const Offers = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-orange-500/20 bg-orange-500/5 px-8 py-6">
+        {/* <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-orange-500/20 bg-orange-500/5 px-8 py-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <div>
               <p className="text-sm font-bold text-foreground">
@@ -275,7 +274,7 @@ export const Offers = () => {
               Réserver mon audit gratuit →
             </Link>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
