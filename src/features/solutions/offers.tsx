@@ -40,6 +40,7 @@ const OFFERS: Offer[] = [
       "Formation complète à votre rythme (sessions 1h)",
       "Routines IA pour devis, relances, réponses clients",
       "Accompagnement pas à pas, support WhatsApp",
+			"20€ crédits API offers",
     ],
     roi: { value: "+5h", label: "récupérées dès la première semaine" },
     cta: "Démarrer",
@@ -68,14 +69,15 @@ const OFFERS: Offer[] = [
     id: "entreprise",
     tag: "Entreprise",
     title: "Écosystème I.A. privé, hébergé en France",
-    price: "349€",
-    priceUnit: "/mois HT",
+    price: "Sur devis",
+    priceUnit: "Setup + Plan Pro",
     description:
       "Votre propre infrastructure IA dédiée — CRM chantiers, Tom votre assistant vocal, données chez vous.",
     features: [
       "Tout le pack Pro inclus",
       "Environnement IA 100% privé — vos données restent chez vous",
-      "Tom : assistant vocal avec votre ton et vocabulaire métier",
+      "Donna: assistant vocal avec votre ton et vocabulaire métier",
+			"Communications: 0.20€/min"
       "CRM chantiers connecté à vos outils",
       "Séquences commerciales automatiques",
       "Support prioritaire dédié",
@@ -88,8 +90,8 @@ const OFFERS: Offer[] = [
     id: "elite",
     tag: "Elite",
     title: "Coordination multi-équipes et multi-dépôts",
-    price: "420€",
-    priceUnit: "/mois HT",
+    price: "Sur devis",
+    priceUnit: "Setup + Plan Entreprise",
     description:
       "Pour les groupes BTP ou franchises avec plusieurs équipes terrain. Agents entraînés sur votre catalogue, reporting par chantier.",
     features: [
@@ -201,7 +203,7 @@ const TimelineStep = ({
 // Main export
 // ─────────────────────────────────────────────
 
-export const NosOffres = () => {
+export const Offers = () => {
   const [activeId, setActiveId] = useState(OFFERS[0].id);
   const active = OFFERS.find((o) => o.id === activeId) ?? OFFERS[0];
 

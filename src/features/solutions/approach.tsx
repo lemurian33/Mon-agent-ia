@@ -66,7 +66,7 @@ const PILLARS: Pillar[] = [
       "Votre propre écosystème IA hébergé en France. Vos données ne quittent jamais votre infrastructure.",
     features: [
       "VPS dédié, données chez vous",
-      "Tom — votre assistant vocal sur-mesure",
+      "Donna — votre assistant vocal sur-mesure",
       "CRM chantiers connecté",
       "+2 500€ économisés vs secrétariat",
     ],
@@ -137,7 +137,7 @@ export const Approach = () => (
           variant="large"
           className="mt-4 text-lg text-muted-foreground text-balance"
         >
-          La formation seule ne suffit pas. Les agents seuls ne font rien sans vous. Il vous faut les trois.
+          Pour récupérer des heures chaque semaine, il faut les trois : comprendre l'IA, l'automatiser, et garder le contrôle de vos données.
         </Typography>
       </div>
 
