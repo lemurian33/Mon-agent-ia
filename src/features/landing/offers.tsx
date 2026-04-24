@@ -216,7 +216,7 @@ export const Offers = () => {
           ref={scrollRef}
           onScroll={onScroll}
           data-testid="offers-carousel"
-          className="mt-4 flex gap-4 overflow-x-auto pb-4
+          className="mt-4 flex gap-4 pb-4
                      [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {OFFERS.map((offer) => (
@@ -229,7 +229,7 @@ export const Offers = () => {
           {[
             { num: "24/7", lbl: "Agents actifs sur chantier" },
             { num: "France", lbl: "Données sécurisées" },
-            { num: "<30j", lbl: "Premiers résultats" },
+            { num: "<1j", lbl: "Premiers résultats" },
             { num: "0 impayé", lbl: "Oublié sans relance" },
           ].map(({ num, lbl }) => (
             <div key={lbl} className="rounded-xl bg-muted px-4 py-3 text-center">
