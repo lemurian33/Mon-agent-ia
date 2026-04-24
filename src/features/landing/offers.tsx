@@ -138,9 +138,11 @@ export const Offers = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [eliteRevealed, setEliteRevealed] = useState(false);
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
+    if (dir === "right") setEliteRevealed(true);
     scrollRef.current.scrollBy({
       left: dir === "left" ? -320 : 320,
       behavior: "smooth",
@@ -236,9 +238,9 @@ export const Offers = () => {
           className="mt-4 flex gap-4 pb-4
                      [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {OFFERS.map((offer) => (
-            <OfferCard key={offer.id} {...offer} />
-          ))}
+       {OFFERS.filter((o) => o.id !== "elite" || eliteRevealed).map((offer) => (
+          <OfferCard key={offer.id} {...offer} />
+        ))}
         </div>
 
         {/* ── Stats ── */}
@@ -280,7 +282,7 @@ const OfferCard = ({
       data-testid="offer-card"
       className={cn(
         "relative flex w-[280px] shrink-0 flex-col rounded-2xl",
-        "p-6 transition-all overflow-visible",
+        "p-4 transition-all overflow-visible",
         "hover:-translate-y-1 hover:shadow-md hover:shadow-black/5",
         "dark:hover:shadow-black/20",
         featured
