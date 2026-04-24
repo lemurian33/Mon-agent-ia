@@ -39,137 +39,91 @@ type Solution = {
 };
 
 // ─────────────────────────────────────────────
-// Data
+// Data — contexte Artisans & BTP
 // ─────────────────────────────────────────────
 
 const SOLUTIONS: Solution[] = [
   {
-    id: "audit",
-    icon: ScanSearch,
-    tag: "Gratuit",
-    title: "Audit I.A. gratuit",
-    desc: "30 min pour cartographier vos process et identifier où l'I.A. peut vous faire gagner du temps.",
+    id: "essentiel",
+    icon: Bot,
+    tag: "Essentiel • 79€/mois",
+    title: "Formation & configuration Claude",
+    desc: "On installe Claude pour votre activité et on vous forme à l'utiliser au quotidien sur le terrain.",
     detail:
-      "On plonge dans votre quotidien métier : tâches chronophages, goulots d'étranglement, opportunités cachées. À la fin, vous avez une vision claire de ce qui peut être automatisé.",
+      "Chaque session est construite autour de votre métier d'artisan : relances devis, réponses clients, gestion agenda. Vous repartez avec des routines prêtes à l'emploi, sans aucune compétence technique requise.",
     included: [
-      "Analyse complète de vos process en 30 min",
-      "Identification des tâches automatisables",
-      "Estimation concrète des gains",
-      "Feuille de route I.A. personnalisée",
-      "Recommandations outils et ordre de déploiement",
+      "Configuration Claude sur mesure pour votre métier",
+      "Formation complète à votre rythme",
+      "Routines IA pour votre quotidien artisan",
+      "Accompagnement pas à pas",
+      "Support WhatsApp inclus",
     ],
-    price: "Gratuit",
-    cta: "Réserver mon audit",
+    price: "79€/mois HT",
+    cta: "Démarrer l'accompagnement",
     tech: {
       prereqs: [
-        "Aucun prérequis technique",
-        "Accès à vos process actuels",
+        "Aucune compétence technique requise",
+        "Un smartphone ou ordinateur suffit",
+        "Accès à Claude.ai (on vous guide pour l'ouvrir)",
       ],
-      delai: "Disponible sous 48h",
-      format: "Appel Zoom ou Google Meet",
-      stack: ["Claude", "ChatGPT", "Notion", "n8n"],
+      delai: "Démarrage sous 1 semaine",
+      format: "Sessions en ligne 1h, cadence hebdomadaire",
+      stack: ["Claude", "WhatsApp", "Google Agenda", "Notion"],
       questions: [
         {
-          q: "Faut-il préparer des documents avant l'appel ?",
-          a: "Non, l'audit est conversationnel. Un accès à votre CRM ou vos outils du quotidien peut être utile mais n'est pas obligatoire.",
+          q: "Je ne suis pas du tout à l'aise avec la tech — c'est fait pour moi ?",
+          a: "Oui, c'est exactement pour vous. On configure tout ensemble, étape par étape. Vous n'avez rien à installer de compliqué.",
         },
         {
-          q: "Cet audit est-il vraiment sans engagement ?",
-          a: "Oui, absolument. Aucun devis, aucune relance commerciale agressive. Vous repartez avec une feuille de route indépendamment de toute décision d'achat.",
+          q: "Combien de temps avant de voir des résultats ?",
+          a: "La plupart des artisans récupèrent +5h dès la première semaine grâce aux routines de relance et de réponse client.",
         },
         {
-          q: "Que se passe-t-il après l'audit ?",
-          a: "Vous recevez un compte-rendu écrit sous 24h avec les priorités identifiées. La suite dépend entièrement de vous.",
+          q: "Que se passe-t-il si j'ai une question entre deux sessions ?",
+          a: "Vous avez accès à un support WhatsApp dédié avec réponse garantie sous 24h.",
         },
       ],
     },
   },
   {
-    id: "essentiel",
-    icon: Bot,
-    tag: "Essentiel",
-    title: "Formation & montée en compétences",
-    desc: "Maîtrisez l'I.A. en autonomie avec des cas pratiques tirés de votre métier.",
-    detail:
-      "Chaque session est construite autour de vos outils, vos process et vos vrais blocages. Vos collaborateurs repartent avec des prompts opérationnels et des workflows prêts à l'emploi.",
-    included: [
-      "Formation Claude et LLM de A à Z",
-      "Prompts & templates calibrés pour votre métier",
-      "Ateliers pratiques sur vos cas d'usage réels",
-      "Accès communauté privée & ressources exclusives",
-      "Support post-formation pour ancrer les acquis",
-    ],
-    price: "79€/mois",
-    cta: "Démarrer l'accompagnement",
-    tech: {
-      prereqs: [
-        "Aucune compétence technique requise",
-        "Session individuel",
-        "Accès à Claude.ai",
-      ],
-      delai: "Démarrage sous 1 semaine",
-      format: "Sessions en ligne, 1h à 2h, cadence hebdomadaire",
-      stack: ["Claude", "ChatGPT", "Notion", "Make", "Zapier"],
-      questions: [
-        {
-          q: "C'est pour quel niveau ? Faut-il savoir coder ?",
-          a: "Zéro code requis. La formation est conçue pour des profils métier : comptable, RH, commercial, consultant. On travaille avec vos outils existants.",
-        },
-      {
-        q: "On peut former toute l'équipe ?",
-        a: "Non, les sessions sont individuelles — j'anime personnellement chaque accompagnement, donc je travaille en tête-à-tête avec chaque participant.",
-      },
-        {
-          q: "Que contient le support post-formation ?",
-          a: "Un canal de messagerie dédié avec réponse garantie sous 24h, des ressources mises à jour chaque mois et un accès à la communauté privée.",
-        },
-      ],
-    },
-  },
- {
     id: "pro",
     icon: Star,
-    tag: "Pro",
-    title: "Infrastrure + Agents I.A. sur mesure",
-    desc: "5 agents I.A. déployés un serveur VPS mutualisé, connectés à vos outils métier — vos données restent chez vous.",
+    tag: "Pro • 208€/mois",
+    title: "Agents I.A. actifs pendant que vous êtes sur le chantier",
+    desc: "Vos agents relancent les devis, publient vos photos chantier et gèrent les impayés — sans vous.",
     detail:
-      "On conçoit et déploie jusqu'à 5 agents I.A. directement sur votre serveur. Chaque agent est configuré sur mesure pour vos process : relances, qualification, support, prise de RDV. Zéro donnée qui transite en dehors de votre infrastructure.",
+      "On déploie des agents I.A. configurés pour votre activité BTP : relances automatiques, publication réseaux sociaux depuis vos photos chantier, suivi des factures impayées. Vous revenez du chantier avec du travail déjà fait.",
     included: [
-      "Déploiement de 5 agents I.A. sur votre VPS mutualié",
-      "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
-      "Dashboard Fermé",
-      "Intégration native à vos outils (CRM, agenda, messagerie)",
-      "Conformité RGPD complète",
-      "Formation à la prise en main",
-      "Support et optimisation continue",
+      "Devis relancés automatiquement",
+      "Photos chantier publiées sur vos réseaux",
+      "Factures impayées relancées sans vous",
+      "Référencement local (plombier à X…)",
+      "Hébergé en France — RGPD",
+      "Agents disponibles 24h/24",
     ],
-    price: "208€/mois",
+    price: "208€/mois HT",
     cta: "Déployer mes agents",
     tech: {
       prereqs: [
-        "Serveur VPS dédié",
-        "Accès admin à vos outils (CRM, messagerie)",
-        "Données structurées ou semi-structurées",
+        "Serveur VPS mutualisé (inclus dans l'offre)",
+        "Accès à votre logiciel de devis/facturation",
+        "Compte réseaux sociaux si publication souhaitée",
       ],
-      delai: "Premier agent en prod sous 1 semaines",
-      format: "Déploiement asynchrone + sessions de recette",
-      stack: ["n8n", "Claude API", "Pinecone", "Airtable", "HubSpot"],
+      delai: "Premier agent actif sous 1 semaine",
+      format: "Déploiement assuré par notre équipe + session de prise en main",
+      stack: ["n8n", "Claude API", "Google My Business", "Instagram", "WhatsApp Business"],
       questions: [
         {
-          q: "Les agents fonctionnent-ils avec mes outils actuels ?",
-          a: "On s'adapte à votre stack existante : HubSpot, Pipedrive, Notion, Google Workspace, Outlook… Si une API est disponible, on peut s'y connecter.",
+          q: "Les agents fonctionnent-ils avec mon logiciel de devis ?",
+          a: "On s'adapte à votre outil : Batappli, Henrri, Sellsy, ou simple fichier Excel. Si une export est possible, on peut s'y connecter.",
         },
         {
-          q: "Combien d'agents peut-on déployer ?",
-          a: "L'offre inclut 5 agents actifs déployés sur votre VPS. Chaque agent couvre un périmètre fonctionnel précis : relances, support, qualification leads, prise de RDV, etc.",
+          q: "Que se passe-t-il si un agent envoie un message incorrect ?",
+          a: "Chaque agent est livré avec un mode supervision. Vous validez les envois pendant les 2 premières semaines, puis on passe en automatique une fois le réglage confirmé.",
         },
         {
-          q: "Que se passe-t-il si l'agent fait une erreur ?",
-          a: "Chaque agent est livré avec un mode supervision : toutes les actions sont loggées et vous pouvez activer une validation humaine avant exécution.",
-        },
-        {
-          q: "La conformité RGPD est-elle documentée ?",
-          a: "Oui, un registre de traitement est fourni à la livraison. Les données restent sur votre VPS et ne transitent que par des API avec DPA signé.",
+          q: "Mes données clients sont-elles en sécurité ?",
+          a: "Oui. Vos données sont hébergées en France sur un serveur dédié à votre activité. Rien ne transite vers des serveurs américains.",
         },
       ],
     },
@@ -177,94 +131,136 @@ const SOLUTIONS: Solution[] = [
   {
     id: "entreprise",
     icon: Briefcase,
-    tag: "Entreprise",
-    title: "Écosystème I.A. souverain",
-    desc: "Infrastructure I.A. complète, hébergée sur votre domaine, 100% RGPD — vos données ne partent jamais.",
+    tag: "Entreprise • 349€/mois",
+    title: "Écosystème I.A. privé pour votre entreprise BTP",
+    desc: "Votre propre infrastructure IA hébergée en France — CRM chantiers, voix personnalisée, données chez vous.",
     detail:
-      "Déploiement intégral de votre stack I.A. : hébergement Coolify, automatisation n8n, stockage vectoriel, LLM open source configurés. Contrôle total sur les données, accès et évolution.",
+      "Tout le pack Pro, plus votre propre environnement IA isolé : Tom, votre assistant vocal avec votre ton et votre vocabulaire métier, un CRM chantiers connecté et des séquences commerciales automatiques. Vos données ne quittent jamais votre infrastructure.",
     included: [
-      "Déploiement des agents I.A. sur votre VPS privé",
-      "Configuration sur mesure par agent (périmètre fonctionnel dédié)",
-      "Hébergement possible sur votre domaine",
-      "Automatisation n8n + RAG multi-sources",
-      "LLM open source configurés (Gemma4, Mistral…)",
-      "Stockage vectoriel",
-      "Conformité RGPD complète et documentée",
-      "Onboarding équipe et formation à la gouvernance",
+      "Tout le pack Pro",
+      "Environnement IA 100% privé — vos données chez vous",
+      "Tom avec voix naturelle personnalisée (votre ton, votre métier)",
+      "CRM chantiers connecté",
+      "Séquences email commerciales automatiques",
+      "Connexion à vos outils métier",
+      "Support prioritaire dédié",
     ],
-    price: "349€/mois",
+    price: "349€/mois HT",
     cta: "Déployer mon écosystème",
     tech: {
       prereqs: [
-        "Serveur VPS dédié",
+        "Serveur VPS dédié (on vous accompagne pour le choisir)",
         "Nom de domaine et accès DNS",
+        "Liste de vos outils métier actuels",
       ],
       delai: "Stack complète opérationnelle sous 1–2 semaines",
-      format: "Déploiement DevOps assuré par notre équipe",
-      stack: ["Coolify", "paperclip", "n8n", "Qdrant", "Mistral", "Gemma", "PostgreSQL", "Dockers", "Traefik","kv8"],
+      format: "Déploiement assuré par notre équipe + formation équipe",
+      stack: ["Coolify", "n8n", "Qdrant", "Mistral", "PostgreSQL", "Docker", "Traefik"],
       questions: [
         {
+          q: "Qu'est-ce que « Tom » exactement ?",
+          a: "Tom est votre assistant vocal IA configuré avec votre vocabulaire métier, votre façon de parler et vos tarifs. Il répond aux appels entrants quand vous êtes sur le chantier.",
+        },
+        {
           q: "Quel hébergeur recommandez-vous ?",
-          a: "Hostinger est notre recommandation par défaut. Hetzner, OVH, Scaleway ou Infomaniak sont des alternatives FR valides.",
+          a: "Hostinger ou OVH pour débuter. Hetzner et Scaleway sont d'excellentes alternatives françaises si vous souhaitez rester 100% souverain.",
         },
         {
-          q: "Les modèles open source sont-ils aussi performants ?",
-          a: "Pour la majorité des usages métier, Mistral Medium ou Gemma 27B rivalisent avec GPT-4. Pour des cas très complexes, on peut brancher Claude API en fallback.",
-        },
-        {
-          q: "Qui maintient l'infrastructure ?",
+          q: "Qui maintient l'infrastructure au quotidien ?",
           a: "L'abonnement inclut la maintenance préventive, les mises à jour de sécurité et le monitoring. SLA de 4h en heures ouvrées.",
         },
         {
-          q: "Peut-on migrer notre existant vers cette stack ?",
-          a: "Oui, on réalise un audit de migration lors du kick-off. Vos données existantes sont indexées dans le RAG en phase d'onboarding.",
+          q: "Économie réelle comparée à une secrétaire ?",
+          a: "Une secrétaire à mi-temps coûte en moyenne 2 800–3 200€/mois charges comprises. Notre pack Entreprise à 349€ couvre les mêmes tâches administratives, 24h/24.",
         },
       ],
     },
   },
   {
-    id: "premium",
+    id: "elite",
     icon: Gem,
-    tag: "Premium",
-    title: "Configuration sur mesure",
-    desc: "Architecture I.A. pensée de zéro pour votre structure — le client garde le contrôle.",
+    tag: "Elite • 420€/mois",
+    title: "Coordination multi-équipes et multi-dépôts",
+    desc: "Pour les groupes BTP ou franchises avec plusieurs équipes terrain à coordonner.",
     detail:
-      "Pour les projets ambitieux ou les besoins hors standard : audit stratégique, déploiement full stack, intégrations métier complexes et SLA dédié. Un interlocuteur unique de la conception au suivi.",
+      "Tout l'écosystème Entreprise, déployé sur plusieurs dépôts ou chantiers simultanés. Vos agents sont entraînés sur votre catalogue de services, vos tarifs et vos process internes. Reporting commercial par chantier inclus.",
     included: [
-      "Audit stratégique & architecture I.A. sur mesure",
-      "Déploiement full stack personnalisé",
-      "Intégrations métier spécifiques et complexes",
-      "Formation équipes avancée",
-      "SLA dédié & accompagnement long terme",
-      "Support prioritaire interlocuteur unique",
+      "Tout le pack Entreprise",
+      "Gestion multi-dépôts et multi-équipes",
+      "Agents entraînés sur votre catalogue de services",
+      "Reporting commercial par chantier",
+      "Zéro interruption de service garantie",
+      "Suivi et optimisation continue inclus",
     ],
-    price: "Sur devis",
+    price: "420€/mois HT",
     cta: "Nous contacter",
     tech: {
       prereqs: [
-        "Brief technique initial (on vous accompagne)",
-        "Accès à vos systèmes d'information",
-        "Disponibilité d'un référent technique interne",
+        "Minimum 2 équipes ou dépôts actifs",
+        "Catalogue de services structuré (on vous aide)",
+        "Accès admin à vos outils de coordination",
       ],
-      delai: "Kick-off sous 5 jours, livraison selon périmètre",
-      format: "Engagement sur mesure, comité de pilotage mensuel",
-      stack: ["Architecture définie après audit", "Tous les outils précédents possibles", "Développement spécifique si nécessaire"],
+      delai: "Déploiement progressif par dépôt, 2–4 semaines",
+      format: "Comité de pilotage mensuel + support prioritaire dédié",
+      stack: ["Coolify", "n8n", "Qdrant", "Mistral", "PostgreSQL", "Docker", "Traefik", "Metabase"],
       questions: [
         {
-          q: "À partir de quand a-t-on besoin de cette offre ?",
-          a: "Quand vos besoins dépassent les offres standards : multi-sites, secteur réglementé, stack propriétaire ou conformité avancée.",
+          q: "À partir de combien d'équipes cette offre est-elle pertinente ?",
+          a: "Dès 2 équipes terrain ou 2 dépôts distincts, la coordination manuelle devient un gouffre de temps. Cette offre est taillée pour ça.",
         },
         {
-          q: "Quel est l'ordre de grandeur du budget ?",
-          a: "Les projets custom démarrent généralement à partir de 500 € HT/mois + setup. Un devis détaillé est fourni après l'audit stratégique gratuit.",
+          q: "Le reporting par chantier, ça ressemble à quoi ?",
+          a: "Un tableau de bord avec CA par chantier, devis en attente, taux de transformation et relances en cours — mis à jour en temps réel.",
         },
         {
-          q: "Le code développé nous appartient-il ?",
-          a: "Oui, intégralement. Tout le code produit dans le cadre de votre projet vous est cédé. Pas de dépendance propriétaire.",
+          q: "Peut-on ajouter un dépôt en cours d'abonnement ?",
+          a: "Oui, chaque nouveau dépôt est intégré dans un délai de 5 jours ouvrés sans surcoût jusqu'à 5 sites.",
         },
         {
-          q: "Comment se passe la passation en cas de fin de contrat ?",
-          a: "Un kit de passation complet est fourni : documentation technique, runbooks, accès aux repos et session de transfert de compétences.",
+          q: "Quel est l'économie estimée à ce niveau ?",
+          a: "Nos clients élites économisent en moyenne 3 500€/mois comparé à une équipe admin dédiée (assistante + coordinateur terrain).",
+        },
+      ],
+    },
+  },
+  {
+    id: "audit",
+    icon: ScanSearch,
+    tag: "Gratuit",
+    title: "Audit I.A. gratuit — 30 min",
+    desc: "On identifie exactement quels process de votre activité peuvent être automatisés et combien ça vous ferait gagner.",
+    detail:
+      "On plonge dans votre quotidien d'artisan : devis, relances, chantiers, administratif. À la fin, vous avez une vision claire de ce qui peut être automatisé et une feuille de route concrète — sans engagement.",
+    included: [
+      "Analyse de vos process métier en 30 min",
+      "Identification des tâches automatisables",
+      "Estimation concrète des gains (temps + argent)",
+      "Feuille de route I.A. personnalisée",
+      "Recommandations outils adaptés à votre activité",
+    ],
+    price: "Gratuit",
+    cta: "Réserver mon audit",
+    tech: {
+      prereqs: [
+        "Aucun prérequis technique",
+        "30 minutes de disponibilité",
+        "Un accès à vos outils du quotidien est un plus",
+      ],
+      delai: "Disponible sous 48h",
+      format: "Appel Zoom ou Google Meet",
+      stack: ["Claude", "Notion", "Google Meet"],
+      questions: [
+        {
+          q: "Faut-il préparer quelque chose avant l'appel ?",
+          a: "Non, l'audit est conversationnel. Pensez juste à vos 3 plus grandes pertes de temps dans la semaine — c'est tout ce dont on a besoin pour commencer.",
+        },
+        {
+          q: "Cet audit est-il vraiment sans engagement ?",
+          a: "Oui. Aucun devis envoyé sans votre accord, aucune relance commerciale. Vous repartez avec une feuille de route que vous pouvez appliquer seul si vous le souhaitez.",
+        },
+        {
+          q: "Que se passe-t-il après l'audit ?",
+          a: "Vous recevez un compte-rendu écrit sous 24h avec les priorités identifiées. La suite vous appartient entièrement.",
         },
       ],
     },
@@ -272,7 +268,7 @@ const SOLUTIONS: Solution[] = [
 ];
 
 // ─────────────────────────────────────────────
-// Modal
+// Modal — inchangée
 // ─────────────────────────────────────────────
 
 const Modal = ({
@@ -284,7 +280,6 @@ const Modal = ({
 }) => {
   const { tag, title, tech: t } = solution;
 
-  // Close on Escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -293,7 +288,6 @@ const Modal = ({
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  // Lock body scroll
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
@@ -308,7 +302,6 @@ const Modal = ({
         className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
         <div className="mb-5 flex items-start justify-between gap-3">
           <div>
             <p className="text-xs font-bold tracking-widest text-orange-500 uppercase mb-1">
@@ -325,7 +318,6 @@ const Modal = ({
           </button>
         </div>
 
-        {/* Prérequis */}
         <div className="mb-4">
           <p className="mb-2 text-[11px] font-bold tracking-widest text-orange-500 uppercase">
             Prérequis
@@ -342,7 +334,6 @@ const Modal = ({
           </div>
         </div>
 
-        {/* Infos pratiques */}
         <div className="mb-4">
           <p className="mb-2 text-[11px] font-bold tracking-widest text-orange-500 uppercase">
             Infos pratiques
@@ -361,7 +352,6 @@ const Modal = ({
 
         <hr className="my-4 border-border" />
 
-        {/* Stack technique */}
         <div className="mb-4">
           <p className="mb-2 text-[11px] font-bold tracking-widest text-orange-500 uppercase">
             Stack technique
@@ -380,7 +370,6 @@ const Modal = ({
 
         <hr className="my-4 border-border" />
 
-        {/* FAQ */}
         <div>
           <p className="mb-2 text-[11px] font-bold tracking-widest text-orange-500 uppercase">
             Questions fréquentes
@@ -403,7 +392,7 @@ const Modal = ({
 };
 
 // ─────────────────────────────────────────────
-// Accordion Item
+// Accordion Item — inchangé
 // ─────────────────────────────────────────────
 
 const SolutionItem = ({
@@ -426,18 +415,15 @@ const SolutionItem = ({
           : "border-border bg-card"
       }`}
     >
-      {/* Clickable header */}
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         className="flex w-full items-center gap-3 px-4 py-4 text-left sm:px-5"
       >
-        {/* Icon */}
         <div className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-orange-200 bg-orange-50 dark:border-orange-800/50 dark:bg-orange-950/40">
           <Icon size={16} className="text-orange-500" />
         </div>
 
-        {/* Text */}
         <div className="flex-1 min-w-0">
           <span className="text-[10px] font-bold tracking-widest text-orange-500 uppercase">
             {s.tag}
@@ -450,7 +436,6 @@ const SolutionItem = ({
           </p>
         </div>
 
-        {/* Price + chevron */}
         <div className="flex shrink-0 items-center gap-3">
           <span className="hidden text-sm font-semibold text-foreground sm:block">
             {s.price}
@@ -464,11 +449,9 @@ const SolutionItem = ({
         </div>
       </button>
 
-      {/* Expanded body */}
       {open && (
         <div className="border-t border-border px-4 pb-5 pt-4 sm:px-5">
           <div className="grid gap-5 lg:grid-cols-[1fr_auto]">
-            {/* Left */}
             <div>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {s.detail}
@@ -483,7 +466,6 @@ const SolutionItem = ({
               </ul>
             </div>
 
-            {/* Right — price + CTAs */}
             <div className="flex flex-col items-start gap-3 lg:items-end lg:justify-between">
               <div className="lg:text-right">
                 <p className="text-xs text-muted-foreground">Tarif</p>
@@ -525,10 +507,9 @@ export const SolutionAccordion = () => {
     <>
       <section id="solutions" className="py-24 sm:py-32">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          {/* Header */}
           <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
-              Solutions
+              Artisans & BTP
             </span>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
               Ce qu'on fait pour vous
@@ -536,11 +517,10 @@ export const SolutionAccordion = () => {
             <p className="mt-4 text-base text-muted-foreground text-pretty">
               Cliquez sur une solution pour voir le détail —{" "}
               <span className="text-foreground font-medium">En savoir plus</span> affiche les infos
-              techniques.
+              techniques et la FAQ.
             </p>
           </div>
 
-          {/* List */}
           <div className="mt-10 flex flex-col gap-2.5">
             {SOLUTIONS.map((s, i) => (
               <SolutionItem
@@ -554,7 +534,6 @@ export const SolutionAccordion = () => {
         </div>
       </section>
 
-      {/* Modal */}
       {modalSolution && (
         <Modal solution={modalSolution} onClose={closeModal} />
       )}
