@@ -24,6 +24,27 @@ type Offer = {
 
 const OFFERS: Offer[] = [
   {
+    id: "audit",
+    badge: "",
+    title: "Audit",
+    price: "Gratuit",
+    priceUnit: "",
+    description:
+      "test On installe et configure Claude pour vous, et on vous forme à l'utiliser au quotidien dans votre activité.",
+    strongFeatures: [
+      "Configuration Claude sur mesure pour votre métier",
+      "Formation complète à votre rythme",
+    ],
+    features: [
+      "Routines IA pour votre quotidien artisan",
+      "Accompagnement pas à pas",
+      "Support WhatsApp inclus",
+    ],
+    roi: { value: "+5h", label: "récupérées dès la première semaine" },
+    cta: "Démarrer",
+    href: "/#audit-form",
+  },
+  {
     id: "essentiel",
     badge: "Propulsé par Claude",
     title: "Essentiel",
@@ -46,7 +67,7 @@ const OFFERS: Offer[] = [
   },
   {
     id: "pro",
-    badge: "Agents IA actifs",
+    badge: "Populaire",
     title: "Pro",
     price: "208€",
     priceUnit: "/mois HT",
@@ -68,7 +89,6 @@ const OFFERS: Offer[] = [
   },
   {
     id: "entreprise",
-    badge: "Le plus choisi",
     title: "Entreprise",
     price: "Sur devis",
     priceUnit: "",
@@ -93,7 +113,6 @@ const OFFERS: Offer[] = [
   {
     id: "elite",
     badge: "Multi-équipes",
-    badgeStyle: { background: "#FAEEDA", color: "#FF8904"  },
     title: "Elite",
     price: "Sur devis",
     priceUnit: "",
@@ -265,7 +284,7 @@ const OfferCard = ({
         "hover:-translate-y-1 hover:shadow-md hover:shadow-black/5",
         "dark:hover:shadow-black/20",
         featured
-          ? "border-2 border-blue-500/50 bg-card"
+          ? "border-2 border-orange-500/50 bg-card"
           : "border border-border bg-card"
       )}
     >
