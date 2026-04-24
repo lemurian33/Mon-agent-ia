@@ -26,7 +26,6 @@ const OFFERS: Offer[] = [
   {
     id: "essentiel",
     badge: "Propulsé par Claude",
-    badgeStyle: { background: "#EAF3DE", color: "#FF8904" },
     title: "Essentiel",
     price: "79€",
     priceUnit: "/mois HT",
@@ -48,7 +47,6 @@ const OFFERS: Offer[] = [
   {
     id: "pro",
     badge: "Agents IA actifs",
-    badgeStyle: { background: "#E6F1FB", color: "#FF8904"  },
     title: "Pro",
     price: "208€",
     priceUnit: "/mois HT",
@@ -276,13 +274,7 @@ const OfferCard = ({
         <div className="absolute -top-3 right-4">
           <span
             data-testid="offer-badge"
-            className="rounded-full px-2 py-1 text-xs font-bold uppercase tracking-wider"
-            style={
-              badgeStyle ?? {
-                background: "var(--color-background-info, #E6F1FB)",
-                color: "var(--color-text-info, #0C447C)",
-              }
-            }
+            className="rounded-full px-2 py-1 text-xs font-bold uppercase tracking-wider bg-orange-100 text-orange-500 dark:bg-orange-950 dark:text-orange-400"
           >
             {badge}
           </span>
