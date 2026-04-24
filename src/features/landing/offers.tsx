@@ -239,31 +239,6 @@ export const Offers = () => {
           ))}
         </div>
 
-        {/* ── Bloc bas ── */}
-        {/* <div className="mx-auto mt-8 max-w-6xl rounded-2xl border
-                        border-orange-500/20 bg-orange-500/5 px-8 py-6">
-          <div className="flex flex-col items-center justify-between
-                          gap-4 text-center sm:flex-row sm:text-left">
-            <div>
-              <p className="text-sm font-bold text-foreground">
-                Premiers résultats en moins de 30 jours
-              </p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Ou on ajuste jusqu'à ce que ce soit le cas
-              </p>
-            </div>
-            <Link
-              href="#audit-form"
-              className="shrink-0 rounded-md bg-orange-500 px-6 py-2.5
-                          text-sm font-semibold text-white transition-all
-                          hover:bg-orange-400 hover:shadow-lg
-                          hover:shadow-orange-500/20 active:scale-95"
-            >
-              Réserver mon audit gratuit →
-            </Link>
-          </div>
-        </div> */}
-
       </div>
     </section>
   );
