@@ -77,7 +77,7 @@ const OFFERS: Offer[] = [
       "Tout le pack Pro inclus",
       "Environnement IA 100% privé — vos données restent chez vous",
       "Donna: assistant vocal avec votre ton et vocabulaire métier",
-			"Communications: 0.20€/min"
+			"Communications: 0.20€/min",
       "CRM chantiers connecté à vos outils",
       "Séquences commerciales automatiques",
       "Support prioritaire dédié",
