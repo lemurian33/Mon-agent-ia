@@ -1,7 +1,7 @@
 import { Typography } from "@/components/nowts/typography";
 import Link from "next/link";
 import {
-  Clock, Zap, BrainCircuit,
+  Clock, Zap, Bot,
   TrendingUp, Users, BarChart2,
   Calendar, Activity, ShieldCheck,
 } from "lucide-react";
@@ -37,7 +37,7 @@ const RESULTS: ResultCard[] = [
     metriques: [
       { icon: TrendingUp,   label: "Devis générés",         delta: "+340%",  highlight: true },
       { icon: Clock,        label: "Temps de réponse",      delta: "-80%",   highlight: true },
-      { icon: BrainCircuit, label: "Relances automatiques", delta: "24/7",   highlight: false },
+      { icon: Bot,          label: "Relances automatiques", delta: "24/7",   highlight: false },
     ],
     tags: ["Agent I.A.", "Automatisation complexe", "RGPD", "Formation"],
   },

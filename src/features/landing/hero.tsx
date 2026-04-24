@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BarChart2, Clock, Zap, Users } from "lucide-react";
+import { BarChart2, Clock, Zap, User } from "lucide-react";
 import { SectionDivider } from "@/features/landing/section-divider";
 
 export const Hero = () => {
@@ -116,10 +116,10 @@ const BADGES = [
 ] as const;
 
 const STATS = [
-  { icon: BarChart2, value: "+15 audits I.A. réalisés", label: "" },
+  { icon: BarChart2, value: "+20 audits I.A. réalisés", label: "" },
   { icon: Clock,     value: "Réponse < 24h",            label: "" },
   { icon: Zap,       value: "Automatisation rapide",    label: "" },
-  { icon: Users,     value: "Orienté Zero Employé",     label: "" },
+  { icon: User,     value: "Orienté Zero Employé",     label: "" },
 ] as const;
 
 // ── Background ───────────────────────────────────────────────────

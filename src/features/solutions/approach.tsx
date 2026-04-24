@@ -27,8 +27,8 @@ const PILLARS: Pillar[] = [
     id: "installer",
     num: "01",
     tag: "Installer",
-    tagColor: "text-green-700 dark:text-green-400",
-    accentColor: "bg-green-500",
+    tagColor: "text-orange-700 dark:text-orange-400",
+    accentColor: "bg-orange-500",
     title: "Formation & prise en main",
     description:
       "Vous maîtrisez Claude dans votre quotidien d'artisan — sans aucune compétence technique requise.",
@@ -43,8 +43,8 @@ const PILLARS: Pillar[] = [
     id: "automatiser",
     num: "02",
     tag: "Automatiser",
-    tagColor: "text-blue-700 dark:text-blue-400",
-    accentColor: "bg-blue-500",
+    tagColor: "text-orange-700 dark:text-orange-400",
+    accentColor: "bg-orange-500",
     title: "Agents I.A. actifs 24h/24",
     description:
       "Vos agents relancent, publient et gèrent les impayés pendant que vous êtes sur le terrain.",

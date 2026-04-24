@@ -1,5 +1,5 @@
 import { Typography } from "@/components/nowts/typography";
-import { CalendarCheck, BrainCircuit, ShieldCheck, Rocket, BarChart2, HeartHandshake } from "lucide-react";
+import { CalendarCheck, Bot, ShieldCheck, DatabaseBackup , BarChart2, Server  } from "lucide-react";
 
 type Step = {
   number: string;
@@ -9,7 +9,7 @@ type Step = {
 };
 
 const STEPS: Step[] = [
-  {
+  { 
     number: "01",
     icon: CalendarCheck,
     title: "Réservez votre audit I.A. gratuit",
@@ -18,35 +18,35 @@ const STEPS: Step[] = [
   },
   {
     number: "02",
-    icon: BrainCircuit,
+    icon: Bot,
     title: "Votre feuille de route I.A. sur mesure",
     description:
       "Vous repartez avec un plan d'intégration concret et priorisé, adapté à votre métier. On vous explique quels outils, quels modèles, et dans quel ordre les déployer pour un impact immédiat.",
   },
   {
     number: "03",
+    icon: Server,
+    title: "Déploiement de votre écosystème I.A.",
+    description:
+      "On met en place vos agents, automatisations et workflows I.A. — intégrés directement dans vos outils existants. Opérationnel rapidement, sans friction pour vos équipes.",
+  },
+  {
+    number: "04",
     icon: ShieldCheck,
     title: "Intégration RGPD & sécurisée",
     description:
       "Chaque solution est configurée pour respecter le RGPD et rester souveraine. Vos données restent les vôtres — on vous guide sur l'hébergement, les droits d'accès et la conformité dès le départ.",
   },
   {
-    number: "04",
-    icon: Rocket,
-    title: "Déploiement de votre écosystème I.A.",
-    description:
-      "On met en place vos agents, automatisations et workflows I.A. — intégrés directement dans vos outils existants. Opérationnel rapidement, sans friction pour vos équipes.",
-  },
-  {
     number: "05",
     icon: BarChart2,
     title: "Formation & montée en compétences",
     description:
-      "Vos équipes apprennent à utiliser, piloter et faire évoluer l'écosystème en autonomie. Sessions pratiques, cas concrets issus de votre métier — pas de théorie inutile.",
+      "Vous apprenez à utiliser, piloter et faire évoluer l'écosystème en autonomie. Sessions pratiques, cas concrets issus de votre métier — pas de théorie inutile.",
   },
   {
     number: "06",
-    icon: HeartHandshake,
+    icon: DatabaseBackup  ,
     title: "Optimisation & accompagnement continu",
     description:
       "L'I.A. évolue vite. On reste à vos côtés pour ajuster, améliorer et intégrer les nouvelles opportunités — pour que vous gardez toujours une longueur d'avance.",
