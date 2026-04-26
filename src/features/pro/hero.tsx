@@ -8,7 +8,7 @@ export const Hero = () => {
       <GradientBackground />
 
       <div className="relative py-24 sm:py-32 lg:pb-20">
-        <div className="mx-auto max-w-8xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Mobile: org chart en haut, texte en bas — Desktop: texte à gauche, org à droite */}
           <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
 
@@ -152,7 +152,7 @@ const OrgChart = () => (
         { label: "Marketing", sub: "Agent contenu" },
         { label: "Opérations", sub: "Agent process", active: true },
         { label: "Support client", sub: "Agent réponse" },
-				{ label: "Qualifications", sub: "Agent leads" },
+				// { label: "Qualifications", sub: "Agent leads" },
       ].map((n) => (
         <div key={n.label} className="mt-5">
           <OrgNode {...n} />
@@ -227,7 +227,7 @@ const OrgNode = ({
 // ── Data ──────────────────────────────────────────────────────────
 
 const BADGES = [
-  { icon: Shield,  label: "Sans engagement" },
+  { icon: Shield,  label: "Clé en main" },
   { icon: Clock,   label: "Déploiement rapide" },
   { icon: Zap,     label: "Résultats mesurables" },
 ] as const;
@@ -235,10 +235,10 @@ const BADGES = [
 const CHANNELS = [
   { icon: Monitor,       label: "Web app" },
   { icon: Smartphone,    label: "Mobile" },
-  { icon: Mail,          label: "Email" },
+  { icon: Monitor,       label: "Dashboard personalisé" },
   { icon: MessageSquare, label: "Chat intégré" },
-  { icon: Globe,         label: "API REST" },
-  { icon: Zap,           label: "Webhook" },
+  // { icon: Globe,         label: "API REST" },
+  // { icon: Zap,           label: "Webhook" },
 ] as const;
 
 const STATS = [
