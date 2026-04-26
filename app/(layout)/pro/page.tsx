@@ -11,6 +11,7 @@ export default function Page() {
     <>
       <Hero />
       <AgentDemo />
+      <SectionDivider />
       <DashboardView/>
       <SectionDivider />
     </>

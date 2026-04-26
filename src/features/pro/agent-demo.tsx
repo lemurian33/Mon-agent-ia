@@ -93,23 +93,6 @@ export const AgentDemo = () => {
 
   return (
     <div className="flex flex-col gap-3 mx-auto max-w-6xl">
-
-      {/* Toggle */}
-      <div className="flex gap-2">
-        <button
-          type="button"
-          className="rounded-md border border-border bg-muted px-3 py-1.5 text-[13px] font-medium text-foreground"
-        >
-          Vue mobile
-        </button>
-        <button
-          type="button"
-          className="rounded-md border border-border bg-background px-3 py-1.5 text-[13px] text-muted-foreground transition-colors hover:bg-muted/50"
-        >
-          Dashboard Leads
-        </button>
-      </div>
-
       {/* Mobile mockup */}
       <div className="flex min-h-[580px] max-w-6xl overflow-hidden rounded-md border border-border bg-muted/20">
 
