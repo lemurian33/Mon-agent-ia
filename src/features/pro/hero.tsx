@@ -103,8 +103,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      <SectionDivider />
-
       {/* Stats bar */}
       <div className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-5xl px-6 py-6 lg:px-8">
@@ -118,6 +116,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+			<SectionDivider />
     </div>
   );
 };
