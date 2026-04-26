@@ -104,7 +104,6 @@ export const AgentDemo = () => {
         </button>
         <button
           type="button"
-          onClick={() => setShowDashboard(true)}
           className="rounded-md border border-border bg-background px-3 py-1.5 text-[13px] text-muted-foreground transition-colors hover:bg-muted/50"
         >
           Dashboard Leads
