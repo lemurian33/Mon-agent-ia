@@ -76,7 +76,7 @@ export const Hero = () => {
             </div>
 
             {/* Canaux compatibles */}
-            <div className="mt-12 w-full max-w-2xl">
+            <div className="mt-12 w-full max-w-3xl">
               <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground/60 uppercase">
                 Compatible avec vos canaux
               </p>
@@ -103,7 +103,7 @@ export const Hero = () => {
 
       {/* Stats bar */}
       <div className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-4xl px-6 py-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-6 py-6 lg:px-8">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {STATS.map(({ icon: Icon, value }) => (
               <div key={value} className="flex items-center gap-3">
