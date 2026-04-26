@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className="relative py-24 sm:py-32 lg:pb-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Mobile: org chart en haut, texte en bas — Desktop: texte à gauche, org à droite */}
-          <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
 
             {/* ── Colonne texte (gauche sur desktop, bas sur mobile) ── */}
             <div className="flex flex-col items-start text-left w-full lg:flex-1">
@@ -142,17 +142,18 @@ const OrgChart = () => (
     <div className="mx-16 border-t border-border" />
 
     {/* Level 2 */}
-    <div className="relative mt-0 grid grid-cols-3 gap-3">
+    <div className="relative mt-0 grid grid-cols-4 gap-3">
       {/* left connector */}
       <div className="absolute left-[16.5%] top-0 h-5 w-px bg-border" />
       <div className="absolute left-1/2 top-0 h-5 w-px bg-border" />
+			<div className="absolute left-1/2 top-0 h-5 w-px bg-border" />
       <div className="absolute right-[16.5%] top-0 h-5 w-px bg-border" />
 
       {[
         { label: "Marketing", sub: "Agent contenu" },
         { label: "Opérations", sub: "Agent process", active: true },
         { label: "Support client", sub: "Agent réponse" },
-				// { label: "Qualifications", sub: "Agent leads" },
+				{ label: "Qualifications", sub: "Agent leads" },
       ].map((n) => (
         <div key={n.label} className="mt-5">
           <OrgNode {...n} />
@@ -227,15 +228,15 @@ const OrgNode = ({
 // ── Data ──────────────────────────────────────────────────────────
 
 const BADGES = [
-  { icon: Shield,  label: "Clé en main" },
+  // { icon: Shield,  label: "Clé en main" },
   { icon: Clock,   label: "Déploiement rapide" },
   { icon: Zap,     label: "Résultats mesurables" },
+	{ icon: Monitor, label: "Dashboard personalisé" },
 ] as const;
 
 const CHANNELS = [
   { icon: Monitor,       label: "Web app" },
   { icon: Smartphone,    label: "Mobile" },
-  { icon: Monitor,       label: "Dashboard personalisé" },
   { icon: MessageSquare, label: "Chat intégré" },
   // { icon: Globe,         label: "API REST" },
   // { icon: Zap,           label: "Webhook" },
