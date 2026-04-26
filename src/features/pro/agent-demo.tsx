@@ -143,12 +143,32 @@ export function AgentDemo() {
         </button>
       </div>
 
-      {/* MOBILE PLACEHOLDER */}
+      {/* DEBUG */}
+      <p className="text-sm text-muted-foreground">
+        Vue active : <span className="font-medium">{view}</span>
+      </p>
+
+      {/* MOBILE VIEW */}
       {view === "mobile" && (
-        <div className="rounded-lg border p-10 text-center">
-          <p className="text-sm text-muted-foreground">
-            Vue mobile masquée — dashboard uniquement.
-          </p>
+        <div className="flex min-h-[700px] items-center justify-center rounded-lg border bg-background">
+          <div className="text-center">
+            <div
+              className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-2xl font-bold text-white"
+              style={{ background: "#e8680a" }}
+            >
+              A
+            </div>
+
+            <h2 className="text-2xl font-semibold">Vue Mobile Active</h2>
+
+            <p className="mt-2 text-sm text-muted-foreground">
+              Le bouton fonctionne correctement.
+            </p>
+
+            <p className="mt-2 text-sm text-muted-foreground">
+              Ici tu peux remettre ton mockup iPhone complet.
+            </p>
+          </div>
         </div>
       )}
 
@@ -165,6 +185,7 @@ export function AgentDemo() {
                 >
                   A
                 </div>
+
                 <span className="text-sm font-medium">Artisan Pro</span>
               </div>
 
@@ -203,6 +224,7 @@ export function AgentDemo() {
                   <h1 className="text-lg font-semibold">
                     Acquisition de leads — BTP & Artisans
                   </h1>
+
                   <p className="text-sm text-muted-foreground">
                     Trouvez, qualifiez et contactez vos prospects automatiquement.
                   </p>
@@ -241,12 +263,21 @@ export function AgentDemo() {
                     sub: "pipeline actif",
                   },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-md bg-muted/40 p-4">
+                  <div
+                    key={item.label}
+                    className="rounded-md bg-muted/40 p-4"
+                  >
                     <p className="text-xs text-muted-foreground">
                       {item.label}
                     </p>
-                    <p className="mt-1 text-2xl font-semibold">{item.val}</p>
-                    <p className="text-xs text-muted-foreground">{item.sub}</p>
+
+                    <p className="mt-1 text-2xl font-semibold">
+                      {item.val}
+                    </p>
+
+                    <p className="text-xs text-muted-foreground">
+                      {item.sub}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -274,6 +305,7 @@ export function AgentDemo() {
 
                     <div className="flex-1">
                       <p className="text-sm font-medium">{lead.name}</p>
+
                       <p className="text-xs text-muted-foreground">
                         {lead.meta}
                       </p>
@@ -335,10 +367,14 @@ export function AgentDemo() {
                           key={card.name}
                           className="mb-2 rounded-md border bg-background p-3 last:mb-0"
                         >
-                          <p className="text-sm font-medium">{card.name}</p>
+                          <p className="text-sm font-medium">
+                            {card.name}
+                          </p>
+
                           <p className="text-xs text-muted-foreground">
                             {card.type}
                           </p>
+
                           <p className="mt-1 text-sm font-medium">
                             {card.val}
                           </p>
