@@ -1,8 +1,11 @@
 import React from 'react';
+import {Hero} from '@/features/pro/hero'
 
 function page() {
   return (
-    <div>test page Pro</div>
+    <>
+     <Hero/>
+    </>
   );
 }
 
