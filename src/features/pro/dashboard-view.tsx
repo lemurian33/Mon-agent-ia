@@ -43,23 +43,21 @@ const ORANGE = "#e8680a";
 
 // ── Component ─────────────────────────────────────────────────────
 
-export function DashboardView({ onBack }: { onBack: () => void }) {
+export function DashboardView({ onBack }: { onBack?: () => void }) {
   return (
     <div className="flex flex-col gap-3 mx-auto max-w-6xl">
 
       {/* Toggle */}
       <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={onBack}
-          className="rounded-md border border-border bg-background px-3 py-1.5 text-[13px] text-muted-foreground transition-colors hover:bg-muted/50"
-        >
-          Vue mobile
-        </button>
-        <button
-          type="button"
-          className="rounded-md border border-border bg-muted px-3 py-1.5 text-[13px] font-medium text-foreground"
-        >
+				{onBack && (
+					<button
+							type="button"
+							onClick={onBack}
+							className="rounded-md border border-border bg-background px-3 py-1.5 text-[13px] text-muted-foreground transition-colors hover:bg-muted/50"
+					>
+						Vue mobile
+					</button>
+					)}
           Dashboard Leads
         </button>
       </div>

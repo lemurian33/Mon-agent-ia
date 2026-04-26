@@ -72,7 +72,6 @@ const ORANGE = "#e8680a";
 // ── Component ─────────────────────────────────────────────────────
 
 export const AgentDemo = () => {
-  const [showDashboard, setShowDashboard] = useState(false);
   const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
   const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
 
@@ -91,10 +90,6 @@ export const AgentDemo = () => {
       [...msgTimers, ...stepTimers].forEach(clearTimeout);
     };
   }, []);
-
-  if (showDashboard) {
-    return <DashboardView onBack={() => setShowDashboard(false)} />;
-  }
 
   return (
     <div className="flex flex-col gap-3 mx-auto max-w-6xl">
