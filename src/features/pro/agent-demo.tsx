@@ -137,7 +137,7 @@ export const AgentDemo = () => {
               </div>
               <div>
                 <div className="flex items-center gap-1 text-[11px] font-semibold text-white">
-                  Charly
+                  Jarvis
                   <svg width="12" height="12" viewBox="0 0 18 18" fill="none">
                     <circle cx="9" cy="9" r="8" fill="#25D366"/>
                     <path d="M5.5 9l2.5 2.5 5-5" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
