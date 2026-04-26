@@ -109,10 +109,10 @@ export const AgentDemo = () => {
   }, []);
 
   return (
-    <div className="flex min-h-[580px] overflow-hidden rounded-xl border border-border bg-muted/20">
+    <div className="flex min-h-[580px] max-w-6xl mx-auto overflow-hidden rounded-xl border border-border bg-muted/20">
       {/* ── iPhone ── */}
-      <div className="flex w-[220px] shrink-0 items-center justify-center p-5">
-        <div className="w-[172px] overflow-hidden rounded-[34px] border-[2.5px] border-zinc-800 bg-zinc-900 shadow-2xl">
+      <div className="flex w-[350px] shrink-0 items-center justify-center p-5">
+        <div className="w-[264px] overflow-hidden rounded-[34px] border-[2.5px] border-zinc-800 bg-zinc-900 shadow-2xl">
           {/* Status bar */}
           <div className="flex items-center justify-between bg-zinc-900 px-3 py-1.5">
             <span className="text-[10px] font-semibold text-white">11:02</span>
