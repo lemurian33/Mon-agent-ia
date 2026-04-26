@@ -122,7 +122,7 @@ export const AgentDemo = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 mx-auto max-w-6xl">
       {/* ── Toggle ── */}
       <div className="flex gap-2">
         <button
