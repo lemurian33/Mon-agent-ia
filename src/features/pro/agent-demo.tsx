@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 // ── Types ─────────────────────────────────────────────────────────
 
@@ -12,7 +12,7 @@ type Message = {
 };
 
 type LogicStep =
-  | { type: "thinking"; label: string; cards: { icon: React.ReactNode; label: string; value: string }[] }
+  | { type: "thinking"; label: string; cards: { icon: ReactNode; label: string; value: string }[] }
   | { type: "action"; app: "leads" | "campaign"; title: string; sub: string };
 
 // ── Data ──────────────────────────────────────────────────────────
@@ -430,42 +430,43 @@ export const AgentDemo = () => {
               <div className="rounded-lg border border-border bg-background p-3">
                 <p className="mb-2 text-[12px] font-medium text-foreground">Pipeline de conversion</p>
                 <div className="grid grid-cols-3 gap-2">
-                  {(
-                    [
-                      { key: "nouveau", label: "Nouveau lead", count: 3 },
-                      { key: "devis", label: "Devis envoyé", count: 2 },
-                      { key: "signe", label: "Signé", count: 2 },
-                    ] as const
-                  ).map(({ key, label, count }) => (
-                    <div key={key} className="rounded-md bg-muted/40 p-2.5">
-                      <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11px] font-medium text-muted-foreground">{label}</span>
-                        <span
-                          className="rounded-full px-1.5 py-0.5 text-[9px] font-medium"
-                          style={
-                            key === "signe"
-                              ? { background: "#EAF3DE", color: "#27500A" }
-                              : { background: "var(--color-background-primary, white)", color: "var(--color-text-secondary, #666)", border: "0.5px solid var(--color-border-tertiary, #ddd)" }
-                          }
-                        >
-                          {count}
-                        </span>
-                      </div>
-                      {PIPELINE[key].map((card) => (
-                        <div key={card.name} className="mb-1.5 last:mb-0 rounded-md border border-border bg-background p-2">
-                          <p className="text-[11px] font-medium text-foreground">{card.name}</p>
-                          <p className="text-[10px] text-muted-foreground">{card.type}</p>
-                          <p
-                            className="mt-0.5 text-[11px] font-medium"
-                            style={{ color: key === "signe" ? "#27500A" : undefined }}
-                          >
-                            {card.val}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
+									{(
+										[
+											{ key: "nouveau", label: "Nouveau lead", count: 3 },
+											{ key: "devis", label: "Devis envoyé", count: 2 },
+											{ key: "signe", label: "Signé", count: 2 },
+										] as const
+									).map(({ key, label, count }) => (
+										<div key={key} className="rounded-md bg-muted/40 p-2.5">
+											<div className="mb-2 flex items-center justify-between">
+												<span className="text-[11px] font-medium text-muted-foreground">
+													{label}
+												</span>
+
+												<span className="rounded-full px-1.5 py-0.5 text-[9px] font-medium">
+													{count}
+												</span>
+											</div>
+
+											{PIPELINE[key as keyof typeof PIPELINE].map((card) => (
+												<div
+													key={card.name}
+													className="mb-1.5 last:mb-0 rounded-md border border-border bg-background p-2"
+												>
+													<p className="text-[11px] font-medium text-foreground">
+														{card.name}
+													</p>
+													<p className="text-[10px] text-muted-foreground">
+														{card.type}
+													</p>
+													<p className="mt-0.5 text-[11px] font-medium">
+														{card.val}
+													</p>
+												</div>
+											))}
+										</div>
+									))}
+								</div>
               </div>
             </div>
           </div>
