@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 type Status = "Chaud" | "Tiède" | "Froid";
 
@@ -111,7 +111,7 @@ const STATUS_STYLES: Record<Status, { bg: string; text: string }> = {
   },
 };
 
-export default function AgentDemo() {
+export function AgentDemo() {
   const [view, setView] = useState<"mobile" | "dashboard">("dashboard");
 
   return (
@@ -209,6 +209,7 @@ export default function AgentDemo() {
                 </div>
 
                 <button
+                  type="button"
                   className="rounded-md px-4 py-2 text-sm font-medium text-white"
                   style={{ background: "#e8680a" }}
                 >
