@@ -9,90 +9,94 @@ export const Hero = () => {
 
       <div className="relative py-24 sm:py-32 lg:pb-20">
         <div className="mx-auto max-w-8xl px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center">
+          {/* Mobile: org chart en haut, texte en bas — Desktop: texte à gauche, org à droite */}
+          <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
 
-            {/* Badge */}
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full
-                            border border-orange-200 bg-orange-50 px-4 py-1.5
-                            text-xs font-semibold tracking-widest
-                            text-orange-700 uppercase
-                            dark:border-orange-800/60 dark:bg-orange-950/60
-                            dark:text-orange-300">
-              Orchestration multi-agents
-            </div>
+            {/* ── Colonne texte (gauche sur desktop, bas sur mobile) ── */}
+            <div className="flex flex-col items-start text-left w-full lg:flex-1">
 
-            {/* Titre */}
-            <h1 className="text-4xl font-bold tracking-tight text-balance
-                           text-foreground sm:text-5xl lg:text-6xl
-                           lg:leading-tight">
-              Vos agents IA,{" "}
-              <span className="text-orange-500">
-                une seule plateforme.
-              </span>
-            </h1>
+              {/* Badge */}
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full
+                              border border-orange-200 bg-orange-50 px-4 py-1.5
+                              text-xs font-semibold tracking-widest
+                              text-orange-700 uppercase
+                              dark:border-orange-800/60 dark:bg-orange-950/60
+                              dark:text-orange-300">
+                Orchestration multi-agents
+              </div>
 
-            {/* Sous-titre */}
-            <p className="mt-6 max-w-2xl text-base leading-relaxed
-                          text-muted-foreground sm:text-lg">
-              Connectez vos outils métier existants sous une structure unifiée,
-              pilotée par l'IA. Zéro compétence technique requise — déployé en quelques jours.
-            </p>
-
-            {/* CTAs */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="#demo"
-                className="rounded-md bg-orange-500 px-8 py-3.5 text-sm
-                           font-semibold text-white transition-all
-                           hover:bg-orange-400 hover:shadow-lg
-                           hover:shadow-orange-500/30 active:scale-95"
-              >
-                Voir une démo →
-              </Link>
-              <Link
-                href="#contact"
-                className="rounded-md border border-border px-8 py-3.5
-                           text-sm font-semibold text-foreground
-                           transition-all hover:bg-muted"
-              >
-                Prendre rendez-vous
-              </Link>
-            </div>
-
-            {/* Badges inline */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6
-                            text-sm text-muted-foreground">
-              {BADGES.map(({ icon: Icon, label }) => (
-                <span key={label} className="flex items-center gap-1.5">
-                  <Icon size={14} className="text-muted-foreground/60" />
-                  {label}
+              {/* Titre */}
+              <h1 className="text-4xl font-bold tracking-tight text-balance
+                             text-foreground sm:text-5xl lg:text-6xl
+                             lg:leading-tight">
+                Vos agents IA,{" "}
+                <span className="text-orange-500">
+                  une seule plateforme.
                 </span>
-              ))}
-            </div>
+              </h1>
 
-            {/* Org chart visuel */}
-            <div className="mt-16 w-full max-w-3xl">
-              <OrgChart />
-            </div>
-
-            {/* Canaux compatibles */}
-            <div className="mt-12 w-full max-w-3xl">
-              <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground/60 uppercase">
-                Compatible avec vos canaux
+              {/* Sous-titre */}
+              <p className="mt-6 max-w-xl text-base leading-relaxed
+                            text-muted-foreground sm:text-lg">
+                Connectez vos outils métier existants sous une structure unifiée,
+                pilotée par l'IA. Zéro compétence technique requise — déployé en quelques jours.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-3">
-                {CHANNELS.map(({ icon: Icon, label }) => (
-                  <span
-                    key={label}
-                    className="flex items-center gap-2 rounded-full border border-border
-                               bg-background px-4 py-2 text-xs font-medium text-muted-foreground
-                               transition-colors hover:border-orange-200 hover:text-foreground"
-                  >
-                    <Icon size={13} className="text-muted-foreground/50" />
+
+              {/* CTAs */}
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="#demo"
+                  className="rounded-md bg-orange-500 px-8 py-3.5 text-sm
+                             font-semibold text-white transition-all
+                             hover:bg-orange-400 hover:shadow-lg
+                             hover:shadow-orange-500/30 active:scale-95"
+                >
+                  Voir une démo →
+                </Link>
+                <Link
+                  href="#contact"
+                  className="rounded-md border border-border px-8 py-3.5
+                             text-sm font-semibold text-foreground
+                             transition-all hover:bg-muted"
+                >
+                  Prendre rendez-vous
+                </Link>
+              </div>
+
+              {/* Badges inline */}
+              <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+                {BADGES.map(({ icon: Icon, label }) => (
+                  <span key={label} className="flex items-center gap-1.5">
+                    <Icon size={14} className="text-muted-foreground/60" />
                     {label}
                   </span>
                 ))}
               </div>
+
+              {/* Canaux compatibles */}
+              <div className="mt-10">
+                <p className="mb-3 text-xs font-semibold tracking-widest text-muted-foreground/60 uppercase">
+                  Compatible avec vos canaux
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  {CHANNELS.map(({ icon: Icon, label }) => (
+                    <span
+                      key={label}
+                      className="flex items-center gap-2 rounded-full border border-border
+                                 bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground
+                                 transition-colors hover:border-orange-200 hover:text-foreground"
+                    >
+                      <Icon size={12} className="text-muted-foreground/50" />
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* ── Colonne org chart (droite sur desktop, haut sur mobile) ── */}
+            <div className="w-full lg:flex-1">
+              <OrgChart />
             </div>
 
           </div>
@@ -148,6 +152,7 @@ const OrgChart = () => (
         { label: "Marketing", sub: "Agent contenu" },
         { label: "Opérations", sub: "Agent process", active: true },
         { label: "Support client", sub: "Agent réponse" },
+				{ label: "Qualifications", sub: "Agent leads" },
       ].map((n) => (
         <div key={n.label} className="mt-5">
           <OrgNode {...n} />
