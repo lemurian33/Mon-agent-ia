@@ -10,18 +10,18 @@ import { FAQSection } from '@/features/landing/faq-accordion';
 import { Cta } from '@/features/pro/cta';
 import { SectionDivider } from '@/features/landing/section-divider';
 
- 
 export default function Page() {
   return (
     <>
       <Hero />
-      <EntProcess />
       <SectionDivider />
       <AgentDemo />
       <SectionDivider />
+      <Features />
+      <SectionDivider />
       <Dashboard/>
       <SectionDivider />
-      <Features />
+      <EntProcess />
       <SectionDivider />
       <EntPricing />
       <SectionDivider />
