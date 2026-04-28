@@ -14,9 +14,6 @@ export default function SolutionsPage() {
   return (
     <>
       <HeroSolution />
-      <SectionDivider/>
-      <Offers/>
-      <SectionDivider/>
       <Approach/>
       <SectionDivider/>
       <SolutionAccordion />
@@ -24,6 +21,8 @@ export default function SolutionsPage() {
       <ProofSection />
       <SectionDivider/>
       <WhyUs />
+      <SectionDivider/>
+      <Offers/>
       <SectionDivider/>
       <FAQSection faq={[
         {

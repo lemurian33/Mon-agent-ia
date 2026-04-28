@@ -9,7 +9,6 @@ import { ProPricing } from '@/features/pro/pro-pricing';
 import { FAQSection } from '@/features/landing/faq-accordion';
 import { Cta } from '@/features/premium/cta';
 import { SectionDivider } from '@/features/landing/section-divider';
-
  
 export default function Page() {
   return (

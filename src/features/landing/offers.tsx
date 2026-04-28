@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 type Offer = {
   id: string;
   badge?: string;
-  badgeStyle?: React.CSSProperties;
   title: string;
   price: string;
   priceUnit: string;
@@ -25,23 +24,22 @@ type Offer = {
 const OFFERS: Offer[] = [
   {
     id: "audit",
-    badge: "",
-    title: "Audit",
+    title: "Audit gratuit",
     price: "Gratuit",
     priceUnit: "",
     description:
-      "test On installe et configure Claude pour vous, et on vous forme à l'utiliser au quotidien dans votre activité.",
+      "30 min pour cartographier vos process et identifier exactement où l'I.A. peut vous faire gagner du temps et de l'argent.",
     strongFeatures: [
-      "Configuration Claude sur mesure pour votre métier",
-      "Formation complète à votre rythme",
+      "Analyse complète de vos process métier",
+      "Feuille de route I.A. personnalisée",
     ],
     features: [
-      "Routines IA pour votre quotidien artisan",
-      "Accompagnement pas à pas",
-      "Support WhatsApp inclus",
+      "Identification des tâches automatisables",
+      "Estimation des gains de temps et d'argent",
+      "Recommandations outils et ordre de déploiement",
     ],
-    roi: { value: "+5h", label: "récupérées dès la première semaine" },
-    cta: "Démarrer",
+    roi: { value: "30 min", label: "pour avoir un plan d'action concret" },
+    cta: "Réserver mon audit",
     href: "/#audit-form",
   },
   {
@@ -57,80 +55,81 @@ const OFFERS: Offer[] = [
       "Formation complète à votre rythme",
     ],
     features: [
-      "Routines IA pour votre quotidien artisan",
+      "Routines I.A. pour votre quotidien",
       "Accompagnement pas à pas",
       "Support WhatsApp inclus",
     ],
     roi: { value: "+5h", label: "récupérées dès la première semaine" },
     cta: "Démarrer",
-    href: "#",
+    href: "/essentiel",
   },
-  {
-    id: "pro",
-    badge: "Populaire",
-    title: "Pro",
-    price: "208€",
-    priceUnit: "/mois HT",
-    description:
-      "Vos agents IA travaillent pour vous pendant que vous êtes sur le chantier.",
-    strongFeatures: [
-      "Devis relancés automatiquement",
-      "Photos chantier publiées sur vos réseaux",
-      "Factures impayées relancées sans vous",
-    ],
-    features: [
-      "Référencement local (plombier à X…)",
-      "Hébergé en France — RGPD",
-      "Agents disponibles 24h/24",
-    ],
-    roi: { value: "8–12h", label: "récupérées par semaine" },
-    cta: "Découvrir",
-    href: "#",
-  },
+  // {
+  //   id: "pro",
+  //   badge: "Populaire",
+  //   title: "Pro",
+  //   price: "208€",
+  //   priceUnit: "/mois HT",
+  //   description:
+  //     "Vos agents I.A. travaillent pour vous pendant que vous êtes sur le chantier.",
+  //   strongFeatures: [
+  //     "Devis relancés automatiquement",
+  //     "Photos chantier publiées sur vos réseaux",
+  //     "Factures impayées relancées sans vous",
+  //   ],
+  //   features: [
+  //     "Référencement local (plombier à X…)",
+  //     "Hébergé en France — RGPD",
+  //     "Agents disponibles 24h/24",
+  //   ],
+  //   roi: { value: "8–12h", label: "récupérées par semaine" },
+  //   cta: "Découvrir",
+  //   href: "/pro",
+  // },
   {
     id: "entreprise",
+    badge: "Sur-mesure",
     title: "Entreprise",
     price: "Sur devis",
     priceUnit: "",
     description:
-      "Votre propre écosystème IA, dédié à votre entreprise. Vos données restent chez vous.",
+      "LLM hébergé sur votre infrastructure. Zéro dépendance externe, zéro donnée qui sort de votre périmètre.",
     strongFeatures: [
-      "Tout le pack Pro",
-      "Environnement IA 100% privé — vos données chez vous",
-      "Tom avec voix naturelle personnalisée (votre ton, votre métier)",
-      "CRM chantiers connecté",
+      "Tout le pack Premium",
+      "LLM open source hébergé chez vous",
+      "Intégrations API avancées — ERP, SIRH, BI",
     ],
     features: [
-      "Séquences email commerciales automatiques",
-      "Connexion à vos outils métier",
-      "Support prioritaire dédié",
+      "Conformité RGPD documentée et auditée",
+      "SLA garanti avec reporting mensuel",
+      "Interlocuteur dédié — support prioritaire",
     ],
-    roi: { value: "+2 500€", label: "économisés vs embauche secrétariat" },
-    cta: "Choisir ce pack",
-    href: "#",
-    featured: true,
+    roi: { value: "+3 500€", label: "économisés vs équipe admin dédiée" },
+    cta: "Nous contacter",
+    href: "/entreprise",
   },
   {
-    id: "elite",
-    badge: "Multi-équipes",
-    title: "Elite",
+    id: "premium",
+    badge: "Recommandé",
+    title: "Premium",
     price: "Sur devis",
     priceUnit: "",
     description:
-      "Pour les groupes BTP ou franchises avec plusieurs équipes terrain à coordonner.",
+      "Un écosystème I.A. complet, dédié à votre entreprise. Infrastructure dédiée, agents illimités, souveraineté totale.",
     strongFeatures: [
-      "Tout le pack Entreprise",
-      "Gestion multi-dépôts et multi-équipes",
-      "Agents entraînés sur votre catalogue de services",
+      "Tout le pack Pro",
+      "Infrastructure dédiée — vos données isolées",
+      "Agents I.A. illimités multi-départements",
+      "Accompagnement mensuel dédié (60 min)",
     ],
     features: [
-      "Reporting commercial par chantier",
-      "Zéro interruption de service garantie",
-      "Suivi et optimisation continue inclus",
+      "LLM dernière génération (Claude Opus, GPT-4o…)",
+      "Hébergement souverain EU — conformité RGPD",
+      "Support prioritaire WhatsApp/Slack",
     ],
-    roi: { value: "+3 500€", label: "économisés vs équipe admin dédiée" },
-    cta: "En savoir plus",
-    href: "#",
+    roi: { value: "+2 500€", label: "économisés vs embauche secrétariat" },
+    cta: "Demander un audit",
+    href: "/premium",
+    featured: true,
   },
 ];
 
@@ -138,11 +137,9 @@ export const Offers = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-  const [eliteRevealed, setEliteRevealed] = useState(false);
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
-    if (dir === "right") setEliteRevealed(true);
     scrollRef.current.scrollBy({
       left: dir === "left" ? -320 : 320,
       behavior: "smooth",
@@ -162,12 +159,14 @@ export const Offers = () => {
 
         {/* ── Header ── */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center rounded-full
-                           border border-orange-200 bg-orange-50 px-4 py-1.5
-                           text-xs font-semibold tracking-widest
-                           text-orange-700 uppercase
-                           dark:border-orange-800/60 dark:bg-orange-950/60
-                           dark:text-orange-300">
+          <span
+            className="inline-flex items-center rounded-full
+                       border border-orange-200 bg-orange-50 px-4 py-1.5
+                       text-xs font-semibold tracking-widest
+                       text-orange-700 uppercase
+                       dark:border-orange-800/60 dark:bg-orange-950/60
+                       dark:text-orange-300"
+          >
             Artisans & BTP
           </span>
 
@@ -182,13 +181,20 @@ export const Offers = () => {
             variant="large"
             className="text-muted-foreground mt-4 text-lg text-balance"
           >
-            De la formation solo à l'écosystème I.A. d'entreprise — souverain, conforme RGPD et taillé pour votre métier.
+            De la formation solo à l'écosystème I.A. d'entreprise — souverain,
+            conforme RGPD et taillé pour votre métier.
           </Typography>
         </div>
 
         {/* ── Pain points ── */}
         <div className="mt-8 flex flex-wrap justify-center gap-2">
-          {["devis non relancés", "appels manqués sur chantier", "agenda mal géré", "zéro visibilité en ligne", "factures impayées"].map((pain) => (
+          {[
+            "devis non relancés",
+            "appels manqués sur chantier",
+            "agenda mal géré",
+            "zéro visibilité en ligne",
+            "factures impayées",
+          ].map((pain) => (
             <span
               key={pain}
               className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
@@ -201,7 +207,6 @@ export const Offers = () => {
         {/* ── Flèches ── */}
         <div className="mt-6 flex justify-end gap-2">
           <button
-            data-testid="scroll-left"
             onClick={() => scroll("left")}
             disabled={!canScrollLeft}
             aria-label="Précédent"
@@ -215,7 +220,6 @@ export const Offers = () => {
             <ChevronLeft size={16} />
           </button>
           <button
-            data-testid="scroll-right"
             onClick={() => scroll("right")}
             disabled={!canScrollRight}
             aria-label="Suivant"
@@ -234,27 +238,11 @@ export const Offers = () => {
         <div
           ref={scrollRef}
           onScroll={onScroll}
-          data-testid="offers-carousel"
-          className="mt-4 flex gap-4 pb-4
+          className="mt-4 flex gap-4 overflow-x-auto pb-4
                      [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-       {OFFERS.filter((o) => o.id !== "elite" || eliteRevealed).map((offer) => (
-          <OfferCard key={offer.id} {...offer} />
-        ))}
-        </div>
-
-        {/* ── Stats ── */}
-        <div className="mt-6 max-w-6xl grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[
-            { num: "24/7", lbl: "Agents actifs" },
-            { num: "France", lbl: "Données sécurisées" },
-            { num: "< 1j", lbl: "Premiers résultats" },
-            { num: "0 impayé", lbl: "Oublié sans relance" },
-          ].map(({ num, lbl }) => (
-            <div key={lbl} className="rounded-xl bg-muted px-4 py-3 text-center">
-              <p className="text-lg font-semibold text-foreground">{num}</p>
-              <p className="mt-0.5 text-xs text-muted-foreground">{lbl}</p>
-            </div>
+          {OFFERS.map((offer) => (
+            <OfferCard key={offer.id} {...offer} />
           ))}
         </div>
 
@@ -265,7 +253,6 @@ export const Offers = () => {
 
 const OfferCard = ({
   badge,
-  badgeStyle,
   title,
   price,
   priceUnit,
@@ -279,10 +266,9 @@ const OfferCard = ({
 }: Offer) => {
   return (
     <div
-      data-testid="offer-card"
       className={cn(
         "relative flex w-[280px] shrink-0 flex-col rounded-2xl",
-        "p-4 transition-all overflow-visible",
+        "overflow-visible p-4 transition-all",
         "hover:-translate-y-1 hover:shadow-md hover:shadow-black/5",
         "dark:hover:shadow-black/20",
         featured
@@ -294,8 +280,12 @@ const OfferCard = ({
       {badge && (
         <div className="absolute -top-3 right-4">
           <span
-            data-testid="offer-badge"
-            className="rounded-full px-2 py-1 text-xs font-bold uppercase tracking-wider bg-orange-100 text-orange-500 dark:bg-orange-950 dark:text-orange-400"
+            className={cn(
+              "rounded-full px-2 py-1 text-xs font-bold uppercase tracking-wider",
+              featured
+                ? "bg-orange-500 text-white"
+                : "bg-orange-100 text-orange-500 dark:bg-orange-950 dark:text-orange-400"
+            )}
           >
             {badge}
           </span>
@@ -314,10 +304,7 @@ const OfferCard = ({
       </div>
 
       {/* Description */}
-      <p
-        data-testid="offer-description"
-        className="mt-3 text-xs leading-relaxed text-muted-foreground"
-      >
+      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
         {description}
       </p>
 
@@ -326,13 +313,19 @@ const OfferCard = ({
       {/* Features */}
       <ul className="flex flex-col gap-2">
         {strongFeatures.map((f) => (
-          <li key={f} className="flex items-start gap-2 text-xs font-medium text-foreground">
+          <li
+            key={f}
+            className="flex items-start gap-2 text-xs font-medium text-foreground"
+          >
             <Check size={13} className="mt-0.5 shrink-0 text-blue-500" />
             {f}
           </li>
         ))}
         {features.map((f) => (
-          <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
+          <li
+            key={f}
+            className="flex items-start gap-2 text-xs text-muted-foreground"
+          >
             <Check size={13} className="mt-0.5 shrink-0 text-orange-500" />
             {f}
           </li>
