@@ -2,7 +2,7 @@
  
 import { Hero } from '@/features/pro/hero';
 import { AgentDemo } from '@/features/premium/agent-demo';
-import { DashboardView } from '@/features/pro/dashboard-view';
+import { DashboardView } from '@/features/premium/dashboard-view';
 import { Features } from '@/features/pro/features';
 import { ProProcess } from '@/features/pro/pro-process';
 import { EntPricing } from '@/features/premium/ent-pricing';
