@@ -10,25 +10,25 @@ export const Cta = () => {
           {/* Badge */}
           <p className="text-xs font-semibold tracking-widest
                         text-orange-500 uppercase">
-            Formule Pro
+            Formule Premium
           </p>
 
           {/* Titre */}
           <h2 className="mt-3 text-2xl font-bold tracking-tight
                          text-balance text-foreground sm:text-3xl">
-            Vos agents IA opérationnels {" "}
+            Votre infrastructure IA sur-mesure{" "}
             <span className="text-orange-500">
-              en moins de 
+              opérationnelle en 
             </span>{" "}
-            7 jours
+            30 jours
           </h2>
 
           {/* Sous-titre */}
           <p className="mx-auto mt-4 max-w-3xl text-sm
                         text-muted-foreground leading-relaxed">
-            Audit gratuit inclus. Sans engagement. On analyse votre
-            situation, on configure vos agents et on vous forme —
-            vous êtes autonome dès la première semaine
+          Audit gratuit inclus. Sans engagement. On conçoit l'architecture,
+          déploie le LLM sur votre infrastructure et forme vos équipes —
+          vous êtes autonomes et souverains dès le premier mois.
           </p>
 
           {/* CTA */}
@@ -41,10 +41,9 @@ export const Cta = () => {
                          hover:shadow-lg hover:shadow-orange-500/30
                          active:scale-95"
             >
-              Démarrer la formule Pro →
+              Demander un audit gratuit →
             </Link>
           </div>
-
         </div>
       </div>
     </section>

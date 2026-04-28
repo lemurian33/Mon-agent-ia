@@ -20,7 +20,6 @@ const NAV_COLUMNS = [
     links: [
       { label: "Audit", href: "/audit" },
       { label: "Essentiel", href: "/essentiel" },
-      { label: "Pro", href: "/pro" },
       { label: "Entreprise", href: "/entreprise" },
       { label: "Premium", href: "/premium" },
     ],

@@ -24,7 +24,7 @@ const FEATURES_ENTERPRISE = [
 export const ProPricing = () => {
   return (
     <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
 
         {/* Badge */}
         <div className="mb-8 flex justify-center">
