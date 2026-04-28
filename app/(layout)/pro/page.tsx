@@ -15,13 +15,13 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <ProProcess />
-      <SectionDivider />
       <AgentDemo />
+      <SectionDivider />
+      <Features />
       <SectionDivider />
       <DashboardView/>
       <SectionDivider />
-      <Features />
+      <ProProcess />
       <SectionDivider />
       <ProPricing />
       <SectionDivider />
