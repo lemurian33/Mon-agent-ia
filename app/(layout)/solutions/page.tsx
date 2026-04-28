@@ -1,5 +1,5 @@
 import { HeroSolution } from "@/features/solutions/hero-solution";
-import { SolutionAccordion } from "@/features/solutions/solution-accordion-v2";
+import { SolutionAccordion } from "@/features/solutions/solution-accordion";
 import { ProofSection } from "@/features/solutions/proof-section";
 import { Approach } from "@/features/solutions/approach";
 import { Offers } from "@/features/solutions/offers";

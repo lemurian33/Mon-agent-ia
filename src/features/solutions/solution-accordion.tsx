@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ScanSearch, Bot, Server, PhoneCall, Info } from "lucide-react";
+import { ChevronDown, ScanSearch, Bot, Building2, Sparkles, Info } from "lucide-react";
 import Link from "next/link";
 
 type Solution = {
@@ -14,6 +14,7 @@ type Solution = {
   included: string[];
   price: string;
   cta: string;
+  ctaHref: string; 
 };
 
 const SOLUTIONS: Solution[] = [
@@ -35,6 +36,7 @@ const SOLUTIONS: Solution[] = [
     ],
     price: "Gratuit",
     cta: "Réserver mon audit",
+    ctaHref: "/#audit-form",
   },
   {
     id: "essentiel",
@@ -52,73 +54,67 @@ const SOLUTIONS: Solution[] = [
       "Accès communauté privée & ressources exclusives",
       "Support post-formation pour ancrer les acquis",
     ],
-    price: "79€/mois",
-    cta: "Démarrer l'accompagnement'",
-  },
-  {
-    id: "pro",
-    icon: Server,
-    tag: "Pro",
-    title: "Intégration d'agents I.A.",
-    description:
-      "Des agents I.A. déployés dans vos outils du quotidien — devis, relances, support, prise de RDV, qualification de leads.",
-    details:
-      "On conçoit, configure et déploie des agents I.A. sur mesure, directement connectés à votre environnement métier. Chaque agent est entraîné sur votre contexte, intégré à vos outils existants (CRM, agenda, messagerie) et conforme RGPD dès le premier jour. Résultat : vos process tournent, même quand vous dormez.",
-    included: [
-      "Audit et cartographie de vos process existants",
-      "Développement d'agents I.A. calibrés pour votre activité",
-      "Intégration native à vos outils (CRM, agenda, messagerie)",
-      "Automatisation n8n + RAG sur vos données métier",
-      "Conformité RGPD complète dès la conception",
-      "Formation à la prise en main et à l'évolution",
-      "Support et optimisation continue inclus",
-    ],
-    price: "108 €/mois",
-    cta: "Déployer mon écosystème",
-  },
-  {
-    id: "entreprise",
-    icon: Server,
-    tag: "Entreprise",
-    title: "Écosystème I.A. souverain",
-    description:
-      "Une infrastructure I.A. complète, hébergée sur votre domaine, 100% conforme RGPD — vos données ne quittent jamais votre périmètre.",
-    details:
-      "On déploie l'intégralité de votre stack I.A. : hébergement Coolify sur votre domaine, automatisation n8n, stockage vectoriel, LLM open source configurés pour votre secteur. Vous gardez le contrôle total — sur les données, les accès et l'évolution du système.",
-    included: [
-      "Hébergement Coolify souverain sur votre domaine",
-      "Automatisation n8n + RAG multi-sources",
-      "LLM open source configurés (Claude, Gemma & autres)",
-      "Stockage vectoriel KV4 ou KV8 selon vos besoins",
-      "Conformité RGPD complète et documentée",
-      "Onboarding équipe et formation à la gouvernance I.A.",
-    ],
-    price: "199€/mois",
-    cta: "Déployer mon écosystème",
+    price: "49€/mois",
+    cta: "Démarrer l'accompagnement",
+    ctaHref: "/essentiel",
   },
   {
     id: "premium",
-    icon: Server,
+    icon: Sparkles, 
     tag: "Premium",
-    title: "Configuration full custom",
+    title: "Écosystème IA dédié & agents illimités",
     description:
-      "Architecture I.A. pensée de zéro pour votre structure — pour aller plus loin, plus vite, sans compromis.",
+      "Une infrastructure IA complète, hébergée sur votre domaine, avec des agents illimités coordonnés — conçue sur mesure pour votre organisation.",
     details:
-      "Pour les projets ambitieux ou les besoins hors standard : on part d'une page blanche et on construit exactement ce qu'il vous faut. Audit stratégique, déploiement full stack, intégrations métier complexes et SLA dédié. Vous avez un interlocuteur unique, de la conception au suivi long terme.",
+      "On conçoit l'architecture complète de votre écosystème IA : agents spécialisés par fonction, LLM de dernière génération, infrastructure dédiée et orchestrateur central. Chaque composant est calibré sur vos process réels, connecté à vos outils existants et conforme RGPD dès la conception. Vous gagnez une vraie équipe IA — pas un outil de plus.",
     included: [
-      "Audit stratégique & architecture I.A. sur mesure",
-      "Déploiement full stack entièrement personnalisé",
-      "Intégrations métier spécifiques et complexes",
-      "Formation équipes avancée et accompagnement terrain",
-      "SLA dédié & accompagnement long terme",
-      "Support prioritaire avec interlocuteur unique",
+      "Agents IA illimités — marketing, ops, support, qualification",
+      "LLM dernière génération (Claude Opus, GPT-4o ou Gemini Ultra)",
+      "Infrastructure dédiée — vos données isolées des autres clients",
+      "Orchestrateur central multi-agents et multi-départements",
+      "Intégrations CRM, Gmail, Calendar, Notion, Slack",
+      "Dashboard de performance en temps réel",
+      "Accompagnement mensuel dédié (60 min) + support WhatsApp/Slack",
+      "Hébergement souverain EU — conformité RGPD native",
+      "Formation complète de vos équipes incluse",
+    ],
+    price: "Sur devis",
+    cta: "Demander un audit gratuit",
+    ctaHref: "/#audit-form",
+  },
+  {
+    id: "entreprise",
+    icon: Building2,
+    tag: "Entreprise",
+    title: "LLM local hébergé & infrastructure souveraine",
+    description:
+      "Votre propre modèle IA tourne sur votre infrastructure. Zéro dépendance externe, zéro donnée qui sort de votre périmètre.",
+    details:
+      "Pour les structures avec des exigences réglementaires strictes ou un SI complexe. On déploie un LLM open source directement sur votre infrastructure, configure les agents sur-mesure et connecte l'ensemble à vos outils via API. Vous gardez la maîtrise totale — sur les données, les accès, les modèles et l'évolution du système. SLA garanti, interlocuteur dédié, audit-ready dès le premier jour.",
+    included: [
+      "LLM open source hébergé sur votre infrastructure (Mistral, Llama, Gemma…)",
+      "Agents IA multi-rôles configurés sur vos process",
+      "Intégrations API avancées — ERP, CRM, SIRH, BI",
+      "Stockage vectoriel RAG sur vos données métier",
+      "Isolation complète — aucune donnée ne sort de votre périmètre",
+      "Conformité RGPD documentée et auditée",
+      "Onboarding équipes & formation à la gouvernance IA",
+      "SLA garanti avec reporting mensuel des performances",
+      "Support prioritaire dédié — interlocuteur unique",
     ],
     price: "Sur devis",
     cta: "Nous contacter",
+    ctaHref: "/contact",
   },
 ];
 
-const SolutionItem = ({ solution: s, isFirst }: { solution: Solution; isFirst?: boolean }) => {
+const SolutionItem = ({
+  solution: s,
+  isFirst,
+}: {
+  solution: Solution;
+  isFirst?: boolean;
+}) => {
   const [open, setOpen] = useState(isFirst ?? false);
   const Icon = s.icon;
 
@@ -143,7 +139,7 @@ const SolutionItem = ({ solution: s, isFirst }: { solution: Solution; isFirst?: 
         </div>
 
         {/* Texte */}
-        <div className="flex-1 min-w-0">
+        <div className="min-w-0 flex-1">
           <span className="text-xs font-bold tracking-widest text-orange-500 uppercase">
             {s.tag}
           </span>
@@ -197,11 +193,17 @@ const SolutionItem = ({ solution: s, isFirst }: { solution: Solution; isFirst?: 
               </div>
 
               <div className="flex flex-col gap-2 lg:items-end">
-                <Link href={`/${s.id}`} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-6 py-2.5 text-sm font-semibold text-muted-foreground transition-all hover:bg-muted active:scale-95 whitespace-nowrap">
+                <Link
+                  href={`/${s.id}`}
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-6 py-2.5 text-sm font-semibold text-muted-foreground transition-all hover:bg-muted active:scale-95 whitespace-nowrap"
+                >
                   <Info size={15} className="text-orange-500" />
                   En savoir plus
                 </Link>
-                <Link href="/#audit-form" className="inline-flex items-center gap-1.5 rounded-md bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-400 hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 whitespace-nowrap">
+                <Link
+                  href={s.ctaHref}
+                  className="inline-flex items-center gap-1.5 rounded-md bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-400 hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 whitespace-nowrap"
+                >
                   {s.cta} →
                 </Link>
               </div>
