@@ -7,16 +7,24 @@ import { WhyUs } from "@/features/solutions/why-us";
 import { CtaBannerSolutions } from "@/features/solutions/cta-banner-solutions";
 import { AuditForm } from "@/features/landing/audit/audit-form";
 import { FAQSection } from "@/features/landing/faq-accordion";
+import { SectionDivider } from "@/features/landing/section-divider";
+
 
 export default function SolutionsPage() {
   return (
     <>
       <HeroSolution />
+      <SectionDivider/>
       <Offers/>
+      <SectionDivider/>
       <Approach/>
+      <SectionDivider/>
       <SolutionAccordion />
+      <SectionDivider/>
       <ProofSection />
+      <SectionDivider/>
       <WhyUs />
+      <SectionDivider/>
       <FAQSection faq={[
         {
           question: "Combien de temps avant de voir les premiers résultats ?",
@@ -59,7 +67,9 @@ export default function SolutionsPage() {
             "On garantit une amélioration mesurable dans les 30 premiers jours — ou on ajuste jusqu'à ce que ce soit le cas. Toute agence qui vous promet un résultat précis sans connaître votre contexte vous survend. Ce qu'on promet : des actions concrètes, un suivi rigoureux et une totale transparence sur l'impact.",
         },
       ]} />
+      <SectionDivider/>
       <CtaBannerSolutions />
+      <SectionDivider/>
       <AuditForm />
     </>
   );
