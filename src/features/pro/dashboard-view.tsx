@@ -46,6 +46,20 @@ const ORANGE = "#e8680a";
 export function DashboardView({ onBack }: { onBack?: () => void }) {
   return (
     <div className="flex flex-col gap-3 mx-auto max-w-6xl">
+      {/* Badge + titre + sous-titre */}
+      <div className="mx-auto max-w-2xl text-center mb-8">
+        <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
+          Dashboard temps réel
+        </span>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
+          Tout votre pipeline.{" "}
+          <span className="text-orange-500">Un seul endroit.</span>
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground text-pretty">
+          Leads qualifiés, taux de contact, devis en cours, CA potentiel —
+          pilotez votre activité avec des données fraîches, pas des intuitions.
+        </p>
+      </div>
       {/* Dashboard */}
       <div className="overflow-hidden rounded-md border border-border bg-background" style={{ minHeight: 580 }}>
         <div className="flex" style={{ minHeight: 580 }}>

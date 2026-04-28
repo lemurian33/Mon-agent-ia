@@ -8,7 +8,7 @@ import {
   Clock,
   Shield,
 } from "lucide-react";
-import { SectionDivider } from "@/features/landing/section-divider";
+// import { SectionDivider } from "@/features/landing/section-divider";
 
 export const Hero = () => {
   return (
@@ -107,7 +107,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <SectionDivider />
+      {/* <SectionDivider /> */}
     </div>
   );
 };
