@@ -1,6 +1,6 @@
 import { HeroSolution } from "@/features/solutions/hero-solution";
-// import { SolutionAccordion } from "@/features/solutions/solution-accordion-v2";
-// import { ProofSection } from "@/features/solutions/proof-section";
+import { SolutionAccordion } from "@/features/solutions/solution-accordion-v2";
+import { ProofSection } from "@/features/solutions/proof-section";
 import { Approach } from "@/features/solutions/approach";
 import { Offers } from "@/features/solutions/offers";
 import { WhyUs } from "@/features/solutions/why-us";
@@ -12,10 +12,10 @@ export default function SolutionsPage() {
   return (
     <>
       <HeroSolution />
-      {/* <SolutionAccordion /> */}
-      {/* <ProofSection /> */}
-      <Approach/>
       <Offers/>
+      <Approach/>
+      <SolutionAccordion />
+      <ProofSection />
       <WhyUs />
       <FAQSection faq={[
         {
