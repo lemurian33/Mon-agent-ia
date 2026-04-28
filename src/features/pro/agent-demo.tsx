@@ -1,9 +1,8 @@
 "use client";
 
-import type { ReactNode} from "react";
-import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { DashboardView } from "./dashboard-view";
 
 // ── Types ─────────────────────────────────────────────────────────
 
@@ -75,10 +74,34 @@ const ORANGE = "#e8680a";
 export const AgentDemo = () => {
   const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
   const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
+  const [started, setStarted] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
+  // ── Lance l'animation uniquement quand la section est visible ──
   useEffect(() => {
-    const delays = [400, 1800, 3200, 4600];
-    const stepDelays = [1400, 2800, 4200, 5600];
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.25 } // démarre quand 25% de la section est visible
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [started]);
+
+  // ── Déclenche les timers seulement après que started = true ──
+  useEffect(() => {
+    if (!started) return;
+
+    const delays     = [0, 1400, 2800, 4200];
+    const stepDelays = [1000, 2400, 3800, 5200];
 
     const msgTimers = delays.map((delay, i) =>
       setTimeout(() => setVisibleMessages((prev) => [...prev, i]), delay)
@@ -87,27 +110,31 @@ export const AgentDemo = () => {
       setTimeout(() => setVisibleSteps((prev) => [...prev, i]), delay)
     );
 
+    timersRef.current = [...msgTimers, ...stepTimers];
+
     return () => {
-      [...msgTimers, ...stepTimers].forEach(clearTimeout);
+      timersRef.current.forEach(clearTimeout);
     };
-  }, []);
+  }, [started]);
 
   return (
-    <div className="flex flex-col gap-3 mx-auto max-w-6xl">
+    <div ref={sectionRef} className="flex flex-col gap-3 mx-auto max-w-6xl">
+
       {/* Badge + titre + sous-titre */}
-    <div className="mx-auto max-w-2xl text-center mb-8">
-      <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
-        Agent IA en action
-      </span>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
-        Votre agent travaille.{" "}
-        <span className="text-orange-500">Vous encaissez.</span>
-      </h2>
-      <p className="mt-4 text-lg text-muted-foreground text-pretty">
-        Envoyez une instruction en langage naturel — votre agent l'exécute,
-        contacte vos prospects et planifie les relances. Sans vous.
-      </p>
-    </div>
+      <div className="mx-auto max-w-2xl text-center mb-8">
+        <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold tracking-widest text-orange-700 uppercase dark:border-orange-800/60 dark:bg-orange-950/60 dark:text-orange-300">
+          Agent IA en action
+        </span>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
+          Votre agent travaille.{" "}
+          <span className="text-orange-500">Vous encaissez.</span>
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground text-pretty">
+          Envoyez une instruction en langage naturel — votre agent l'exécute,
+          contacte vos prospects et planifie les relances. Sans vous.
+        </p>
+      </div>
+
       {/* Mobile mockup */}
       <div className="flex min-h-[580px] max-w-6xl overflow-hidden rounded-md border border-border bg-muted/20">
 
