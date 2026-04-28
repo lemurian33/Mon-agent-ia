@@ -43,7 +43,7 @@ const ORANGE = "#e8680a";
 
 // ── Component ─────────────────────────────────────────────────────
 
-export function DashboardEnterprise() {
+export function Dashboard() {
   return (
     <div className="flex flex-col gap-3 mx-auto max-w-6xl">
 
