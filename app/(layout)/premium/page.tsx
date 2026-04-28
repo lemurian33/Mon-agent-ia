@@ -4,9 +4,9 @@ import { Hero } from '@/features/pro/hero';
 import { AgentDemo } from '@/features/premium/agent-demo';
 import { Dashboard } from '@/features/premium/dashboard-view';
 import { Features } from '@/features/premium/features';
-import { ProProcess } from '@/features/pro/pro-process';
+import { EntProcess } from '@/features/premium/ent-process';
 import { EntPricing } from '@/features/premium/ent-pricing';
-import { FAQSection } from '@/features/landing/faq-section';
+import { FAQSection } from '@/features/landing/faq-accordion';
 import { Cta } from '@/features/pro/cta';
 import { SectionDivider } from '@/features/landing/section-divider';
 
@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <ProProcess />
+      <EntProcess />
       <SectionDivider />
       <AgentDemo />
       <SectionDivider />
