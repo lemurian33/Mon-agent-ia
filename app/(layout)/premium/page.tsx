@@ -2,8 +2,8 @@
  
 import { Hero } from '@/features/pro/hero';
 import { AgentDemo } from '@/features/premium/agent-demo';
-import { DashboardView } from '@/features/premium/dashboard-view';
-import { Features } from '@/features/pro/features';
+import { Dashboard } from '@/features/premium/dashboard-view';
+import { Features } from '@/features/premium/features';
 import { ProProcess } from '@/features/pro/pro-process';
 import { EntPricing } from '@/features/premium/ent-pricing';
 import { FAQSection } from '@/features/landing/faq-section';
@@ -19,7 +19,7 @@ export default function Page() {
       <SectionDivider />
       <AgentDemo />
       <SectionDivider />
-      <DashboardView/>
+      <Dashboard/>
       <SectionDivider />
       <Features />
       <SectionDivider />
