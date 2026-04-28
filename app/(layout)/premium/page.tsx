@@ -1,11 +1,11 @@
 "use client";
  
 import { Hero } from '@/features/pro/hero';
-import { AgentDemo } from '@/features/pro/agent-demo';
+import { AgentDemo } from '@/features/premium/agent-demo';
 import { DashboardView } from '@/features/pro/dashboard-view';
 import { Features } from '@/features/pro/features';
 import { ProProcess } from '@/features/pro/pro-process';
-import { EntPricing } from '@/features/entreprise/ent-pricing';
+import { EntPricing } from '@/features/premium/ent-pricing';
 import { FAQSection } from '@/features/landing/faq-section';
 import { Cta } from '@/features/pro/cta';
 import { SectionDivider } from '@/features/landing/section-divider';
