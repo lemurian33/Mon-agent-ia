@@ -7,7 +7,7 @@ const FEATURES_PRO = [
   "Intégration Gmail, Calendar, CRM",
   "Campagnes email automatisées",
   "Génération & qualification de leads",
-  "Dashboard de performance en temps réel",
+  "Dashboard ultra performance ",
   "Synchronisation outils existants",
   "Conformité RGPD & données en EU",
 ] as const;
