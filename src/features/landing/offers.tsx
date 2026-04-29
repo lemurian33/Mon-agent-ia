@@ -59,42 +59,19 @@ const OFFERS: Offer[] = [
       "Accompagnement pas à pas",
       "Support WhatsApp inclus",
     ],
-    roi: { value: "+5h", label: "récupérées dès la première semaine" },
+    roi: { value: "5h - 10h", label: "récupérées dès la première semaine" },
     cta: "Démarrer",
     href: "/essentiel",
   },
-  // {
-  //   id: "pro",
-  //   badge: "Populaire",
-  //   title: "Pro",
-  //   price: "208€",
-  //   priceUnit: "/mois HT",
-  //   description:
-  //     "Vos agents I.A. travaillent pour vous pendant que vous êtes sur le chantier.",
-  //   strongFeatures: [
-  //     "Devis relancés automatiquement",
-  //     "Photos chantier publiées sur vos réseaux",
-  //     "Factures impayées relancées sans vous",
-  //   ],
-  //   features: [
-  //     "Référencement local (plombier à X…)",
-  //     "Hébergé en France — RGPD",
-  //     "Agents disponibles 24h/24",
-  //   ],
-  //   roi: { value: "8–12h", label: "récupérées par semaine" },
-  //   cta: "Découvrir",
-  //   href: "/pro",
-  // },
   {
     id: "entreprise",
     badge: "Sur-mesure",
     title: "Entreprise",
-    price: "Sur devis",
-    priceUnit: "",
+    price: "à partir de 208€",
+    priceUnit: "/mois HT",
     description:
       "LLM hébergé sur votre infrastructure. Zéro dépendance externe, zéro donnée qui sort de votre périmètre.",
     strongFeatures: [
-      "Tout le pack Premium",
       "LLM open source hébergé chez vous",
       "Intégrations API avancées — ERP, SIRH, BI",
     ],
@@ -103,7 +80,7 @@ const OFFERS: Offer[] = [
       "SLA garanti avec reporting mensuel",
       "Interlocuteur dédié — support prioritaire",
     ],
-    roi: { value: "+3 500€", label: "économisés vs équipe admin dédiée" },
+    roi: { value: "+2 500€", label: "économisés vs embauche secrétariat" },
     cta: "Nous contacter",
     href: "/entreprise",
   },
@@ -116,7 +93,7 @@ const OFFERS: Offer[] = [
     description:
       "Un écosystème I.A. complet, dédié à votre entreprise. Infrastructure dédiée, agents illimités, souveraineté totale.",
     strongFeatures: [
-      "Tout le pack Pro",
+      "Tout le pack Entrerpise",
       "Infrastructure dédiée — vos données isolées",
       "Agents I.A. illimités multi-départements",
       "Accompagnement mensuel dédié (60 min)",
@@ -126,7 +103,7 @@ const OFFERS: Offer[] = [
       "Hébergement souverain EU — conformité RGPD",
       "Support prioritaire WhatsApp/Slack",
     ],
-    roi: { value: "+2 500€", label: "économisés vs embauche secrétariat" },
+    roi: { value: "+3 500€", label: "économisés vs équipe admin dédiée" },
     cta: "Demander un audit",
     href: "/premium",
     featured: true,
@@ -238,7 +215,7 @@ export const Offers = () => {
         <div
           ref={scrollRef}
           onScroll={onScroll}
-          className="mt-4 flex gap-4 overflow-x-auto pb-4
+          className="mt-4 flex gap-4 pb-4
                      [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {OFFERS.map((offer) => (
