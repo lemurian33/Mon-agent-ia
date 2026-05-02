@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { submitAuditFormAIActAction } from "./audit-form.action";
 import {
-  // ✅ Fix 1 — import as type (used only as a type annotation, not a value)
   type AuditFormAIActData,
   AuditFormAIActSchema,
   Step1Schema,

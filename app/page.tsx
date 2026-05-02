@@ -8,7 +8,7 @@ import { SectionDivider } from "@/features/landing/section-divider";
 import { Testimonials } from "@/features/landing/testimonials";
 import { Footer } from "@/features/layout/footer";
 import { About } from "@/features/landing/about";
-import { AuditForm } from "@/features/landing/audit-ia-act/audit-form";
+import { AuditFormAIAct } from "@/features/landing/audit-ia-act/audit-form";
 import { CtaBanner } from "@/features/landing/cta-banner";
 import { FAQSection } from "@/features/landing/faq-accordion";
 
@@ -32,7 +32,7 @@ export default function HomePage() {
 
       <Testimonials />       
 
-      <AuditForm />
+      <AuditFormAIAct />
 
       <CtaBanner />
 
