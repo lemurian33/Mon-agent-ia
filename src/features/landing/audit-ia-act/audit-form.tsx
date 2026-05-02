@@ -56,7 +56,7 @@ const OBJECTIFS = [
 ] as const;
 
 const BUDGETS = [
-  "79€/mois (Essentiel)",
+  "79€/mois/user (Essentiel)",
   "à partir de 208€/mois (Entreprise)",
   "Premium — Sur devis",
   "Sur devis — Infrastructure dédiée",
@@ -127,10 +127,10 @@ export const AuditFormAIAct = () => {
     defaultValues: {
       secteur:    "",
       taille:     "",
-      outils:     [],        // ✅ Fix 2 — initialisé [], jamais undefined → watch() retourne toujours string[]
+      outils:     [],        
       conformite: "",
       objectif:   "",
-      budget:     BUDGETS[0], // ✅ Fix 3 — initialisé avec valeur, jamais undefined → pas besoin de ??
+      budget:     BUDGETS[0],
       note:       "",
       prenom:     "",
       nom:        "",
@@ -241,7 +241,7 @@ export const AuditFormAIAct = () => {
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance text-foreground sm:text-4xl">
             Obtenez votre programme sur mesure
           </h2>
-          <p className="mt-4 text-base text-muted-foreground text-balance">
+          <p className="mt-4 text-base text-muted-foreground">
             4 étapes · 3 minutes · Programme de formation AI Act adapté à votre métier et votre secteur.
           </p>
         </div>
@@ -343,7 +343,7 @@ export const AuditFormAIAct = () => {
                   </Field>
 
                   <div className="flex items-center justify-between border-t border-border pt-2">
-                    <span className="text-xs text-muted-foreground">Étape 1/4</span>
+                    <span className="text-xs text-muted-foreground px-4">Étape 1/4</span>
                     <NextBtn onClick={goNext} />
                   </div>
                 </div>
